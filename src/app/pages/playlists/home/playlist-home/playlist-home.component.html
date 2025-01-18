@@ -1,0 +1,10 @@
+<div class="header">
+    <h2>Your Playlists</h2>
+    <hr>
+</div>
+
+<app-playlist-list 
+[playListSectionTitle]="'Playlists'" 
+[playlists]="playlists" 
+(playlistClicked)="onClickPlaylist($event)"
+(playPlaylist)="onClickplayPlaylist($event)"/>
