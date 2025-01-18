@@ -1,0 +1,10 @@
+.home {
+  padding: 1rem;
+  /* overflow: auto; */
+  /* max-height: 85vh; */
+  position: relative;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
