@@ -1,8 +1,8 @@
 import { EnumLanguages } from "./enum/languages";
 import { Playlist } from "./models/playlists";
 import { Song } from "./interfaces/songs";
-import song_details from '../../data/song_details.json';
-import iswar_song_details from '../../data/iswar_song_details.json';
+import song_details from '../../public/data/song_details.json';
+import iswar_song_details from '../../public/data/iswar_song_details.json';
 // import fs from 'fs';
 
 export const DEFAULT_THUMBNAIL = 
