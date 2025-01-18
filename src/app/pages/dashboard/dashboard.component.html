@@ -1,0 +1,17 @@
+
+<div class="dashboard">
+
+    <div class="cont d-flex">
+        <!-- Sidebar -->
+         <app-sidebar [sideBarOpen]="sideBarOpen" (toggleSideBar)="toggleSidebar()"/>
+        
+        <!-- Main Content -->
+        <main class="main-content flex-grow-1" [class.closed]="!sideBarOpen">
+            <router-outlet />
+        </main>
+    </div>
+
+</div>
+
+<!-- Now Playing Bar -->
+<app-footer />

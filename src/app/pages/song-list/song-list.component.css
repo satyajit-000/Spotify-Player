@@ -1,0 +1,220 @@
+
+.song-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  /* margin: 1rem; */
+  max-height: 77vh;
+  overflow-y: auto;
+  /* justify-content: space-between; Ensures cards spread out evenly */
+}
+
+.song-card {
+  background-color: #282828;
+  /* border-radius: 8px; */
+  /* padding: 1rem; */
+  margin: 0 .5rem .5rem 0 ;
+  flex: 1 1 calc(10% - 1rem);
+  /* Dynamically calculate width with flexibility */
+  min-width: 12rem;
+  max-width: 14rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative;
+  color: #fff;
+}
+
+.song-card:hover {
+  transform: scale(1.05);
+}
+
+
+.thumbnail {
+  width: 100%;
+  height: 150px; /* Adjust as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.02);
+}
+
+
+.details {
+  text-align: center;
+}
+
+.song-name {
+  padding-top: 4px;
+  font-size: 1rem;
+  margin: 0;
+  color: #fff;
+}
+
+.artist,
+.source {
+  font-size: 0.8rem;
+  color: #b3b3b3;
+  margin: 0;
+}
+
+.source {
+  color: var(--primary-green);
+}
+
+.source:hover {
+  color: var(--primary-green-hover);
+}
+
+
+.no-songs {
+  font-size: 1.5rem;
+  color: #b3b3b3;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #282828;
+  border: 2px dashed #555;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.no-songs:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+.options-container {
+  position: absolute;
+  bottom: 10px;
+  /* Align to bottom */
+  right: 10px;
+  /* Align to right */
+}
+
+.options-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  /* Smaller font size */
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  /* Required for the pseudo-element */
+  transition: box-shadow 0.3s ease, color 0.3s ease;
+  /* Smooth shadow and color transition */
+
+}
+
+.options-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  /* Smaller font size */
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  /* Required for the pseudo-element */
+  transition: color 0.3s ease;
+  /* Smooth color transition */
+}
+
+.options-btn::before {
+  content: '';
+  /* Empty content for the circle */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(29, 185, 84, 0.4);
+  /* Green glow */
+  opacity: 0;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+.options-btn:hover {
+  color: var(--primary-green-hover);
+  /* Text color change on hover */
+}
+
+.options-btn:hover::before {
+  width: 30px;
+  /* Adjust size for the circular glow */
+  height: 30px;
+  /* Adjust size for the circular glow */
+  opacity: 1;
+  /* Make the glow visible */
+}
+
+
+.options-dropdown {
+  position: absolute;
+  bottom: 100%;
+  /* Open above the button */
+  right: 0;
+  background-color: #282828;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  min-width: 12rem;
+}
+
+.options-dropdown button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 0.5 .7rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: .9rem;
+}
+
+.options-dropdown button:hover {
+  background-color: var(--primary-green-hover);
+}
+
+/* Add favorite icon */
+.favorite-icon {
+  position: absolute;
+  bottom: 10px;
+  /* Adjust positioning */
+  left: 10px;
+  /* Adjust positioning */
+  font-size: 1.2rem;
+  /* Size of the icon */
+  color: var(--primary-green);
+  /* Green color */
+  background-color: transparent;
+  /* Background to make it stand out */
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Optional: hover effect for the icon */
+.favorite-icon:hover {
+  color: #fff;
+  /* Change color on hover */
+  background-color: (--primary-green-hover);
+  /* Highlight the background */
+}

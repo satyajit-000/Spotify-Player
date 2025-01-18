@@ -1,0 +1,79 @@
+.back-btn {
+    background: transparent;
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.back-btn i {
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.back-btn span {
+    letter-spacing: 0.5px;
+}
+
+.back-btn:hover {
+    background-color: var(--primary-green);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Playlist title styles */
+.playlist-title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Song count container */
+  .playlist-title .song-count {
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #b3b3b3;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  
+  /* Song number styling */
+  .playlist-title .song-count .song-number {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    display: inline-block;
+    line-height: 1.2;
+    vertical-align: middle;
+  }
+  
+  
+::ng-deep.ant-pagination-total-text {
+    color: #fff !important;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  .float-right {
+    float: right;
+  }

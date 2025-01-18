@@ -1,0 +1,105 @@
+@import "../node_modules/ng-zorro-antd/style/index.css";
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.min.css"; 
+@import "../node_modules/bootstrap/dist/css/bootstrap.css"; 
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #1db954;
+    /* Spotify's primary green color */
+    --primary-green-hover: #1ed760;
+    /* A slightly lighter green for hover effects */
+
+    --background-dark:#121212;
+}
+
+body {
+    overflow: visible;
+    /* height: 100%; */
+    background-color: var(--background-dark);
+}
+
+/* Global styles for buttons */
+button {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-green-hover);
+}
+
+/* Global styles for links */
+a {
+    color: var(--primary-green) ;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-green-hover);
+    text-decoration: underline;
+}
+
+.active {
+  color: var(--primary-green) !important;
+}
+
+/* General dark theme scrollbar style */
+
+/* WebKit Browsers */
+::-webkit-scrollbar {
+  width: 10px; /* Set the scrollbar width */
+  height: 10px; /* For horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: #2b2b2b; /* Dark gray background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a; /* Slightly lighter gray for the thumb */
+  border-radius: 5px; /* Rounded edges */
+  border: 2px solid #2b2b2b; /* Adds padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5c5c5c; /* Lighter shade on hover */
+}
+
+/* Firefox */
+html, .song-list {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #4a4a4a #2b2b2b; /* Thumb color, track color */
+  background-color: var(--background-dark);
+}
+.scrollable {
+  overflow-y: scroll;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a;
+  border-radius: 5px;
+  border: 2px solid #2b2b2b;
+}
+
+.card, .card-body {
+  background-color: transparent;
+}

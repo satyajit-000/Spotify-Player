@@ -1,0 +1,28 @@
+<header class="header">
+    <div class="logo">
+        <!-- <img src="assets/svg/spotify.svg" alt="Spotify Logo" class="logo-image" /> -->
+         <!-- <div>
+
+             <i class="fab fa-spotify"></i>
+         </div> -->
+         <!-- @if (smallScreen) {
+             <button class="hide-btn" >
+             (click)="onToggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa fa-angle-double-left"></i>
+            </button>
+         } -->
+
+        <img src="https://developer.spotify.com/images/guidelines/design/icon3.svg" alt="Spotify Logo" class="logo-image" />
+        <h1 class="title" routerLinkActive="router-link-active" ><a [routerLink]="['/home']">Spotify Player</a></h1>
+    </div>
+    <div class="search-bar">
+        <!-- <a routerLink="/signin"> -->
+            <button class="signup btn rounded-pill">Sign up / Sign in</button>
+        <!-- </a> -->
+        <input type="text" placeholder="Search for songs..." [(ngModel)]="searchQuery" (input)="onSearch()" (keyup.enter)="onSearch()" />
+        <button (click)="onSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+</header>

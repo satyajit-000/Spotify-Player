@@ -1,0 +1,62 @@
+<div class="song-list">
+  @for (song of songs(); track song.website) {
+  <div class="song-card card" (click)="onSingleClick($event, song)" (dblclick)="onDoubleClick($event, song)"
+    [id]="$index" (mouseleave)="optionsIndex=null">
+    <div class="card-body">
+      <img [src]="song.thumbnail || defaultThumbnail" alt="{{ song.song_name }}" class="thumbnail" />
+      <!-- Favorite icon -->
+      @if (song.isFavorite) {
+      <div class="favorite-icon">
+        <i class="fa fa-heart"></i>
+      </div>
+      }
+      <div class="details">
+        <p class="song-countsong_name" [ngClass]="{ active: currentIndex() === $index }">{{ song.song_name }}</p>
+        <p class="artist">{{ song.singers }}</p>
+        <a class="source" [href]="song.website" target="_blank"
+          (click)="$event.stopPropagation()">{{retriveSource(song.source)}}</a>
+        <br>
+        @if (currentSong()?.website === song.website) {
+        <img [src]="sharedDataService.isSongPlaying ? playingImage:pauseImage" alt="" width="20" />
+        }
+
+
+        <!-- Options button -->
+        <div class="options-container">
+          <button class="options-btn" (click)="toggleOptions($event, $index)">
+            ⋮
+          </button>
+          @if (optionsIndex === $index) {
+          <div class="options-dropdown">
+            <button (click)="toggleFavorite($event, song)">
+              {{ song.isFavorite ? 'Remove from Favorites' : 'Add to Favorites' }}
+            </button>
+            <!-- <button (click)="togglePlaylist(song)">
+                      {{ song.isInPlaylist ? 'Remove from Playlist' : 'Add to Playlist' }}
+                    </button> -->
+            <!-- <button (click)="shareSong(song)">Share Song</button> -->
+            <button (click)="downloadSong($event,song)">Download Song</button>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  } @empty {
+  <div class="no-songs">
+    <i class="fa fa-music" style="font-size: 2rem; color: #555;"></i>
+    <p>No songs available</p>
+  </div>
+
+  }
+  <!-- <div class="song-card card">
+        <div class="card-body">
+          <img src="https://cdn-icons-png.flaticon.com/512/49/49750.png" alt="Empty" class="thumbnail" />
+          <div class="details">
+              <p class="song-countsong_name">Empty</p>
+              <p class="artist">Empty</p>
+              <a class="source">Empty</a>
+          </div>
+        </div>
+      </div> -->
+</div>

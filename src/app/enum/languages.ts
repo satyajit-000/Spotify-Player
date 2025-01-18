@@ -1,0 +1,21 @@
+export enum EnumLanguages {
+    Odia = 'Odia',
+    Hindi = 'Hindi',
+    Telugu = 'Telugu',
+    Kannada = 'Kannada',
+    Tamil = 'Tamil',
+    Malayalam = 'ml',
+    Bengali = 'Bengali',
+    Marathi = 'mr',
+    Gujarati = 'Gujarati',
+    Punjabi = 'Punjabi',
+    Assamese = 'as',
+    Bhojpuri = 'Bhojpuri',
+    Haryanvi = 'ha',
+    Rajasthani = 'ra',
+    English = 'English',
+    Spanish = 'es',
+    French = 'fr',
+    German = 'de',
+
+}

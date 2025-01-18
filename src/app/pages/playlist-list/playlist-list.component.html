@@ -1,0 +1,22 @@
+<section class="section">
+    <h3>{{playListSectionTitle()}}</h3>
+    <div class="playlist-list">
+        @for (playlist of playlists(); track $index) {
+        <div class="playlist-card card" (mouseenter)="playlistIndex = $index" (mouseleave)="playlistIndex = null" (click)="onClickPlaylist($event, playlist.id)">
+            <div class="card-body">
+                <img [src]="playlist.thumbnail" alt="{{ playlist.name }}" class="thumbnail" />
+                <div class="details">
+                    <p class="playlist-name">{{ playlist.name }}</p>
+                    <p class="song-count">{{ playlist.songs.length }} Songs</p>
+                </div>
+                @if (playlistIndex === $index) {
+                <button class="play-pause" (click)="onClickPlay($event, playlist.id, playlist.songs)">
+                    <i class="fas fa-play"></i>
+                </button>
+
+                }
+            </div>
+        </div>
+        }
+    </div>
+</section>
