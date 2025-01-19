@@ -103,3 +103,7 @@ html, .song-list {
 .card, .card-body {
   background-color: transparent;
 }
+
+.float-right {
+  float: right;
+}

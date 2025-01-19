@@ -1,0 +1,130 @@
+  /* Target the pagination container */
+  ::ng-deep .ant-pagination {
+    font-size: 14px; /* Adjust font size */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the pagination */
+    gap: 8px;
+  }
+  
+  /* Style individual page numbers */
+  ::ng-deep .ant-pagination-item {
+    border: 1px solid #4caf50; /* Green border */
+    background-color: white; /* White background */
+    color: #4caf50; /* Green text */
+    transition: all 0.3s ease;
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  /* Hover effect for page numbers */
+  ::ng-deep .ant-pagination-item:hover {
+    background-color: var(--primary-green-hover); /* Green background on hover */
+    color: white; /* White text on hover */
+    border-color: #388e3c; /* Darker green border */
+  }
+  
+  /* Active page style */
+  ::ng-deep .ant-pagination-item-active {
+    background-color: var(--primary-green); /* Green background */
+    color: white; /* White text */
+    border-color: #4caf50;
+    font-weight: bold;
+  }
+  
+  /* Style "Previous" and "Next" buttons */
+  ::ng-deep .ant-pagination-prev .ant-pagination-item-link,
+  ::ng-deep .ant-pagination-next .ant-pagination-item-link {
+    color: #4caf50; /* Green text */
+    border: 1px solid #4caf50;
+    background-color: white;
+    border-radius: 4px;
+  }
+  
+  /* Hover effect for "Previous" and "Next" */
+  ::ng-deep .ant-pagination-prev .ant-pagination-item-link:hover,
+  ::ng-deep .ant-pagination-next .ant-pagination-item-link:hover {
+    background-color: var(--primary-green-hover); /* Green background */
+    color: white; /* White text */
+  }
+  
+  /* Style "Prev 5" and "Next 5" buttons */
+  ::ng-deep .ant-pagination-jump-prev .ant-pagination-item-container,
+  ::ng-deep .ant-pagination-jump-next .ant-pagination-item-container {
+    color: #4caf50; /* Green text */
+  }
+  
+  /* Change ellipsis color (e.g., ... in jump buttons) */
+  ::ng-deep .ant-pagination-jump-prev .ant-pagination-item-ellipsis,
+  ::ng-deep .ant-pagination-jump-next .ant-pagination-item-ellipsis {
+    color: #4caf50; /* Green text */
+  }
+  
+  /* Style the "Previous" and "Next" buttons with additional styles */
+  ::ng-deep .ant-pagination-prev,
+  ::ng-deep .ant-pagination-next,
+  ::ng-deep .ant-pagination-jump-prev,
+  ::ng-deep .ant-pagination-jump-next,
+  ::ng-deep.ant-pagination-total-text {
+    background-color: white !important; /* Set background to white */
+    border: 1px solid #d9d9d9; /* Add a border for visibility */
+    border-radius: 4px; /* Rounded corners */
+    color: black !important; /* Set text/icon color to black */
+    padding: 0 10px;
+  }
+  
+  /* Add hover effects for all buttons */
+  ::ng-deep .ant-pagination-prev:hover,
+  ::ng-deep .ant-pagination-next:hover,
+  ::ng-deep .ant-pagination-jump-prev:hover,
+  ::ng-deep .ant-pagination-jump-next:hover {
+    background-color: #f5f5f5; /* Light gray background on hover */
+    border-color: #bfbfbf; /* Darker border on hover */
+  }
+  
+  /* Style the dropdown selector */
+  ::ng-deep .ant-pagination-options {
+    background-color: white !important;
+    border: 1px solid white;
+    border-radius: 4px;
+  
+  }
+  
+  ::ng-deep .ant-pagination-options .ant-select-selector {
+    background-color: white !important;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    color: black !important;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style the dropdown menu */
+  ::ng-deep .ant-pagination-options .ant-select-dropdown {
+    background-color: white !important;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+  }
+  
+  /* Add hover effect for dropdown */
+  ::ng-deep .ant-pagination-options .ant-select-selector:hover {
+    background-color: #f5f5f5;
+    border-color: #bfbfbf;
+  }
+  
+  /* Style individual dropdown items */
+  ::ng-deep .ant-select-item {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  ::ng-deep .ant-select-item:hover {
+    background-color: #f5f5f5 !important;
+    color: black !important;
+  }
+  
+  /* Style the selected dropdown item */
+  ::ng-deep .ant-select-item-option-selected {
+    background-color: #f0f0f0 !important;
+    font-weight: bold;
+  }
+  

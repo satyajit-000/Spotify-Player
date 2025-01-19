@@ -20,7 +20,17 @@ export class SharedDataService {
   private _allSongs:Song[] = ALL_SONGS;
   private _filteredText = signal<string>('');
   private _isSongPlaying = signal<boolean>(false);
-  private _currentPlayingPlaylist = signal<Playlist | null>(null);
+  private _currentPlayingPlaylist = signal<Playlist | null>(
+    (() => {
+      const currentPlayingPlaylist = sessionStorage.getItem('currentPlayingPlaylist');
+      try {
+        return currentPlayingPlaylist ? JSON.parse(currentPlayingPlaylist) as Playlist : null;
+      } catch (error) {
+        console.error('Error parsing currentSong from sessionStorage:', error);
+        return null;
+      }
+    })() as Playlist | null
+  );
 
   get currentSong(): WritableSignal<Song | null> {
     return this._currentSong
@@ -54,5 +64,6 @@ export class SharedDataService {
   }
   set currentPlayingPlaylist(playlist:Playlist | null) {
     this._currentPlayingPlaylist.set(playlist);
+    sessionStorage.setItem('currentPlayingPlaylist', JSON.stringify(playlist));
   }
 }

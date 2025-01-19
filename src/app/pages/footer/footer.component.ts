@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { Song } from '../../interfaces/songs';
 import { SharedDataService } from '../../services/shared-data.service';
 import { DEFAULT_THUMBNAIL } from '../../constants';
-import { getRandomIntegerInRange, initFavorite, retriveSource, scrollToCard } from '../../utils';
-import { Router } from '@angular/router';
+import { retriveSource, scrollToCard } from '../../utils';
+import _ from 'lodash';
 
 @Component({
   selector: 'app-footer',
@@ -18,8 +18,8 @@ export class FooterComponent implements AfterViewInit {
 
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>; // Reference to the audio element
 
-  allSongs: Song[] = [];
-  searchQuery: string = '';
+  allSongs!: Song[];
+  shuffledSongs!:Song[];
   currentSong: WritableSignal<Song | null> = signal(null);
   currentSongIndex = -1;
   songLoading = false;
@@ -29,25 +29,87 @@ export class FooterComponent implements AfterViewInit {
   isLooped: boolean = false;
   isSuffled: boolean = JSON.parse(localStorage.getItem('isSuffled') || 'false');
   progress: number = 0;
-  volume: number = JSON.parse(sessionStorage.getItem('volume') || '100');
+  volume: number = JSON.parse(sessionStorage.getItem('volume') ?? '100');
   favoriteList = JSON.parse(localStorage.getItem('favoriteList') || '[]');
   defaultThumbnail = DEFAULT_THUMBNAIL
-  songsVisited: Set<number> = new Set();
-  retriveSource = retriveSource
+  retriveSource = retriveSource;
   expanded = false;
   playBarHeight = '0';
+  currentPlayingPlaylistId: string | number = -1;
+  currentShufflePlaying = false;
+
   constructor(
     public sharedDataService: SharedDataService,
-    private _cdr: ChangeDetectorRef
+    private _cdr: ChangeDetectorRef,
   ) {
-    initFavorite(this.allSongs);
+    // Initial setup from shared service
+    this.initializePlaylist();
+
+    // Track playlist changes with effects
     effect(() => {
-      this.currentSong = this.sharedDataService?.currentSong;
-      this.currentSongIndex = this.allSongs.findIndex((song: Song) => this.currentSong()?.website === song.website);
-      this.allSongs = this.sharedDataService.currentPlayingPlaylist?.songs || [];
-    })
+      this.syncPlaylistData();
+    });
   }
 
+  // Initialize playlist based on shared service data
+  private initializePlaylist(): void {
+    this.currentPlayingPlaylistId = this.sharedDataService.currentPlayingPlaylist?.id ?? -1;
+    this.allSongs = this.sharedDataService.currentPlayingPlaylist?.songs ?? [];
+    this.shuffledSongs = this.isSuffled ? _.shuffle(this.allSongs) : [...this.allSongs];
+    this.setCurrentSongIndex();
+  }
+
+  // Synchronize playlist data when it changes
+  private syncPlaylistData(): void {
+    const playlistChanged = this.currentPlayingPlaylistId !== this.sharedDataService.currentPlayingPlaylist?.id || !this.allSongs.length;
+
+    if (playlistChanged) {
+      this.initializePlaylist();
+    }
+
+    this.currentSong = this.sharedDataService?.currentSong;
+    this.setCurrentSongIndex();
+
+    if (this.isSuffled && !this.currentShufflePlaying) {
+      this.shuffleCurrentSong();
+    }
+    
+    this.currentShufflePlaying = false;
+  }
+
+  // Set the index of the current song in the shuffled list
+  private setCurrentSongIndex(): void {
+    this.currentSongIndex = this.shuffledSongs.findIndex((song:Song) => this.currentSong()?.website === song.website);
+  }
+
+  // Move the current song to the start of the shuffled list
+  private shuffleCurrentSong(): void {
+    const [song] = this.shuffledSongs.splice(this.currentSongIndex, 1);
+    this.shuffledSongs.splice(0, 0, song);
+    this.currentSongIndex = 0;
+  }
+
+    // Update shuffled songs based on shuffle state
+    private updateShuffledSongs(): void {
+      if (this.isSuffled) {
+        this.shuffledSongs = _.shuffle(this.allSongs);
+        this.shuffleCurrentSong();
+      } else {
+        this.shuffledSongs = [...this.allSongs];
+        this.setCurrentSongIndex();
+      }
+    }
+  
+    // Handle the expanded state toggling logic
+    private handleExpandedState(): void {
+      if (!this.expanded) {
+        this.expanded = true;
+        setTimeout(() => {
+          this.expanded = false;
+        }, 1000);
+      }
+    }
+  
 
 
   @HostListener('window:keydown', ['$event'])
@@ -55,7 +117,9 @@ export class FooterComponent implements AfterViewInit {
     const target = event.target as HTMLElement;
 
     if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA' && target.tagName !== 'SELECT' && !target.isContentEditable) {
-      this.onKeyPress(event);
+      try {
+        this.onKeyPress(event);
+      } catch(error) { }
     }
   }
 
@@ -85,18 +149,15 @@ export class FooterComponent implements AfterViewInit {
     }
   }
 
+  // Toggle shuffle state and update playlist accordingly
   toggleSuffle(): void {
     this.isSuffled = !this.isSuffled;
-    if (!this.isSuffled) {
-      this.songsVisited.clear();
-    }
-    if (!this.expanded) {
-      this.expanded = true;
-      setTimeout(() => {
-        this.expanded = false;
+    this.updateShuffledSongs();
+    
+    // Handle expanded state toggle
+    this.handleExpandedState();
 
-      }, 1000);
-    }
+    // Persist shuffle state in localStorage
     localStorage.setItem('isSuffled', JSON.stringify(this.isSuffled));
   }
 
@@ -106,10 +167,10 @@ export class FooterComponent implements AfterViewInit {
 
   toggleFavorite(index: number): void {
     this.currentSong() && (this.currentSong.update(
-      (song:Song | null) => {
+      (song: Song | null) => {
         song && (song.isFavorite = !this.currentSong()?.isFavorite);
         return song
-      } ));
+      }));
     this.favoriteList[index] = !this.favoriteList[index]
     if (!this.expanded) {
       this.expanded = true;
@@ -144,54 +205,19 @@ export class FooterComponent implements AfterViewInit {
     }
   }
 
-  getUniqueNextIndex(): number {
-    if ([...this.songsVisited].length == this.allSongs.length) {
-      this.songsVisited.clear();
-      // this.audioPlayer.nativeElement.pause(); // Pause the audio
-      return -1;
-
-    }
-    const songVisitedIndex = [...this.songsVisited].findIndex(visitedIndex => visitedIndex == this.currentSongIndex);
-    if (songVisitedIndex != -1 && this.allSongs[songVisitedIndex + 1]) {
-      return songVisitedIndex + 1;
-    }
-    let uniqueIndex = getRandomIntegerInRange(this.allSongs.length);
-    while (this.songsVisited.has(uniqueIndex)) {
-      uniqueIndex = getRandomIntegerInRange(this.allSongs.length)
-    }
-    return uniqueIndex
-  }
-
-  getUniquePrevIndex(): number {
-    if ([...this.songsVisited].length < 2) {
-      return getRandomIntegerInRange(this.allSongs.length);
-    } else {
-      return [...this.songsVisited].at(-2) || getRandomIntegerInRange(this.allSongs.length);
-    }
-  }
-
   playPrevious(): void {
     sessionStorage.setItem('currentTime', '0');
-    let prevIndex;
-    if (this.isSuffled) {
-      prevIndex = this.getUniquePrevIndex();
-    } else {
-      prevIndex = (this.allSongs.length + this.currentSongIndex - 1) % this.allSongs.length;
-    }
-    // this.setCurrentIndex(prevIndex);
-    this.setCurrentSong(this.allSongs[prevIndex])
+    const prevIndex = (this.shuffledSongs.length + this.currentSongIndex - 1) % this.shuffledSongs.length;
+    this.setCurrentSong(this.shuffledSongs[prevIndex])
+    this.currentShufflePlaying = true;
   }
 
   playNext(): void {
 
     sessionStorage.setItem('currentTime', '0');
-    let nextIndex;
-    if (this.isSuffled) {
-      nextIndex = this.getUniqueNextIndex();
-    } else {
-      nextIndex = (this.currentSongIndex + 1) % this.allSongs.length;
-    }
-    this.setCurrentSong(this.allSongs[nextIndex])
+    const nextIndex = (this.currentSongIndex + 1) % this.shuffledSongs.length;
+    this.setCurrentSong(this.shuffledSongs[nextIndex]);
+    this.currentShufflePlaying = true;
   }
 
   onProgressChange(event: any): void {
@@ -314,10 +340,10 @@ export class FooterComponent implements AfterViewInit {
   get songName(): string | undefined {
     return this.currentSong()?.song_name;
   }
-  
+
   get isSongNameShort(): boolean {
     const name = this.songName;
     return name !== undefined && name.length <= 25;
   }
-  
+
 }
