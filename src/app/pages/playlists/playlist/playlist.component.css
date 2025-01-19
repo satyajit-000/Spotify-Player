@@ -66,14 +66,3 @@
     line-height: 1.2;
     vertical-align: middle;
   }
-  
-  
-::ng-deep.ant-pagination-total-text {
-    color: #fff !important;
-    font-size: 1rem;
-    margin-right: 1rem;
-  }
-
-  .float-right {
-    float: right;
-  }

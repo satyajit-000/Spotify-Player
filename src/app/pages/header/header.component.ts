@@ -1,7 +1,9 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SharedDataService } from '../../services/shared-data.service';
 import { RouterLink } from '@angular/router';
+import { initFavorite } from '../../utils';
+import { ALL_SONGS } from '../../constants';
 @Component({
   selector: 'app-header',
   imports: [FormsModule, RouterLink],
@@ -18,6 +20,7 @@ export class HeaderComponent implements OnInit{
 
   ngOnInit(): void {
     this.checkScreenSize();
+    initFavorite(ALL_SONGS);
   }
 
   private checkScreenSize() {

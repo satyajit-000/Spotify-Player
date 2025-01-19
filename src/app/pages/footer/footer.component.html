@@ -9,10 +9,7 @@
     <button class="close-btn" (click)="exitNowPlayingBar()" title="Close" *ngIf="isExpanded">
       <i class="fas fa-times-circle"></i>
     </button>
-    <!-- <button class="toggle-size" (click)="toggleExpand()">
-        <span class="material-symbols-rounded" [title]="expanded?'Collapse':'Expand'">
-        {{expanded ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}}
-        </span></button> -->
+
     <div class="now-playing">
       <!-- Song Info -->
       <div class="song-info">
@@ -90,12 +87,10 @@
       </div>
       <!-- Volume Control -->
       <div class="volume-control">
-        <!-- @if (isExpanded) { -->
         <button (click)="toggleMute()" style="min-width: 52px; display: flex;">
           <i class="fas pointer" [ngClass]="{'fa-volume-mute':muted || !volume, 'fa-volume-up':!muted && volume}"></i>
         </button>
         <input type="range" min="0" max="100" [(ngModel)]="volume" (change)="onVolumeChange()" />
-        <!-- } -->
       </div>
     </div>
   </div>

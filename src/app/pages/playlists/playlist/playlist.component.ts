@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, input, OnDestroy, OnInit, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, input, OnInit, signal, WritableSignal } from '@angular/core';
 import { SharedDataService } from '../../../services/shared-data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SongListComponent } from '../../song-list/song-list.component';
@@ -11,18 +11,23 @@ import { NzPaginationModule } from 'ng-zorro-antd/pagination';
   selector: 'app-playlist',
   imports: [SongListComponent, NzPaginationModule],
   templateUrl: './playlist.component.html',
-  styleUrl: './playlist.component.css',
+  styleUrls: ['./playlist.component.css', '../../../../css/pagination.css'],
   changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class PlaylistComponent implements OnInit {
 
+  private playListId?: number;
+  private filterCache = new Map<string, Song[]>();
+
   inputPlaylist = input<Playlist>();
-  playListId?: number;
   playList: Playlist = {} as Playlist;
   filteredSongs: WritableSignal<Song[]> = signal<Song[]>([]);
   currentIndex = -1;
   currentSong!: WritableSignal<Song | null | undefined>;
 
+  pageSize = 20;
+  pageIndex = 1;
+  currentPageSongs: WritableSignal<Song[]> = signal([])
 
   constructor(
     private _sharedDataService: SharedDataService,
@@ -34,7 +39,7 @@ export class PlaylistComponent implements OnInit {
     effect(() => {
       this.filterSongs(this._sharedDataService.filteredText);
       this.currentSong = this._sharedDataService.currentSong;
-      this.currentIndex = this.playList.songs?.findIndex((song: Song) => this.currentSong()?.website === song.website);      
+      this.currentIndex = this.playList.songs?.findIndex((song: Song) => this.currentSong()?.website === song.website);
     })
   }
 
@@ -46,6 +51,7 @@ export class PlaylistComponent implements OnInit {
       this.playList = PLAYLISTS.find((playlist: Playlist) => this.playListId === playlist.id) || {} as Playlist;
     }
     this.filteredSongs.set(this.playList.songs);
+    this.onPageSizeOrIndexChange();
 
   }
 
@@ -53,20 +59,42 @@ export class PlaylistComponent implements OnInit {
     this._router.navigate(['../'], { relativeTo: this._route });
   }
 
-  filterSongs(text: string) {
-    if (!text.trim()) {
-      this.filteredSongs.set(this.playList.songs);
-      // scrollToCard(this.currentIndex + '');
-    } else if (text.trim().length >= 2) {
-      setTimeout(() => {
-        this.filteredSongs.set(this.playList.songs.filter((song: Song) => song.song_name.toLowerCase().trim().includes(text.trim().toLowerCase())))
-      }, 100);
-    }
+  private debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
+    let timer: any;
+    return ((...args: any[]) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => func(...args), delay);
+    }) as T;
   }
+
+  filterSongs = this.debounce((text: string) => {
+    const trimmedText = text.trim().toLowerCase();
+    if (trimmedText.length < 2) {
+      this.filteredSongs.set(this.playList.songs);
+    } else {
+      if (this.filterCache.has(trimmedText)) {
+        this.filteredSongs.set(this.filterCache.get(trimmedText) || []);
+      } else {
+        const filtered = this.playList.songs.filter(song =>
+          song.song_name.toLowerCase().includes(trimmedText)
+        );
+        this.filterCache.set(trimmedText, filtered);
+        this.filteredSongs.set(filtered);
+      }
+    }
+    this.onPageSizeOrIndexChange();
+  }, 300);
 
   onClickSong(currSong: Song) {
     this._sharedDataService.currentPlayingPlaylist = this.playList;
     this._sharedDataService.currentSong = currSong;
+  }
+
+
+  onPageSizeOrIndexChange(): void {
+    const start = (this.pageIndex - 1) * this.pageSize;
+    const end = Math.min(start + this.pageSize, this.filteredSongs().length);
+    this.currentPageSongs.set(this.filteredSongs().slice(start, end));
   }
 
 }

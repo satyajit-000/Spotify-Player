@@ -1,31 +1,60 @@
 @if(!inputPlaylist()){
-<button (click)="backToPlaylist()" class="back-btn mt-2" [title]="'Back to playlist'">
-    <i class="fa-solid fa-chevron-left"></i>
-    <span>
-        Back to playlist
-    </span>
-</button>
-<!-- <nz-pagination [nzPageIndex]="1" [nzTotal]="playList.songs.length" [nzPageSize]="20" [nzShowTotal]="totalTemplate"></nz-pagination> -->
-<br />
-<!-- <div class="float-right">
-
-    <nz-pagination [nzPageIndex]="1" [nzTotal]="playList.songs.length" [nzPageSize]="20" [nzShowTotal]="rangeTemplate" [nzShowSizeChanger]="true" [nzPageSizeOptions]="[5,10,20,50,100]"></nz-pagination>
-    <ng-template #totalTemplate let-total>Total {{ total }} items</ng-template>
-    <ng-template #rangeTemplate let-range="range" let-total>
-        {{ range[0] }}-{{ range[1] }} of {{ total }} items
-    </ng-template>
-</div> -->
+    <div class="row">
+        <div class="col-md-3 p-3 pb-0">
+            <button (click)="backToPlaylist()" class="back-btn" [title]="'Back to playlist'">
+                <i class="fa-solid fa-chevron-left"></i>
+                <span>
+                    Back to playlist
+                </span>
+            </button>
+        </div>
+        <div class="col-md-9 p-3">
+            <div class="float-right">
+                <nz-pagination class="m-0 p-0"
+                    [(nzPageIndex)]="pageIndex" 
+                    [nzTotal]="filteredSongs().length" 
+                    [(nzPageSize)]="pageSize" 
+                    [nzResponsive]="true" 
+                    [nzShowTotal]="rangeTemplate" 
+                    [nzShowSizeChanger]="true" 
+                    [nzItemRender]="itemRenderTemplate"
+                    [nzPageSizeOptions]="[5,10,20,30,50,70,100]" 
+                    (nzPageSizeChange)="onPageSizeOrIndexChange()"
+                    (nzPageIndexChange)="onPageSizeOrIndexChange()"/>
+                <ng-template #rangeTemplate let-range="range" let-total>
+                    {{ range[0] }}-{{ range[1] }} of {{ total }} items
+                </ng-template>
+                <ng-template #itemRenderTemplate let-type let-page="page">
+                    @switch (type) {
+                        @case ('prev') {
+                            Previous
+                        }
+                        @case ('next') {
+                            Next
+                        }
+                        @case ('page') {
+                            {{page}}
+                        }
+                        @case ('prev_5') {
+                            «
+                        }
+                        @case ('next_5') {
+                            »
+                        }
+                    }
+                </ng-template>
+            </div>
+        </div>
+    </div>
 }
 
 <section class="section">
-    <!-- <h3>{{playlistTitle()}} (<span class="song-count">{{ songs() && songs().length }}</span>)</h3> -->
     <h3 class="playlist-title">
         {{ playList.name }}
         <span class="song-count">
             <span class="song-number">{{ playList.songs.length }}</span> Songs
         </span>
     </h3>
-
     <app-song-list [playlistTitle]="playList.name" [currentIndex]="currentIndex" [currentSong]="currentSong()"
-        [songs]="filteredSongs()" (songClicked)="onClickSong($event)" />
+        [songs]="currentPageSongs()" (songClicked)="onClickSong($event)" />
 </section>

@@ -1,6 +1,6 @@
 import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter, RouterModule } from '@angular/router';
-
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { routes } from './app.routes';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { IconDefinition } from '@ant-design/icons-angular';
@@ -21,6 +21,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     importProvidersFrom(RouterModule.forRoot(routes)),
     provideNzIcons(icons),
-    provideNzI18n(en_US)
+    provideNzI18n(en_US),
+    provideAnimations()
   ]
 };
