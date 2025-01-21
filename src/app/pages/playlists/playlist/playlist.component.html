@@ -1,6 +1,6 @@
 @if(!inputPlaylist()){
     <div class="row">
-        <div class="col-md-3 p-3 pb-0">
+        <div class="p-3 pb-0" [ngClass]="{'col-md-3': !isSimple(), 'col-md-6': isSimple()}">
             <button (click)="backToPlaylist()" class="back-btn" [title]="'Back to playlist'">
                 <i class="fa-solid fa-chevron-left"></i>
                 <span>
@@ -8,8 +8,8 @@
                 </span>
             </button>
         </div>
-        <div class="col-md-9 p-3">
-            <div class="float-right">
+        <div class="p-3" [ngClass]="{'col-md-9': !isSimple(), 'col-md-6': isSimple()}">
+            <div [ngClass]="{'float-right': !isSimple(), 'flex-start': isSimple()}">
                 <nz-pagination class="m-0 p-0"
                     [(nzPageIndex)]="pageIndex" 
                     [nzTotal]="filteredSongs().length" 
@@ -17,6 +17,7 @@
                     [nzResponsive]="true" 
                     [nzShowTotal]="rangeTemplate" 
                     [nzShowSizeChanger]="true" 
+                    [nzSimple]="isSimple()"
                     [nzItemRender]="itemRenderTemplate"
                     [nzPageSizeOptions]="[5,10,20,30,50,70,100]" 
                     (nzPageSizeChange)="onPageSizeOrIndexChange()"

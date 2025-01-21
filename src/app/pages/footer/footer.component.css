@@ -11,7 +11,7 @@ footer {
   align-items: flex-end;
   transition: background-color .2s ease-in-out;
   transition: height .2s ease-in-out, background-color .3s ease-in-out;
-
+  opacity: 1;
 }
 
 footer:hover {
@@ -138,7 +138,7 @@ footer:hover {
 
 
 .song-info img {
-  transition:  height .2s ease-in-out,width .5s ease-in-out;
+  transition:  transform .3s ease-in-out;
 
   /* transition: width .2s ease-in-out; */
   
@@ -148,10 +148,8 @@ footer:hover {
   height: 3.2rem;
   border-radius: 5px;
 }
-.small-thumbnail {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 5px;
+.thumbnail.small {
+  transform: scale(.8);
 }
 
 .details {
@@ -289,18 +287,29 @@ footer:hover {
     opacity: 0;
     height: 0; /* Start with 0 height */
   }
-  /* 50% {
-    opacity: 0.4;
-    height: 90px;
-  } */
-  /* 70% {
-    opacity: 0.7;
-    height: 95px;;
-  } */
+
   100% {
     opacity: 0.8;
     height: fit-content; /* Final height */
   }
+}
+
+@keyframes growUpFullOpacity {
+  0% {
+    opacity: 0.5;
+    height: 0; /* Start with 0 height */
+  }
+
+  50% {
+    opacity: 0.9;
+    height: 30%;
+  }
+
+  100% {
+    opacity: 1;
+    height: fit-content; /* Final height */
+  }
+  
 }
 
 @keyframes growUpSmall {
@@ -317,3 +326,120 @@ footer:hover {
     height: fit-content; /* Final height */
   }
 }
+
+.list {
+  position: relative;
+}
+
+.shuffledList {
+  color: #fff;
+  position: fixed; /* Fixed to the screen */
+  bottom: 7.5rem; /* Adjust this value to place it above the footer */
+  left: 70vw;
+  background-color: #000 !important; /* Solid background color */
+  transform: translateX(-50%);
+  max-height: 13rem;
+  overflow-y: auto;
+  font-size: small;
+  text-align: left;
+  max-width: 20rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow remains subtle */
+  /* z-index: 1000; */
+  animation: growUpFullOpacity .5s ease-in-out forwards; /* Apply animation */
+}
+
+.shuffledList * {
+  opacity: 1 !important; /* Ensure no inherited opacity */
+}
+
+
+.shuffledList span {
+  /* margin: 1rem 0.5rem; */
+  display: inline-block;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden;    /* Hides overflowed text */
+  text-overflow: ellipsis; /* Adds the "..." to indicate truncation */
+  max-width: 80%;     /* Ensure it doesn't exceed its parent's width */
+}
+
+.song {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 0.5rem 1rem; */
+  padding: 10px;
+  border-bottom: solid 1px #ccc;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: var(--primary-dark);
+  font-size: 14px;
+  opacity: 1 !important;
+  cursor: pointer;
+}
+
+.song i {
+  cursor: move;
+}
+
+.song:hover {
+  background-color: var(--background-light-dark);
+}
+
+.cdk-drag-preview {
+  border: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: rgb(105, 105, 105);
+  /* color: #000; */
+  box-shadow: 0 5px 5px -3px rgba(158,158,158 0.2),
+              0 8px 10px 1px rgba(158,158,158 0.14),
+              0 3px 14px 2px rgba(158,158,158 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.song:last-child {
+  border: none;
+}
+
+.song.cdk-drop-list-dragging .song:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+/* Fix in later release
+@media (max-width:750px) {
+  .progress-bar {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+  }
+  .progress-bar:hover {
+    height: initial;
+  }
+  .now-playing-bar {
+    position: relative;
+  }
+  .now-playing {
+    grid-template-rows: auto auto;
+  grid-template-columns: none;
+  }
+  .song-info {
+    grid-row: 3;
+    grid-column: none;
+    max-width: none;
+  }
+  .audio-info{
+    grid-row: 2;
+    grid-column: none;
+  }
+} */
