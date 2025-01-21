@@ -16,6 +16,8 @@
     /* A slightly lighter green for hover effects */
 
     --background-dark:#121212;
+
+    --background-light-dark: #383838;
 }
 
 body {

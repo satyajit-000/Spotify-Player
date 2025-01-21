@@ -114,21 +114,6 @@
 
 }
 
-.options-btn {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.2rem;
-  /* Smaller font size */
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  /* Required for the pseudo-element */
-  transition: color 0.3s ease;
-  /* Smooth color transition */
-}
-
 .options-btn::before {
   content: '';
   /* Empty content for the circle */
@@ -208,7 +193,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 1;
 }
 
 /* Optional: hover effect for the icon */
@@ -217,4 +202,76 @@
   /* Change color on hover */
   background-color: (--primary-green-hover);
   /* Highlight the background */
+}
+
+@media (max-width: 750px) {
+  .details {
+    text-align: left;
+    width: 100%;
+    margin-left: 3px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .song-list {
+    gap: 0;
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    max-height: none;
+}
+
+  .song-card {
+    margin: 0;
+
+    min-width: 100%;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+
+  }
+  .song-card:hover {
+    transform: scale(1.01);
+  }
+
+  .card-body {
+    display: flex;
+    gap: 2px;
+    padding-bottom: 0;
+  }
+
+  .card-body img {
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  .artist {
+    font-size: small;
+  }
+
+  p.songs, p.artist {
+    display: inline-block;
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden;    /* Hides overflowed text */
+    text-overflow: ellipsis; /* Adds the "..." to indicate truncation */
+    max-width: 75%;     /* Ensure it doesn't exceed its parent's width */
+  }
+
+  p.songs {
+    margin: 0;
+    text-align: center;
+  }
+
+  .options-container {
+    top: 1.5rem;
+  }
+
+  .favorite-icon {
+    top: 0;
+    right: -70%;
+  }
+
 }

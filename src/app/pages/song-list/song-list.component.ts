@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, HostListener, input, output } from '@angular/core';
 import { Song } from '../../interfaces/songs';
 import { CommonModule } from '@angular/common';
 import { DEFAULT_THUMBNAIL } from '../../constants';
@@ -25,8 +25,18 @@ export class SongListComponent {
   retriveSource = retriveSource
   clickTimeout: any; // Timer reference for click event
   favoriteList = JSON.parse(localStorage.getItem('favoriteList') || '[]');
+  smallScreen = window.innerWidth <= 750;
 
   constructor(public sharedDataService: SharedDataService) {  }
+
+  private checkScreenSize() {
+    this.smallScreen = window.innerWidth <= 750;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.checkScreenSize();
+  }
 
   onSingleClick(event: MouseEvent, song: Song): void {
     // Set a timer to handle click delay

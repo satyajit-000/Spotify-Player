@@ -6,10 +6,11 @@ import { SharedDataService } from '../../services/shared-data.service';
 import { DEFAULT_THUMBNAIL } from '../../constants';
 import { retriveSource, scrollToCard } from '../../utils';
 import _ from 'lodash';
+import {CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, CdkDropList, CdkDrag],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -37,6 +38,8 @@ export class FooterComponent implements AfterViewInit {
   playBarHeight = '0';
   currentPlayingPlaylistId: string | number = -1;
   currentShufflePlaying = false;
+
+  isSuffleListOpen = false;
 
   constructor(
     public sharedDataService: SharedDataService,
@@ -84,32 +87,33 @@ export class FooterComponent implements AfterViewInit {
 
   // Move the current song to the start of the shuffled list
   private shuffleCurrentSong(): void {
+    this.setCurrentSongIndex();
     const [song] = this.shuffledSongs.splice(this.currentSongIndex, 1);
     this.shuffledSongs.splice(0, 0, song);
     this.currentSongIndex = 0;
   }
 
-    // Update shuffled songs based on shuffle state
-    private updateShuffledSongs(): void {
-      if (this.isSuffled) {
-        this.shuffledSongs = _.shuffle(this.allSongs);
-        this.shuffleCurrentSong();
-      } else {
-        this.shuffledSongs = [...this.allSongs];
-        this.setCurrentSongIndex();
-      }
+  // Update shuffled songs based on shuffle state
+  private updateShuffledSongs(): void {
+    if (this.isSuffled) {
+      this.shuffledSongs = _.shuffle(this.allSongs);
+      this.shuffleCurrentSong();
+    } else {
+      this.shuffledSongs = [...this.allSongs];
+      this.setCurrentSongIndex();
     }
-  
-    // Handle the expanded state toggling logic
-    private handleExpandedState(): void {
-      if (!this.expanded) {
-        this.expanded = true;
-        setTimeout(() => {
-          this.expanded = false;
-        }, 1000);
-      }
+  }
+
+  // Handle the expanded state toggling logic
+  private handleExpandedState(): void {
+    if (!this.expanded) {
+      this.expanded = true;
+      setTimeout(() => {
+        this.expanded = false;
+      }, 1000);
     }
-  
+  }
+
 
 
   @HostListener('window:keydown', ['$event'])
@@ -344,6 +348,11 @@ export class FooterComponent implements AfterViewInit {
   get isSongNameShort(): boolean {
     const name = this.songName;
     return name !== undefined && name.length <= 25;
+  }
+
+  drop(event: CdkDragDrop<unknown>) {
+    moveItemInArray(this.shuffledSongs, event.previousIndex, event.currentIndex);
+    this.setCurrentSongIndex();
   }
 
 }

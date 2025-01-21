@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, input, OnInit, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, input, OnInit, Signal, signal, WritableSignal } from '@angular/core';
 import { SharedDataService } from '../../../services/shared-data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SongListComponent } from '../../song-list/song-list.component';
@@ -6,10 +6,11 @@ import { Playlist } from '../../../models/playlists';
 import { PLAYLISTS } from '../../../constants';
 import { Song } from '../../../interfaces/songs';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-playlist',
-  imports: [SongListComponent, NzPaginationModule],
+  imports: [SongListComponent, NzPaginationModule, CommonModule],
   templateUrl: './playlist.component.html',
   styleUrls: ['./playlist.component.css', '../../../../css/pagination.css'],
   changeDetection:ChangeDetectionStrategy.OnPush
@@ -25,9 +26,18 @@ export class PlaylistComponent implements OnInit {
   currentIndex = -1;
   currentSong!: WritableSignal<Song | null | undefined>;
 
-  pageSize = 20;
+  pageSize = 30;
   pageIndex = 1;
   currentPageSongs: WritableSignal<Song[]> = signal([])
+
+  customPageSizeOptions = [5, 10, 30, 50, 100]; // Page size values
+  customPageSizeLabels = {
+    5: 'Five Items',
+    10: 'Ten Items',
+    30: 'Thirty Items',
+    50: 'Fifty Items',
+    100: 'Hundred Items',
+  };
 
   constructor(
     private _sharedDataService: SharedDataService,
@@ -95,6 +105,10 @@ export class PlaylistComponent implements OnInit {
     const start = (this.pageIndex - 1) * this.pageSize;
     const end = Math.min(start + this.pageSize, this.filteredSongs().length);
     this.currentPageSongs.set(this.filteredSongs().slice(start, end));
+  }
+
+  get isSimple():Signal<boolean> {
+    return signal(window.innerWidth <= 1195);
   }
 
 }

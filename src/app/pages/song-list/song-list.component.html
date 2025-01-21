@@ -11,13 +11,15 @@
       </div>
       }
       <div class="details">
-        <p class="song-countsong_name" [ngClass]="{ active: currentIndex() === $index }">{{ song.song_name }}</p>
-        <p class="artist">{{ song.singers }}</p>
-        <a class="source" [href]="song.website" target="_blank"
-          (click)="$event.stopPropagation()">{{retriveSource(song.source)}}</a>
-        <br>
-        @if (currentSong()?.website === song.website) {
-        <img [src]="sharedDataService.isSongPlaying ? playingImage:pauseImage" alt="" width="20" />
+        <p class="songs" [ngClass]="{ active: currentIndex() === $index }">{{ song.song_name }}</p><br>
+        <p class="artist">{{ song.singers }}</p><br>
+        @if (!smallScreen) {
+          <a class="source" [href]="song.website" target="_blank"
+            (click)="$event.stopPropagation()">{{retriveSource(song.source)}}</a>
+          <br>
+          @if (currentSong()?.website === song.website) {
+          <img [src]="sharedDataService.isSongPlaying ? playingImage:pauseImage" alt="" width="20" />
+          }
         }
 
 

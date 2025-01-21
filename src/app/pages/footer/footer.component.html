@@ -1,8 +1,7 @@
-<footer (mouseover)="expanded=true" (mouseenter)="expanded=true" (mouseleave)="!audioPlayer.nativeElement.paused? expanded=false:''">
-
+<footer (mouseover)="expanded=true" (mouseenter)="expanded=true" (mouseleave)="!audioPlayer.nativeElement.paused && !isSuffleListOpen? expanded=false:''">
   @if (currentSong()) {
   <!-- Audio Element -->
-  <audio #audioPlayer [src]="currentSong()?.song_url" [muted]="muted" [volume]="volume/100" [loop]="isLooped" (play)="expanded=false;sharedDataService.isSongPlaying=true;"
+  <audio #audioPlayer [src]="currentSong()?.song_url" [muted]="muted" [volume]="volume/100" [loop]="isLooped" (play)="expanded=false;sharedDataService.isSongPlaying=true;isSuffleListOpen=false;"
     [autoplay]="true" (loadstart)="onLoadStart()" (loadeddata)="onDataLoad()" (timeupdate)="updateProgress()" (pause)="sharedDataService.isSongPlaying=false"
     (ended)="onSongEnd()" (playing)="sharedDataService.isSongPlaying=true" (ended)="playNext()"></audio>
   <div class="now-playing-bar">
@@ -10,11 +9,11 @@
       <i class="fas fa-times-circle"></i>
     </button>
 
-    <div class="now-playing">
+    <div class="now-playing" [ngClass]="{'flex-end': isSuffleListOpen, 'align-items-center': !isSuffleListOpen}">
       <!-- Song Info -->
       <div class="song-info">
-        <img [src]="currentSong()?.thumbnail || defaultThumbnail" alt="Song Thumbnail"
-          [ngClass]="{thumbnail:isExpanded, 'small-thumbnail':!isExpanded}" />
+        <img [src]="currentSong()?.thumbnail || defaultThumbnail" alt="Song Thumbnail" class="thumbnail"
+          [ngClass]="{'small':!isExpanded}" />
           @if (isExpanded) {
             <div class="details">
               @if (isSongNameShort) {
@@ -67,6 +66,33 @@
           <button (click)="toggleLoop()">
             <i class="fas fa-repeat" [ngClass]="{active:isLooped}"></i>
           </button>
+          <button class="list" (click)="isSuffleListOpen = !isSuffleListOpen;" (blur)="isSuffleListOpen=false">
+            <i class="fa-solid fa-list" [ngClass]="{active:isSuffleListOpen}"></i>
+            @if (isSuffleListOpen) {
+              <div
+                cdkDropList
+                class="shuffledList"
+                (cdkDropListDropped)="drop($event)">
+                @for (song of shuffledSongs; track $index) {
+                  <div
+                    class="song"
+                    [cdkDragData]="song"
+                    cdkDrag
+                    (click)="$event.stopPropagation();this.currentShufflePlaying = true;setCurrentSong(song);">
+                    <span [class.active]="currentSongIndex===$index">{{song.song_name}}</span>
+                    <i class="fa-solid fa-bars" cdkDragHandle></i>
+                  </div>
+                }
+              </div>
+            }
+            <!-- <div class="shuffledList" *ngIf="isSuffleListOpen">
+                @for (song of shuffledSongs; track $index) {
+                  <span>{{ song.song_name }}</span>
+                  <br>
+                }
+            </div> -->
+          </button>
+          
         </div>
         }
         <!-- Progress Bar -->
