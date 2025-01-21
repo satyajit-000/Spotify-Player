@@ -6387,8 +6387,403 @@
     "published_on": null,
     "duration": null,
     "language": "Hindi"
+  },
+  {
+    "song_name": "First Time Gote Jhia (Laila O Laila)",
+    "song_url": "https://odiafresh.com/files/download/id/8144/",
+    "thumbnail": "https://odiafresh.com/image/mp3.svg",
+    "singers": [
+      "Human Sagar & Nivedita"
+    ],
+    "lyricist": null,
+    "source": "https://odiafresh.com/",
+    "website": "https://odiafresh.com/filedownload/989/8144/First-Time-Gote-Jhia-(Laila-O-Laila).html",
+    "music_composer": null,
+    "published_on": null,
+    "duration": null,
+    "language": "Odia"
+  },
+  {
+    "song_name": "Pehle Kabhi Na Mera Haal",
+    "song_url": "https://pagalnew.com/320-download/11035",
+    "thumbnail": "https://pagalnew.com/coverimages/Pehle-Kabhi-Na-Mera-Haal-Baghban-500-500.jpg",
+    "singers": [
+      "Udit Narayan",
+      " Alka Yagnik"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/pehle-kabhi-na-mera-haal-baghban.html",
+    "music_composer": "Aadesh Shrivastava",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Rab Kare",
+    "song_url": "https://pagalnew.com/320-download/10749",
+    "thumbnail": "https://pagalnew.com/coverimages/Rab-Kare-Mujhse-Shaadi-Karogi-500-500.jpg",
+    "singers": [
+      "Udit Narayan",
+      " Alka Yagnik"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/rab-kare1-mujhse-shaadi-karogi.html",
+    "music_composer": "Sajid-Wajid",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Aankhen Bandh Karke",
+    "song_url": "https://pagalnew.com/320-download/10324",
+    "thumbnail": "https://pagalnew.com/coverimages/Aankhen-Bandh-Karke-Aitraaz-500-500.jpg",
+    "singers": [
+      "Udit Narayan",
+      " Alka Yagnik"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/aankhen-bandh-karke1-aitraaz.html",
+    "music_composer": "Himesh Reshammiya",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Dil Ke Badle Sanam",
+    "song_url": "https://koshalworld.com/files/download/id/12416",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/c/510_4.jpg",
+    "singers": [
+      "Alka Yagnik",
+      "Udit Narayan"
+    ],
+    "lyricist": "Sameer",
+    "source": "https://koshalworld.com/",
+    "website": "https://koshalworld.com/download/12416/dil-ke-badle-sanam.html",
+    "music_composer": "Himesh Reshammiya",
+    "published_on": "09 Dec, 2021",
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Kyaa Dil Ne Kahaa",
+    "song_url": "https://pagalnew.com/320-download/11973",
+    "thumbnail": "https://pagalnew.com/coverimages/Kyaa-Dil-Ne-Kahaa-Alka-Yagnik-500-500.jpg",
+    "singers": [
+      "Alka Yagnik",
+      " Himesh Reshammiya",
+      " Udit Narayan"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/kyaa-dil-ne-kahaa-alka-yagnik.html",
+    "music_composer": "Himesh Reshammiya",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Hum Pyaar Hai Tumhare",
+    "song_url": "https://pagalnew.com/320-download/11786",
+    "thumbnail": "https://pagalnew.com/coverimages/hum-pyaar-hai-tumhare-haan-maine-bhi-pyaar-kiya-500-500.jpg",
+    "singers": [
+      "Kumar Sanu",
+      " Alka Yagnik"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/hum-pyaar-hai-tumhare-ks-haan-maine-bhi-pyaar-kiya.html",
+    "music_composer": "Nadeem-Shravan",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Jo Bhi Kasmein",
+    "song_url": "https://pagalnew.com/320-download/12262",
+    "thumbnail": "https://pagalnew.com/coverimages/Jo-Bhi-Kasmein-Raaz-500-500.jpg",
+    "singers": [
+      "Alka Yagnik",
+      " Udit Narayan"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/jo-bhi-kasmein1-raaz.html",
+    "music_composer": "Nadeem-Shravan",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Wada Raha",
+    "song_url": "https://pagalnew.com/320-download/10639",
+    "thumbnail": "https://pagalnew.com/coverimages/Wada-Raha-Khakee-500-500.jpg",
+    "singers": [
+      "Arnab Chakraborty",
+      " Shreya Ghoshal"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/wada-raha-khakee.html",
+    "music_composer": "Ram Sampath",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Sham Bhi Khub Hai",
+    "song_url": "https://pagalnew.com/320-download/11931",
+    "thumbnail": "https://pagalnew.com/coverimages/Sham-Bhi-Khub-Hai-Karz-500-500.jpg",
+    "singers": [
+      "Udit Narayan",
+      " Alka Yagnik",
+      " Kumar Sanu"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/sham-bhi-khub-hai1-karz.html",
+    "music_composer": "Sanjeev, Darshan",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Hamein Tumse Hua Pyar",
+    "song_url": "https://pagalnew.com/320-download/10419",
+    "thumbnail": "https://pagalnew.com/coverimages/Hamein-Tumse-Hua-Pyar-Ab-Tumhare-Hawale-Watan-Sathiyo-500-500.jpg",
+    "singers": [
+      "Udit Narayan",
+      " Alka Yagnik"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/hamein-tumse-hua-pyar1-ab-tumhare-hawale-watan-sathiyo.html",
+    "music_composer": "Anu Malik",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Tune Zindagi Mein Male Version",
+    "song_url": "https://pagalnew.com/320-download/11918",
+    "thumbnail": "https://pagalnew.com/coverimages/Tune-Zindagi-Mein-Male-Version-Humraaz-500-500.jpg",
+    "singers": [
+      "Udit Narayan"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/tune-zindagi-mein-male-version-humraaz.html",
+    "music_composer": "Himesh Reshammiya",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Aankhon Se Tune Kya Keh Diya",
+    "song_url": "https://pagalnew.com/320-download/14198",
+    "thumbnail": "https://pagalnew.com/coverimages/Aankhon-Se-Tune-Kya-Keh-Diya-Ghulam-500-500.jpg",
+    "singers": [
+      "Kumar Sanu",
+      " Alka Yagnik"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/aankhon-se-tune-kya-keh-diya1-ghulam.html",
+    "music_composer": "Jatin-Lalit",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Hamne Tumko Dil Ye De Diya",
+    "song_url": "https://pagalnew.com/320-download/11755",
+    "thumbnail": "https://pagalnew.com/coverimages/hamne-tumko-dil-ye-de-diya-gunaah-500-500.jpg",
+    "singers": [
+      "Anand Raaj Anand",
+      " Alka Yagnik",
+      " Babul Supriyo"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/hamne-tumko-dil-ye-de-diya-gunaah.html",
+    "music_composer": "Anand Raaj Anand",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Hum Tum",
+    "song_url": "https://pagalnew.com/320-download/12168",
+    "thumbnail": "https://pagalnew.com/coverimages/Hum-Tum-Babul-Supriyo-500-500.jpg",
+    "singers": [
+      "Babul Supriyo",
+      " Alka Yagnik"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/hum-tum-babul-supriyo.html",
+    "music_composer": "Jatin-Lalit",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Teri Mohabbat Ne Dil",
+    "song_url": "https://pagalnew.com/320-download/17191",
+    "thumbnail": "https://pagalnew.com/coverimages/Teri-Mohabbat-Ne-Dil-Rang-500-500.jpg",
+    "singers": [
+      "Alka Yagnik",
+      " Kumar Sanu"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/teri-mohabbat-ne-dil-rang.html",
+    "music_composer": "Nadeem-Shravan",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Kisi Din Banoongi Main",
+    "song_url": "https://pagalnew.com/320-download/16038",
+    "thumbnail": "https://pagalnew.com/coverimages/kisi-din-banoongi-main-raja-500-500.jpg",
+    "singers": [
+      "Alka Yagnik",
+      " Udit Narayan"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/kisi-din-banoongi1-main-raja-1995.html",
+    "music_composer": "Nadeem-Shravan",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Sochenge Tumhe Pyar",
+    "song_url": "https://pagalnew.com/320-download/17447",
+    "thumbnail": "https://pagalnew.com/coverimages/Sochenge-Tumhe-Pyar-Deewana-500-500.jpg",
+    "singers": [
+      "Kumar Sanu"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/sochenge-tumhe-pyar-deewana.html",
+    "music_composer": "Nadeem-Shravan, Shravan",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Mere Mehboob",
+    "song_url": "https://pagalnew.com/320-download/48979",
+    "thumbnail": "https://pagalnew.com/coverimages/mere-mehboob-vicky-vidya-ka-woh-wala-video-500-500.jpg",
+    "singers": [
+      "Shilpa Rao",
+      " Sachet Tandon"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/mere-mehboob-vicky-vidya-ka-woh-wala-video.html",
+    "music_composer": "Sachin-Jigar",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Mere Haath Mein",
+    "song_url": "https://pagalnew.com/320-download/9651",
+    "thumbnail": "https://pagalnew.com/coverimages/Mere-Haath-Mein-Fanaa-500-500.jpg",
+    "singers": [
+      "Sunidhi Chauhan",
+      " Sonu Nigam",
+      " Jatin-Lalit",
+      " Prasoon Joshi"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/mere-haath-mein-fanaa.html",
+    "music_composer": "Jatin-Lalit",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Jo Haal Dil Ka",
+    "song_url": "https://pagalnew.com/320-download/13835",
+    "thumbnail": "https://pagalnew.com/coverimages/Jo-Haal-Dil-Ka-Sarfarosh-500-500.jpg",
+    "singers": [
+      "Kumar Sanu",
+      " Alka Yagnik"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/jo-haal-dil-ka1-sarfarosh.html",
+    "music_composer": "Jatin-Lalit",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Aap Ka Aana Dil Dhadkana",
+    "song_url": "https://pagalnew.com/320-download/13380",
+    "thumbnail": "https://pagalnew.com/coverimages/Aap-Ka-Aana-Dil-Dhadkana-Kurukshetra-500-500.jpg",
+    "singers": [
+      "Kumar Sanu",
+      " Alka Yagnik"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/aap-ka-aana-dil-dhadkana-kurukshetra.html",
+    "music_composer": "Himesh Reshammiya",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Dil Ne Yeh Kaha Hain Dil Se",
+    "song_url": "https://pagalnew.com/320-download/13234",
+    "thumbnail": "https://pagalnew.com/coverimages/Dil-Ne-Yeh-Kaha-Hain-Dil-Se-Dhadkan-500-500.jpg",
+    "singers": ["Udit Narayan", "Alka Yagnik"],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/dil-ne-yeh-kaha-hain-dil-se-dhadkan.html",
+    "music_composer": "Nadeem-Shravan",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Mu kie tumara tame kie Mora",
+    "song_url": "https://koshalworld.com/files/download/id/1652",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/c/261_4.jpg",
+    "singers": [
+      "Babul suprio"
+    ],
+    "lyricist": null,
+    "source": "https://koshalworld.com/",
+    "website": "https://koshalworld.com/download/1652/mu-kie-tumara-tame-kie-mora.html",
+    "music_composer": null,
+    "published_on": "02 Aug, 2019",
+    "duration": null,
+    "language": "Odia"
+  },
+  {
+    "song_name": "Sarigala Michhi Michhika Kandhei Bahaghara",
+    "song_url": "https://koshalworld.com/files/download/id/14190",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/c/625_4.jpg",
+    "singers": [
+      "Nibedita",
+      "Suresh Wadekar"
+    ],
+    "lyricist": "Srikant Goutam",
+    "source": "https://koshalworld.com/",
+    "website": "https://koshalworld.com/download/14190/sarigala-michhi-michhika-kandhei-bahaghara.html",
+    "music_composer": "Prem Anand",
+    "published_on": "11 Mar, 2022",
+    "duration": null,
+    "language": "Odia"
   }
-  
-  
-    
 ]
