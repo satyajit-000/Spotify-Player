@@ -1,4 +1,4 @@
-<footer (mouseover)="expanded=true" (mouseenter)="expanded=true" (mouseleave)="!audioPlayer.nativeElement.paused && !isSuffleListOpen? expanded=false:''">
+<footer (mouseenter)="expanded=true" (mouseleave)="!audioPlayer.nativeElement.paused && !isSuffleListOpen? expanded=false:''">
   @if (currentSong()) {
   <!-- Audio Element -->
   <audio #audioPlayer [src]="currentSong()?.song_url" [muted]="muted" [volume]="volume/100" [loop]="isLooped" (play)="expanded=false;sharedDataService.isSongPlaying=true;isSuffleListOpen=false;"

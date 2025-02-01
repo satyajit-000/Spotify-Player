@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { PLAYLISTS } from '../../constants';
 import { Playlist } from '../../models/playlists';
 import { Song } from '../../interfaces/songs';
 

@@ -27,10 +27,10 @@ export class FooterComponent implements AfterViewInit {
   songLoading = false;
   muted = false;
   currentTime: number = JSON.parse(sessionStorage.getItem('currentTime') || '0');
-  duration: number = 0;
-  isLooped: boolean = false;
+  duration = 0;
+  isLooped = false;
   isSuffled: boolean = JSON.parse(localStorage.getItem('isSuffled') || 'false');
-  progress: number = 0;
+  progress = 0;
   volume: number = JSON.parse(sessionStorage.getItem('volume') ?? '100');
   favoriteList = JSON.parse(localStorage.getItem('favoriteList') || '[]');
   defaultThumbnail = DEFAULT_THUMBNAIL
@@ -126,7 +126,7 @@ export class FooterComponent implements AfterViewInit {
     if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA' && target.tagName !== 'SELECT' && !target.isContentEditable) {
       try {
         this.onKeyPress(event);
-      } catch(error) { }
+      } catch { }
     }
   }
 
@@ -175,7 +175,8 @@ export class FooterComponent implements AfterViewInit {
   toggleFavorite(song: Song | null): void {
     this.currentSong() && (this.currentSong.update(
       (song: Song | null) => {
-        song && (song.isFavorite = !this.currentSong()?.isFavorite);
+        if (song) 
+          (song.isFavorite = !this.currentSong()?.isFavorite);
         return song
       }));
     const index = ALL_SONGS.findIndex(_song=>_song.website===song?.website)
@@ -249,14 +250,14 @@ export class FooterComponent implements AfterViewInit {
     } else if (event.shiftKey && event.key === 'ArrowRight') {
       // Trigger next song
       this.playNext();
-    } else if (event.key === 'ArrowLeft') {
-      this.currentSong() && this.onProgressChange({
+    } else if (event.key === 'ArrowLeft' && this.currentSong() ) {
+      this.onProgressChange({
         target: {
           value: Math.max(this.progress - 1, 0)
         }
       })
-    } else if (event.key === 'ArrowRight') {
-      this.currentSong() && this.onProgressChange({
+    } else if (event.key === 'ArrowRight' && this.currentSong() ) {
+      this.onProgressChange({
         target: {
           value: Math.min(this.progress + 1, 100)
         }
