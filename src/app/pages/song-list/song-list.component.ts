@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, effect, HostListener, input, output } from '@angular/core';
 import { Song } from '../../interfaces/songs';
 import { CommonModule } from '@angular/common';
-import { DEFAULT_THUMBNAIL } from '../../constants';
+import { ALL_SONGS, DEFAULT_THUMBNAIL } from '../../constants';
 import { SharedDataService } from '../../services/shared-data.service';
 import { downloadSong, initFavorite, retriveSource } from '../../utils';
 
@@ -25,12 +25,12 @@ export class SongListComponent {
   retriveSource = retriveSource
   clickTimeout: any; // Timer reference for click event
   favoriteList = JSON.parse(localStorage.getItem('favoriteList') || '[]');
-  smallScreen = window.innerWidth <= 750;
+  smallScreen = window.innerWidth <= 800;
 
   constructor(public sharedDataService: SharedDataService) {  }
 
   private checkScreenSize() {
-    this.smallScreen = window.innerWidth <= 750;
+    this.smallScreen = window.innerWidth <= 800;
   }
 
   @HostListener('window:resize', ['$event'])
@@ -72,7 +72,7 @@ export class SongListComponent {
     $event.stopPropagation();
     song.isFavorite = !song.isFavorite;
     this.optionsIndex = null; // Close options dropdown
-    const index = this.songs().findIndex((_song: Song) => _song.website === song.website);
+    const index = ALL_SONGS.findIndex((_song: Song) => _song.website === song.website);
     this.favoriteList[index] = !this.favoriteList[index]
     localStorage.setItem('favoriteList', JSON.stringify(this.favoriteList));
   }

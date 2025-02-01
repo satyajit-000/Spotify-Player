@@ -4,23 +4,25 @@
         <h2>Welcome to Spotify Player</h2>
         <hr>
     </div>
+    <div class="home-container">
+        <!-- Recently Played -->
+         <app-playlist
+         [inputPlaylist]="recentlyPlayedPlaylist" />
+    
+        <hr>
+    
+        <!-- Playlists -->
+        <app-playlist-list 
+        [playListSectionTitle]="'Your Playlists'" 
+        [playlists]="playlists"
+        (playlistClicked)="onPlaylistClicked($event)"
+        (playPlaylist)="onPlayPlaylist($event)"/>
+    
+        <hr>
+    
+        <!-- Recommended Songs -->
+         <app-playlist
+         [inputPlaylist]="recommendedPlaylist" />
+    </div>
 
-    <!-- Recently Played -->
-     <app-playlist
-     [inputPlaylist]="recentlyPlayedPlaylist" />
-
-    <hr>
-
-    <!-- Playlists -->
-    <app-playlist-list 
-    [playListSectionTitle]="'Your Playlists'" 
-    [playlists]="playlists"
-    (playlistClicked)="onPlaylistClicked($event)"
-    (playPlaylist)="onPlayPlaylist($event)"/>
-
-    <hr>
-
-    <!-- Recommended Songs -->
-     <app-playlist
-     [inputPlaylist]="recommendedPlaylist" />
 </div>
