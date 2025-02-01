@@ -17,11 +17,15 @@
   flex: 1 1 calc(10% - 1rem);
   /* Dynamically calculate width with flexibility */
   min-width: 12rem;
-  max-width: 14rem;
+  max-width: 12.6rem;
   cursor: pointer;
   transition: transform 0.2s ease;
   position: relative;
   color: #fff;
+}
+
+.song-card * {
+  user-select: none;
 }
 
 .song-card:hover {
@@ -47,18 +51,19 @@
   text-align: center;
 }
 
-.song-name {
+p.songs {
   padding-top: 4px;
   font-size: 1rem;
   margin: 0;
   color: #fff;
 }
 
-.artist,
+p.artist,
 .source {
   font-size: 0.8rem;
   color: #b3b3b3;
   margin: 0;
+  margin-bottom: 0;
 }
 
 .source {
@@ -204,7 +209,7 @@
   /* Highlight the background */
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .details {
     text-align: left;
     width: 100%;
@@ -219,7 +224,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     overflow-x: hidden;
-    max-height: none;
+    max-height: 70vh;
 }
 
   .song-card {
@@ -272,6 +277,10 @@
   .favorite-icon {
     top: 0;
     right: -70%;
+  }
+  .options-dropdown {
+    bottom: -15%;
+    right: 130%;
   }
 
 }

@@ -20,7 +20,10 @@
         <!-- <a routerLink="/signin"> -->
             <!-- <button class="signup btn rounded-pill mx-4">Sign up / Sign in</button> -->
         <!-- </a> -->
-        <input type="text" placeholder="Search for songs..." [(ngModel)]="searchQuery" (input)="onSearch()" (keyup.enter)="onSearch()" />
+         <span class="position-relative">
+             <input type="text" placeholder="Search for songs" [(ngModel)]="searchQuery" (input)="onSearch()" (keyup.enter)="onSearch()" />
+             <i class="fa-solid fa-x clear-search " (click)="onClear()"></i>
+         </span>
         <button (click)="onSearch()">
             <i class="fa-solid fa-magnifying-glass"></i>
         </button>

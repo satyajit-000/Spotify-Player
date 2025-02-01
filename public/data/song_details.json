@@ -6785,5 +6785,23 @@
     "published_on": "11 Mar, 2022",
     "duration": null,
     "language": "Odia"
+  },
+  {
+    "song_name": "Shukran Allah",
+    "song_url": "https://pagalnew.com/320-download/8515",
+    "thumbnail": "https://pagalnew.com/coverimages/Shukran-Allah-Kurbaan-500-500.jpg",
+    "singers": [
+      "Sonu Nigam",
+      " Salim Merchant",
+      " Salim-Sulaiman",
+      " Shreya Ghoshal"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/shukran-allah2-kurbaan.html",
+    "music_composer": "Salim-Sulaiman, Salim Merchant, Sulaiman Merchant",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
   }
 ]
