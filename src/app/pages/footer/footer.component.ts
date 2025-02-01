@@ -1,16 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, effect, ElementRef, HostListener, signal, ViewChild, WritableSignal } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, computed, effect, ElementRef, HostListener, signal, ViewChild, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Song } from '../../interfaces/songs';
 import { SharedDataService } from '../../services/shared-data.service';
-import { DEFAULT_THUMBNAIL } from '../../constants';
+import { ALL_SONGS, DEFAULT_THUMBNAIL } from '../../constants';
 import { retriveSource, scrollToCard } from '../../utils';
 import _ from 'lodash';
 import {CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray} from '@angular/cdk/drag-drop';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule, FormsModule, CdkDropList, CdkDrag],
+  imports: [CommonModule, FormsModule, CdkDropList, CdkDrag, ScrollingModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -40,6 +41,10 @@ export class FooterComponent implements AfterViewInit {
   currentShufflePlaying = false;
 
   isSuffleListOpen = false;
+
+
+  playingImage = 'https://i.gifer.com/Nt6v.gif';
+  pauseImage = 'https://i.gifer.com/fetch/w300-preview/55/554818561cbf36d813ef2010cc9d66cc.gif';
 
   constructor(
     public sharedDataService: SharedDataService,
@@ -114,8 +119,6 @@ export class FooterComponent implements AfterViewInit {
     }
   }
 
-
-
   @HostListener('window:keydown', ['$event'])
   onKeyDown(event: KeyboardEvent) {
     const target = event.target as HTMLElement;
@@ -169,12 +172,13 @@ export class FooterComponent implements AfterViewInit {
     this.expanded = !this.expanded;
   }
 
-  toggleFavorite(index: number): void {
+  toggleFavorite(song: Song | null): void {
     this.currentSong() && (this.currentSong.update(
       (song: Song | null) => {
         song && (song.isFavorite = !this.currentSong()?.isFavorite);
         return song
       }));
+    const index = ALL_SONGS.findIndex(_song=>_song.website===song?.website)
     this.favoriteList[index] = !this.favoriteList[index]
     if (!this.expanded) {
       this.expanded = true;
@@ -227,7 +231,8 @@ export class FooterComponent implements AfterViewInit {
   onProgressChange(event: any): void {
     this.progress = event.target?.value;
     this.duration = this.audioPlayer.nativeElement.duration;
-    this.audioPlayer.nativeElement.currentTime = (this.progress / 100) * this.duration; // Update the audio position
+    this.currentTime = this.audioPlayer.nativeElement.currentTime = (this.progress / 100) * this.duration; // Update the audio position
+    sessionStorage.setItem('currentTime', JSON.stringify(this.currentTime));
   }
 
   updateProgress(): void {
@@ -267,7 +272,7 @@ export class FooterComponent implements AfterViewInit {
     } else if (event.key === 'l' || event.key === 'L') {
       this.toggleLoop();
     } else if (event.key === 'f' || event.key === 'F') {
-      this.toggleFavorite(this.currentSongIndex);
+      this.toggleFavorite(this.currentSong());
     } else if (event.key === 's' || event.key === 'S') {
       this.toggleSuffle();
     } else if (event.key === ' ') {
@@ -350,9 +355,17 @@ export class FooterComponent implements AfterViewInit {
     return name !== undefined && name.length <= 25;
   }
 
-  drop(event: CdkDragDrop<unknown>) {
-    moveItemInArray(this.shuffledSongs, event.previousIndex, event.currentIndex);
+  drop(event: CdkDragDrop<Song[]>) {
+    const prevSong = this.shuffledSongs.slice(this.currentSongIndex)[event.currentIndex]
+    const currSong = this.shuffledSongs.slice(this.currentSongIndex)[event.previousIndex]
+    const previousIndex = this.shuffledSongs.findIndex(song=>song.website === prevSong.website)
+    const currentIndex = this.shuffledSongs.findIndex(song=>song.website === currSong.website)
+    moveItemInArray(this.shuffledSongs,currentIndex, previousIndex);
     this.setCurrentSongIndex();
   }
+
+  get innerWidth() {
+    return computed(() => window.innerWidth)
+  };
 
 }

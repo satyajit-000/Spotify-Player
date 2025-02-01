@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, input, OnInit, Signal, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, input, OnInit, Signal, signal, WritableSignal } from '@angular/core';
 import { SharedDataService } from '../../../services/shared-data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SongListComponent } from '../../song-list/song-list.component';
@@ -26,7 +26,7 @@ export class PlaylistComponent implements OnInit {
   currentIndex = -1;
   currentSong!: WritableSignal<Song | null | undefined>;
 
-  pageSize = 30;
+  pageSize = window.innerWidth > 1000 ? 50 : 100;
   pageIndex = 1;
   currentPageSongs: WritableSignal<Song[]> = signal([])
 
@@ -108,7 +108,10 @@ export class PlaylistComponent implements OnInit {
   }
 
   get isSimple():Signal<boolean> {
-    return signal(window.innerWidth <= 1195);
+    return computed(()=>window.innerWidth <= 1070);
   }
 
+  get innerWidth() {
+    return computed(() => window.innerWidth)
+  };
 }

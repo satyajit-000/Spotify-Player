@@ -6,7 +6,7 @@
          <app-sidebar [sideBarOpen]="sideBarOpen" (toggleSideBar)="toggleSidebar()"/>
         
         <!-- Main Content -->
-        <main class="main-content flex-grow-1" [class.closed]="!sideBarOpen">
+        <main class="main-content flex-grow-1" [class.open]="sideBarOpen">
             <router-outlet />
         </main>
     </div>

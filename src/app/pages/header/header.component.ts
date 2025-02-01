@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, HostListener, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SharedDataService } from '../../services/shared-data.service';
 import { RouterLink } from '@angular/router';
@@ -9,31 +9,25 @@ import { ALL_SONGS } from '../../constants';
   imports: [FormsModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
-  changeDetection:ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent {
   searchQuery = '';
-  smallScreen = window.innerWidth <= 750;
 
+  get smallScreen() {
+    return computed(() => window.innerWidth <= 800)();
+  }
 
-  constructor(private _sharedDataService:SharedDataService){ }
-
-  ngOnInit(): void {
-    this.checkScreenSize();
+  constructor(private _sharedDataService: SharedDataService) {
     initFavorite(ALL_SONGS);
   }
 
-  private checkScreenSize() {
-    this.smallScreen = window.innerWidth <= 750;
-  }
 
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.checkScreenSize();
-  }
-
-  
   onSearch(): void {
     this._sharedDataService.filteredText = this.searchQuery;
+  }
+
+  onClear(): void {
+    this._sharedDataService.filteredText = this.searchQuery = '';
   }
 }
