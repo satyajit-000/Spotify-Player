@@ -105,6 +105,7 @@ export class PlaylistComponent implements OnInit {
     const start = (this.pageIndex - 1) * this.pageSize;
     const end = Math.min(start + this.pageSize, this.filteredSongs().length);
     this.currentPageSongs.set(this.filteredSongs().slice(start, end));
+    // document.querySelector('.song-list')?.scrollTo({ top: 0});
   }
 
   get isSimple():Signal<boolean> {
