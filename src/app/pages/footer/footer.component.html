@@ -26,7 +26,7 @@
               <p class="artist" *ngIf="currentSong()?.singers">🎤 {{ currentSong()?.singers }}</p>
             </div>
           } @else {
-            @if (isSongNameShort && innerWidth() > 1050) {
+            @if (isSongNameShort && 650 > innerWidth() && innerWidth() > 1050) {
               <p class="song-name" [class.small]="!isExpanded">{{ currentSong()?.song_name }}</p>
             } @else {
               <marquee behavior="scroll" direction="left" class="running-text song-name">

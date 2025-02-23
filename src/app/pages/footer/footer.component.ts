@@ -83,6 +83,7 @@ export class FooterComponent implements AfterViewInit {
     }
     
     this.currentShufflePlaying = false;
+    scrollToCard(this.currentSongIndex + '');
   }
 
   // Set the index of the current song in the shuffled list

@@ -22,6 +22,8 @@ export function retriveSource(sourceUrl: string): string[] {
 }
 
 export function scrollToCard(id: string) {
+  console.log(id);
+  
   const card = document.getElementById(id);
   setTimeout(() => {
     card?.scrollIntoView({ behavior: 'smooth' })
