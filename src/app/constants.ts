@@ -88,5 +88,3 @@ export const PLAYLISTS : Playlist[] =
     songs: reveredSong.filter(song => !song.language),
   }
 ];
-
-console.log(song_details.filter(song => INACTIVE_WEBSITES.some(website => song.website.includes(website))));
