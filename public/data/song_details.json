@@ -9876,7 +9876,7 @@
   {
     "song_name": "Maula Maula (Daha Balunga)",
     "song_url": "https://odiafresh.com/files/download/id/6479/",
-    "thumbnail": "https://odiafresh.com/image/mp3.svg",
+    "thumbnail": "https://odiafresh.com/folderthumb/Daha-Balunga--2013-.jpg",
     "singers": [
       "Babushaan Mohanty",
       "Sohini Mishra"
@@ -10079,5 +10079,141 @@
     "published_on": "9 Aug 2012",
     "duration": "5:08",
     "language": "Bengali"
+  },
+  {
+    "song_name": "Its Only Pyar",
+    "song_url": "https://pendujatt.com.se/files/2734.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/tapu-mishra-special-tapu-mishra.webp",
+    "singers": [
+      "Shaan",
+      "Tapu Mishra"
+    ],
+    "lyricist": null,
+    "source": "https://pendujatt.com.se",
+    "website": "https://pendujatt.com.se/song/its-only-pyar-shaan-tapu-mishra-mp3-song",
+    "music_composer": null,
+    "published_on": "10 Jan 2018",
+    "duration": null,
+    "language": "Odia"
+  },
+  {
+    "song_name": "Sararati Nida Bhuli Kahibaki Aji Kali",
+    "song_url": "https://odiafresh.com/files/download/id/16950/",
+    "thumbnail": "https://odiafresh.com/folderthumb/Tu-Beshi-Paduchu-Mane.jpg",
+    "singers": [
+      "Kumar Bapi",
+      "Sailabhama Mohapatra"
+    ],
+    "lyricist": null,
+    "source": "https://odiafresh.com/",
+    "website": "https://odiafresh.com/filedownload/1891/16950/Sararati-Nida-Bhuli-Kahibaki-Aji-Kali.html",
+    "music_composer": null,
+    "published_on": null,
+    "duration": null,
+    "language": "Odia"
+  },
+  {
+    "song_name": "Chandara Chandini Pari Gupchup Full Song",
+    "song_url": "https://odiabazar.in/files/download/id/5603",
+    "thumbnail": "https://odiabazar.in/siteuploads/thumb/sft12/5603_3.jpg",
+    "singers": [
+      "Shasank Sekhar",
+      "Amrita Nayak"
+    ],
+    "lyricist": null,
+    "source": "https://odiabazar.in",
+    "website": "https://odiabazar.in/download/5603/chandara-chandini-pari-gupchup-full-song.html",
+    "music_composer": null,
+    "published_on": "25 May 2022",
+    "duration": "3:59",
+    "language": "Odia"
+  },
+  {
+    "song_name": "Chandara Chandini Pari,Odia Cover Song by Diptirekha, Swayam",
+    "song_url": "https://odiafresh.com/files/download/id/5685/",
+    "thumbnail": "https://odiafresh.com/folderthumb/Chandara-Chandini-Pari-Odia-Cover-Song-by-Diptirekha--Swayam.jpg",
+    "singers": [
+      "Diptirekha",
+      "Swayam"
+    ],
+    "lyricist": null,
+    "source": "https://odiafresh.com/",
+    "website": "https://odiafresh.com/filedownload/174/5685/Chandara-Chandini-Pari,Odia-Cover-Song-by-Diptirekha,-Swayam.html",
+    "music_composer": null,
+    "published_on": null,
+    "duration": null,
+    "language": "Odia"
+  },
+  {
+    "song_name": "Bata Bana Hela Mo Prema (Awara)",
+    "song_url": "https://odiafresh.com/files/download/id/13011/",
+    "thumbnail": "https://odiafresh.com/image/mp3.svg",
+    "singers": null,
+    "lyricist": null,
+    "source": "https://odiafresh.com/",
+    "website": "https://odiafresh.com/filedownload/84/13011/Bata-Bana-Hela-Mo-Prema-(Awara).html",
+    "music_composer": null,
+    "published_on": null,
+    "duration": null,
+    "language": "Odia"
+  },
+  {
+    "song_name": "Aaj Ki Raat   Full Song | Stree 2",
+    "song_url": "https://koshalworld.com/files/download/id/48630",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft98/48630_4.jpg",
+    "singers": null,
+    "lyricist": null,
+    "source": "https://koshalworld.com/",
+    "website": "https://koshalworld.com/download/48630/aaj-ki-raat-full-song-stree-2.html",
+    "music_composer": null,
+    "published_on": "11 Dec, 2024",
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Dil (ShreyaS Version)",
+    "song_url": "https://pagalfree.com/download/320-Dil (ShreyaS Version) - Ek Villain Returns 320 Kbps.mp3",
+    "thumbnail": "https://pagalfree.com/images/128Dil%20(ShreyaS%20Version)%20-%20Ek%20Villain%20Returns%20128%20Kbps.jpg",
+    "singers": [
+      "Kaushik-Guddu", 
+      "Shreya Ghoshal"
+    ],
+    "lyricist": null,
+    "source": "https://pagalfree.com/",
+    "website": "https://pagalfree.com/music/dil-shreyas-version-2022.html",
+    "music_composer": "Kaushik-Guddu",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Zaroori Tha",
+    "song_url": "https://hindi2.djpunjab.app/load/2R0rDhs7YMx6FiEy-23BqQ==/Zaroori%20Tha.mp3",
+    "thumbnail": "https://hindi2.djpunjab.app/cover/zf0sbk3PkiK7XCNxUe-mnw==/back-2-love-cover-image.webp",
+    "singers": [
+      "Rahat Fateh Ali Khan"
+    ],
+    "lyricist": null,
+    "source": "https://djpunjab.is/",
+    "website": "https://djpunjab.is/bollywood/zaroori-tha-mp3-song-elePw.html",
+    "music_composer": null,
+    "published_on": "09/Jun/2014",
+    "duration": "5:42",
+    "language": "Hindi"
+  },
+  {
+    "song_name": "Maatanaadi Maayavade",
+    "song_url": "https://pagallworld.co.in/wp-content/uploads/2023/12/Maatanaadi-Maayavade.mp3",
+    "thumbnail": "https://pagallworld.co.in/wp-content/uploads/2023/12/Maatanaadi-Maayavade.jpg",
+    "singers": [
+      "Armaan Malik"
+    ],
+    "lyricist": "Santosh Naik",
+    "source": "https://pagallworld.co.in/",
+    "website": "https://pagallworld.co.in/maatanaadi-maayavade/",
+    "music_composer": "Dr.Kiran Thotambyle",
+    "published_on": null,
+    "duration": null,
+    "language": "Kannada"
   }
 ]
