@@ -26,7 +26,7 @@ export class Song {
     published_on: string | null = null, 
     duration: string | null = null, 
     genre: string | null = null, 
-    isFavorite: boolean = false
+    isFavorite = false
   ) {
     this.song_name = song_name;
     this.song_url = song_url;
