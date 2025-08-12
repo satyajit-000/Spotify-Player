@@ -3,7 +3,7 @@
   <!-- Audio Element -->
   <audio #audioPlayer [src]="currentSong()?.song_url" [muted]="muted" [volume]="volume/100" [loop]="isLooped" (play)="expanded=false;sharedDataService.isSongPlaying=true;isSuffleListOpen=false;"
     [autoplay]="true" (loadstart)="onLoadStart()" (loadeddata)="onDataLoad()" (timeupdate)="updateProgress()" (pause)="sharedDataService.isSongPlaying=false"
-    (ended)="onSongEnd()" (playing)="sharedDataService.isSongPlaying=true" (ended)="playNext()"></audio>
+    (ended)="onSongEnd()" (playing)="sharedDataService.isSongPlaying=true" (ended)="playNext()" (error)="playNext()"></audio>
   <div class="now-playing-bar">
     <button class="close-btn" (click)="exitNowPlayingBar()" title="Close" *ngIf="isExpanded">
       <i class="fas fa-times-circle"></i>
@@ -62,7 +62,7 @@
           <button (click)="toggleLoop()">
             <i class="fas fa-repeat" [ngClass]="{active:isLooped}"></i>
           </button>
-          <button class="list" (click)="isSuffleListOpen = !isSuffleListOpen;" (blur)="isSuffleListOpen=false">
+          <button class="list" (click)="toggleSuffleList()" (blur)="isSuffleListOpen=false" #toggleShuffleList>
             <i class="fa-solid fa-list" [ngClass]="{active:isSuffleListOpen}"></i>
             @if (isSuffleListOpen) {
               <div
@@ -72,18 +72,24 @@
                 @for (song of shuffledSongs.slice(currentSongIndex); track $index) {
                   <div
                   class="song" [ngClass]="{'mr-5': song.website===currentSong()?.website, 'justify-content-between':song.website!==currentSong()?.website}"
-                  [cdkDragData]="song"
+                  [cdkDragData]="song" 
                   cdkDrag
-                  [cdkDragDisabled]="song.website===currentSong()?.website"
+                  [cdkDragDisabled]="getCdkDisabled(song)"
                   (click)="$event.stopPropagation();this.currentShufflePlaying = true;setCurrentSong(song);">
-                  <img [src]="song.thumbnail || defaultThumbnail" alt="No Image" width="30">
+                  <img [src]="song.thumbnail || defaultThumbnail" (error)="footThumb.src=defaultThumbnail" alt="No Image" loading="lazy" width="30" #footThumb>
                   <div class="d-flex flex-column p-0 m-0" style="width: 80%;">
                     <span [class.active]="song.website===currentSong()?.website">{{song.song_name}}</span>
                     <small>{{song.singers}}</small>
                   </div>
-                  <div style="min-width: 12px;">
+                  <div class="handler" style="min-width: 12px;" 
+                    (click)="$event.stopPropagation()"
+                    (mousedown)="startHold()"
+                    (mouseup)="stopHold()"
+                    (mouseleave)="stopHold()"
+                    (touchstart)="startHold()"
+                    (touchend)="stopHold()">
                     @if (song.website!==currentSong()?.website) {
-                      <i class="fa-solid fa-bars" cdkDragHandle></i>
+                      <i class="fa-solid fa-bars" cdkDragHandle (click)="$event.stopPropagation()"></i>
                     } @else {
                       <img [src]="sharedDataService.isSongPlaying ? playingImage : pauseImage" alt="" width="20" class="bg-white">
                     }

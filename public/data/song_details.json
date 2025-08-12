@@ -10215,5 +10215,751 @@
     "published_on": null,
     "duration": null,
     "language": "Kannada"
+  },
+  {
+    "song_name": "Teri Masumiyat",
+    "song_url": "https://pagalnew.com/320-download/4697",
+    "thumbnail": "https://pagalnew.com/coverimages/Teri-Masumiyat-Bezubaan-Ishq-500-500.jpg",
+    "singers": [
+      "Babli Haque",
+      " Altamash Faridi"
+    ],
+    "lyricist": null,
+    "source": "https://pagalnew.com/",
+    "website": "https://pagalnew.com/songs/teri-masumiyat1-bezubaan-ishq.html",
+    "music_composer": "Babli Haque",
+    "published_on": null,
+    "duration": null,
+    "language": "Hindi",
+    "genre": "Romantic/Sad"
+  },
+  {
+    "song_name": "Thoda Thoda Pyar",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pagalnew.com/songs/thoda-thoda-pyar1-love-aaj-kal.html",
+    "song_url": "https://pagalnew.com/320-download/8298",
+    "thumbnail": "https://pagalnew.com/coverimages/Thoda-Thoda-Pyar-Love-Aaj-Kal-500-500.jpg",
+    "singers": [
+      "Pritam",
+      " Sunidhi Chauhan"
+    ],
+    "lyricist": null,
+    "music_composer": "Pritam",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Naino Ki To Baat Naina Jane Hai",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pagalnew.com/songs/naino-ki-to-baat-naina-jane-hai-tu-mera-hai-sanam-female-version.html",
+    "song_url": "https://pagalnew.com/320-download/12841",
+    "thumbnail": "https://pagalnew.com/coverimages/Naino-Ki-To-Baat-Naina-Jane-Hai-Tu-Mera-Hai-Sanam-Female-Version-500-500.jpg",
+    "singers": [
+      "Prateeksha Srivastava"
+    ],
+    "lyricist": null,
+    "music_composer": "Chandra-Surya",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Dil Galti Kar Baitha Hai",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pagalnew.com/songs/dil-galti-kar-baitha-hai-jubin-nautiyal.html",
+    "song_url": "https://pagalnew.com/320-download/20054",
+    "thumbnail": "https://pagalnew.com/coverimages/Dil-Galti-Kar-Baitha-Hai-Feat.-Mouni-Roy-Jubin-Nautiyal-500-500.jpg",
+    "singers": [
+      "Jubin Nautiyal"
+    ],
+    "lyricist": null,
+    "music_composer": "Meet Bros",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Khushi Jab Bhi Teri",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pagalnew.com/songs/khushi-jab-bhi-teri-jubin-nautiyal.html",
+    "song_url": "https://pagalnew.com/320-download/19398",
+    "thumbnail": "https://pagalnew.com/coverimages/Khushi-Jab-Bhi-Teri-Feat.Khushalii-Kumar-Jubin-Nautiyal-500-500.jpg",
+    "singers": [
+      "Jubin Nautiyal",
+      " Rochak Kohli"
+    ],
+    "lyricist": null,
+    "music_composer": "Rochak Kohli",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Ankhon Mein Basa Lunga",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pagalnew.com/songs/ankhon-mein-basa-lunga1-bezubaan-ishq.html",
+    "song_url": "https://pagalnew.com/320-download/4695",
+    "thumbnail": "https://pagalnew.com/coverimages/Ankhon-Mein-Basa-Lunga-Bezubaan-Ishq-500-500.jpg",
+    "singers": [
+      "Rupesh Verma",
+      " Mohit Chauhan",
+      " Parineeta"
+    ],
+    "lyricist": null,
+    "music_composer": "Rupesh Verma",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Cham Cham",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pagalnew.com/songs/cham-cham-baaghi.html",
+    "song_url": "https://pagalnew.com/320-download/3901",
+    "thumbnail": "https://pagalnew.com/coverimages/Cham-Cham-Baaghi-500-500.jpg",
+    "singers": [
+      "Monali Thakur"
+    ],
+    "lyricist": null,
+    "music_composer": "Meet Bros",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Rabba",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pagalnew.com/songs/rabba1-heropanti.html",
+    "song_url": "https://pagalnew.com/320-download/5305",
+    "thumbnail": "https://pagalnew.com/coverimages/Rabba-Heropanti-500-500.jpg",
+    "singers": [
+      "Sajid-Wajid",
+      " Mohit Chauhan"
+    ],
+    "lyricist": null,
+    "music_composer": "Sajid-Wajid",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Bezubaan Ishq",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pagalnew.com/songs/bezubaan-ishq1-babli-haque.html",
+    "song_url": "https://pagalnew.com/320-download/4694",
+    "thumbnail": "https://pagalnew.com/coverimages/Bezubaan-Ishq-Babli-Haque-500-500.jpg",
+    "singers": [
+      "Babli Haque",
+      " Javed Ali",
+      " Arpita Chakraborty"
+    ],
+    "lyricist": null,
+    "music_composer": "Babli Haque",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Sanam Teri Kasam",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pagalnew.com/songs/sanam-teri-kasam1-ankit-tiwari.html",
+    "song_url": "https://pagalnew.com/320-download/3747",
+    "thumbnail": "https://pagalnew.com/coverimages/Sanam-Teri-Kasam-Ankit-Tiwari-500-500.jpg",
+    "singers": [
+      "Ankit Tiwari",
+      " Palak Muchhal"
+    ],
+    "lyricist": null,
+    "music_composer": "Himesh Reshammiya",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Teri Saanson Mein",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://koshalworld.com/download/10658/teri-saanson-mein.html",
+    "song_url": "https://koshalworld.com/files/download/id/10658",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/c/404_5.jpg",
+    "singers": [
+      "Arijit Singh",
+      "Palak muchhal"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "03 Sep, 2021",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Hey Jaga",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiafresh.com/filedownload/3105/32149/Hey-Jaga.html",
+    "song_url": "https://odiafresh.com/upload_file/7/115/3105/Hey%20Jaga%20(OdiaFresh.Com).mp3",
+    "thumbnail": "https://odiafresh.com/upload_file/7/115/3105/thumb-Hey Jaga (OdiaFresh.Com).jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Silu Bibhu",
+    "music_composer": "Abhijit Tripathy",
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiafresh.com/"
+  },
+  {
+    "song_name": "To Badapana Ku Dhik-Female",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiafresh.com/filedownload/3332/32745/To-Badapana-Ku-Dhik-Female.html",
+    "song_url": "https://odiafresh.com/upload_file/7/115/3332/To%20Badapana%20Ku%20Dhik-Female%20(OdiaFresh.Com).mp3",
+    "thumbnail": "https://odiafresh.com/upload_file/7/115/3332/thumb-To Badapana Ku Dhik-Female (OdiaFresh.Com).jpg",
+    "singers": [
+      "Diptimayee Dash"
+    ],
+    "lyricist": "Soumya Ranjan Bal",
+    "music_composer": "Dibya Chandan",
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiafresh.com/"
+  },
+  {
+    "song_name": "Mo Jaga Kalia",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiafresh.com/filedownload/3332/33666/Mo-Jaga-Kalia.html",
+    "song_url": "https://odiafresh.com/files/download/id/33666/",
+    "thumbnail": "https://odiafresh.com/folderthumb/Mo-Jaga-Kalia.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Lyricist :Ranjan Nayak",
+    "music_composer": "Music :Matruprasad Rath",
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiafresh.com/"
+  },
+  {
+    "song_name": "To Badapana Ku Dhik",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiafresh.com/filedownload/3332/32551/To-Badapana-Ku-Dhik.html",
+    "song_url": "https://odiafresh.com/files/download/id/32551/",
+    "thumbnail": "https://odiafresh.com/folderthumb/To-Badapana-Ku-Dhik.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Lyricist :Soumya Ranjan Bal",
+    "music_composer": "Music :Dibya Chandan",
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiafresh.com/"
+  },
+  {
+    "song_name": "Bhabara Sahare Mora, Kumar Bapi Bhajan Song",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiafresh.com/filedownload/658/2398/Bhabara-Sahare-Mora,-Kumar-Bapi-Bhajan-Song.html",
+    "song_url": "https://odiafresh.com/files/download/id/2398/",
+    "thumbnail": "https://odiafresh.com/image/mp3.svg",
+    "singers": [
+      "Kumar Bapi"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiafresh.com/"
+  },
+  {
+    "song_name": "Mo Jaga Re",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/48227/mo-jaga-re.html",
+    "song_url": "https://koshalworld.com/files/download/id/48227",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft97/48227_4.jpg",
+    "singers": [
+      "Sourav Bhardwaj"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "03 Dec, 2024",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "He Mahabahu",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/27286/he-mahabahu.html",
+    "song_url": "https://koshalworld.com/files/download/id/27286",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft55/27286_4.jpg",
+    "singers": [
+      "Satyajeet Padhan"
+    ],
+    "lyricist": "P Sarada",
+    "music_composer": "Pintu Das",
+    "published_on": "02 Nov, 2023",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Jagatare Paibuni Emiti Thakura Tie",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/21588/jagatare-paibuni-emiti-thakura-tie.html",
+    "song_url": "https://koshalworld.com/files/download/id/21588",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/c/773_4.jpg",
+    "singers": [
+      "Satyajeet padhan"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "17 Jan, 2023",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Chalu Chalu Mun Jebe Bhul Bate Jae Tuma Bina",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiafresh.com/filedownload/2073/18460/Chalu-Chalu-Mun-Jebe-Bhul-Bate-Jae-Tuma-Bina.html",
+    "song_url": "https://odiafresh.com/files/download/id/18460/",
+    "thumbnail": "https://odiafresh.com/image/mp3.svg",
+    "singers": [
+      "Kumar Bapi"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiafresh.com/"
+  },
+  {
+    "song_name": "Mun Chithi Lekhichi Mo Nilamani Ku",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/14747/mun-chithi-lekhichi-mo-nilamani-ku.html",
+    "song_url": "https://koshalworld.com/files/download/id/14747",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/c/642_4.jpg",
+    "singers": [
+      "Kumar Bapi"
+    ],
+    "lyricist": "Alekh Biswal",
+    "music_composer": "Dipak Kumar",
+    "published_on": "02 Apr, 2022",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Swarga Dwara Mora Sesha Thikana Kalia Karuna Sesha Pauna",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/3113/swarga-dwara-mora-sesha-thikana-kalia-karuna-sesha-pauna.html",
+    "song_url": "https://koshalworld.com/files/download/id/3113",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/c/137_4.jpg",
+    "singers": [
+      "Sricharan Mohanty"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "14 Jun, 2020",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Aakashtharu Besi",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/14461/aakashtharu-besi.html",
+    "song_url": "https://koshalworld.com/files/download/id/14461",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft29/14461_4.jpg",
+    "singers": [
+      "Kumar Bapi"
+    ],
+    "lyricist": "Alekh Biswal",
+    "music_composer": "Sanjay",
+    "published_on": "24 Mar, 2022",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Haire Mora Kala Manika",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/6614/haire-mora-kala-manika.html",
+    "song_url": "https://koshalworld.com/files/download/id/6614",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/hai-re-mora-kala.webp",
+    "singers": [
+      "Kumar Bapi"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "15 Mar, 2021",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Sakha He Kebe Ekutia Dia Dekha Odia Jagannath Bhajan Song Kumar Bapi",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiafresh.com/filedownload/658/2375/Sakha-He-Kebe-Ekutia-Dia-Dekha-Odia-Jagannath-Bhajan-Song-Kumar-Bapi.html",
+    "song_url": "https://odiafresh.com/files/download/id/2375/",
+    "thumbnail": "https://odiafresh.com/image/mp3.svg",
+    "singers": [
+      "Kumar Bapi"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiafresh.com/"
+  },
+  {
+    "song_name": "Niswa Kara He Mate Biswa Bihari",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/21411/niswa-kara-he-mate-biswa-bihari.html",
+    "song_url": "https://koshalworld.com/files/download/id/21411",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/c/465_4.jpg",
+    "singers": [
+      "Kumar Bapi"
+    ],
+    "lyricist": "Alekh Biswal",
+    "music_composer": "Sanjay",
+    "published_on": "12 Jan, 2023",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Shree Mandire Achhu Ki Nahun",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://pendujatt.com.se/song/shree-mandire-achhu-ki-nahun-sourav-bharadwaj-mp3-song",
+    "song_url": "https://pendujatt.com.se/load/57592906/813797/Shree Mandire Achhu Ki Nahun.mp3",
+    "thumbnail": "https://i.ytimg.com/vi/DUcZq91X9Gk/sddefault.jpg?v=66d40872",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "29 Aug, 2024",
+    "duration": "5:05",
+    "source": "https://pendujatt.com.se/"
+  },
+  {
+    "song_name": "Mo Rama Asuchanti",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://pendujatt.com.se/song/mo-rama-asuchanti-sourav-bharadwaj-mp3-song",
+    "song_url": "https://pendujatt.com.se/load/51217409/770119/Mo Rama Asuchanti.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/mo-rama-asuchanti-sourav-bharadwaj.webp",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "17 Jan, 2024",
+    "duration": "5:03",
+    "source": "https://pendujatt.com.se/"
+  },
+  {
+    "song_name": "Jagatara Jamidara",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/40545/jagatara-jamidara.html",
+    "song_url": "https://koshalworld.com/files/download/id/40545",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft82/40545_4.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Rakesh Dash",
+    "music_composer": "Bimal Kumar Sahoo",
+    "published_on": "08 Jul, 2024",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },  
+  {
+    "song_name": "Kalia Tora Karine",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://pendujatt.com.se/song/kalia-tora-karine-sourav-bharadwaj-mp3-song",
+    "song_url": "https://pendujatt.com.se/load/54309735/775894/Kalia Tora Karine.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/kalia-tora-karine-sourav-bharadwaj.webp",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "13 May, 2024",
+    "duration": "5:13",
+    "source": "https://pendujatt.com.se/"
+  },
+  {
+    "song_name": "Jagare Tu Odianka Garba",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/58654/jagare-tu-odianka-garba.html",
+    "song_url": "https://koshalworld.com/files/download/id/58654",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft118/58654_4.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Niranjan Panda",
+    "music_composer": "Niranjan Panda",
+    "published_on": "30 Jun, 2025",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Mo Bhabara Thakura",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiafresh.com/filedownload/2705/28999/Mo-Bhabara-Thakura.html",
+    "song_url": "https://odiafresh.com/files/download/id/28999/",
+    "thumbnail": "https://odiafresh.com/folderthumb/Mo-Bhabara-Thakura.jpg",
+    "singers": [
+      "Kumar Bapi"
+    ],
+    "lyricist": "Lyricist :Panchanan Nayak",
+    "music_composer": "Music :Malaya Mishra",
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiafresh.com/"
+  },
+  {
+    "song_name": "Aage Aage Balia",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/40396/aage-aage-balia.html",
+    "song_url": "https://koshalworld.com/files/download/id/40396",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft81/40396_4.jpg",
+    "singers": [
+      "Sricharan Mohanty"
+    ],
+    "lyricist": "Puspak Parida",
+    "music_composer": "Sagar Pradhan",
+    "published_on": "05 Jul, 2024",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Jagatare Paibuni Emiti Thakura Tie",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiafresh.com/filedownload/3105/30210/Jagatare-Paibuni-Emiti-Thakura-Tie.html",
+    "song_url": "https://odiafresh.com/files/download/id/30210/",
+    "thumbnail": "https://odiafresh.com/folderthumb/Jagatare-Paibuni-Emiti-Thakura-Tie.jpg",
+    "singers": [
+      "Satyajeet Pradhan"
+    ],
+    "lyricist": "Lyricist :Dr. Nirmal Nayak",
+    "music_composer": "Music :Malaya Mishra",
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiafresh.com/"
+  },
+  {
+    "song_name": "Re Kala Thakura",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/39269/re-kala-thakura.html",
+    "song_url": "https://koshalworld.com/files/download/id/39269",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft79/39269_4.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Silu Bibhu",
+    "music_composer": "Nk Sahoo",
+    "published_on": "11 Jun, 2024",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Janichhu Ki Jadu Mantara",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiafresh.com/filedownload/3533/35478/Janichhu-Ki-Jadu-Mantara.html",
+    "song_url": "https://odiafresh.com/files/download/id/35478/",
+    "thumbnail": "https://odiafresh.com/folderthumb/Janichhu-Ki-Jadu-Mantara.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Lyricist :Kriparani Dhal",
+    "music_composer": "Music :Suresh Sahoo",
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiafresh.com/"
+  },
+  {
+    "song_name": "Swargadware Jaga Dabu Kala Thakura",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/50808/swargadware-jaga-dabu-kala-thakura.html",
+    "song_url": "https://koshalworld.com/files/download/id/50808",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft102/50808_4.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Soumya Ranjan Bal",
+    "music_composer": "Dibya Chandan",
+    "published_on": "02 Feb, 2025",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Jhuli Jhuli Jaga Asuchi",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/58135/jhuli-jhuli-jaga-asuchi.html",
+    "song_url": "https://koshalworld.com/files/download/id/58135",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft117/58135_4.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Soumya Ranjan Bal",
+    "music_composer": "Dibya Chandan",
+    "published_on": "20 Jun, 2025",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Jagatara Natha Jagannatha",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/33534/jagatara-natha-jagannatha.html",
+    "song_url": "https://koshalworld.com/files/download/id/33534",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft68/33534_4.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Amar Jyoti",
+    "music_composer": "Rudra Prashad Nayak",
+    "published_on": "20 Feb, 2024",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Bhabara Thakura To Lila Apara",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://pendujatt.com.se/",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/57200481/940923/Bhabara%20Thakura%20To%20Lila%20Apara.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/bhabara-thakura-to-lila-apara-satyajit-pradhan.webp",
+    "singers": [
+      "Satyajit Pradhan"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "14 Aug, 2024",
+    "duration": "5:24",
+    "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "To Swarga Dware New Jagannath Bhajan",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiabazar.in/",
+    "song_url": "https://odiabazar.in/files/download/id/8909",
+    "thumbnail": "https://odiabazar.in/siteuploads/thumb/sft18/8909_5.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "06 Jun, 2025",
+    "duration": "4:48",
+    "source": "https://odiabazar.in/"
+  },
+  {
+    "song_name": "Maa Lo Maa",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://koshalworld.com/download/46815/maa-lo-maa.html",
+    "song_url": "https://koshalworld.com/files/download/id/46815",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft94/46815_4.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Sambit Kumar Mohanty",
+    "music_composer": "Sambit Kumar Mohanty",
+    "published_on": "05 Nov, 2024",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Mahabahu Odia Bhajana Song Sourav Bharadwaj",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://odiabazar.in/download/8842/mahabahu-odia-bhajana-song-sourav-bharadwaj.html",
+    "song_url": "https://odiabazar.in/files/download/id/8842",
+    "thumbnail": "https://odiabazar.in/siteuploads/thumb/sft18/8842_5.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiabazar.in/"
+  },
+  {
+    "song_name": "Jay Jagannath",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/45958305/766416/Jay%20Jagannath.mp3",
+    "website":"https://pendujatt.com.se/song/jay-jagannath-kuldeep-pattanaik-d3v-mp3-song",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/jay-jagannath-kuldeep-pattanaik.webp",
+    "singers": [
+      "Kuldeep Pattanaik"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "13 Jun, 2023",
+    "duration": "4:42",
+    "source": "https://bajaao.pendujatt.com.se/"
+  },
+  {
+    "song_name": "Bali Ratha",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/46049018/767618/Bali%20Ratha.mp3",
+    "website":"https://pendujatt.com.se/song/bali-ratha-satyajeet-pradhan-mp3-song",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/bali-ratha-satyajeet-pradhan.webp",
+    "singers": [
+      "Satyajeet Pradhan"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "20 Jun, 2023",
+    "duration": "5:11",
+    "source": "https://bajaao.pendujatt.com.se/"
+  },
+  {
+    "song_name": "Aji Jaen Dekhini Jaga To Parika",
+    "language": "Odia",
+    "genre": "Bhajan",
+    "website": "https://pendujatt.com.se/song/aji-jaen-dekhini-jaga-to-parika-sourav-mp3-song",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/57303925/813800/Aji Jaen Dekhini Jaga To Parika.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/aji-jaen-dekhini-jaga-to-parika-sourav.webp",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "19 Aug, 2024",
+    "duration": "6:00",
+    "source": "https://pendujatt.com/"
   }
 ]

@@ -392,7 +392,6 @@ input[type="range"]::-moz-range-thumb {
   /* background: var(--primary-dark); */
   font-size: 14px;
   opacity: 1 !important;
-  cursor: move;
   opacity: 1;
   background-color: #fff;
   color: #000;

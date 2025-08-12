@@ -19,6 +19,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 export class FooterComponent implements AfterViewInit {
 
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>; // Reference to the audio element
+  @ViewChild('toggleShuffleList') toggleShuffleListBtn!: ElementRef<HTMLButtonElement>;
 
   allSongs!: Song[];
   shuffledSongs!:Song[];
@@ -41,7 +42,7 @@ export class FooterComponent implements AfterViewInit {
   currentShufflePlaying = false;
 
   isSuffleListOpen = false;
-
+  isDragEnable = signal(false);
 
   playingImage = 'https://i.gifer.com/Nt6v.gif';
   pauseImage = 'https://i.gifer.com/fetch/w300-preview/55/554818561cbf36d813ef2010cc9d66cc.gif';
@@ -143,7 +144,7 @@ export class FooterComponent implements AfterViewInit {
   }
 
   get isExpanded() {
-    return this.audioPlayer?.nativeElement.paused || this.expanded
+    return this.audioPlayer?.nativeElement.paused || this.expanded || this.isSuffleListOpen;
   }
 
   toggleLoop(): void {
@@ -283,6 +284,9 @@ export class FooterComponent implements AfterViewInit {
       this.toggleMute();
     } else if (event.key === 'Enter') {
       scrollToCard(this.currentSongIndex + '')
+    } else if (event.key === 'q' || event.key === 'Q') {
+      this.toggleSuffleList()
+      this.toggleShuffleListBtn.nativeElement.focus();
     }
     this._cdr.markForCheck();
 
@@ -290,6 +294,10 @@ export class FooterComponent implements AfterViewInit {
 
   toggleMute() {
     this.muted = !this.muted
+  }
+
+  toggleSuffleList() {
+    this.isSuffleListOpen = !this.isSuffleListOpen;
   }
 
   onSongEnd(): void {
@@ -369,4 +377,17 @@ export class FooterComponent implements AfterViewInit {
     return computed(() => window.innerWidth)
   };
 
+  getCdkDisabled(song: Song) {
+    return song.website===this.currentSong()?.website || !this.isDragEnable()
+  }
+
+  startHold() {
+    this.isDragEnable.set(true);
+    this._cdr.detectChanges();
+  }
+
+  stopHold() {
+    this.isDragEnable.set(false); // disable when released or mouse leaves
+    this._cdr.detectChanges();
+  }
 }
