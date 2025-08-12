@@ -1,9 +1,9 @@
-import { ChangeDetectionStrategy, Component, effect, HostListener, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, input, output } from '@angular/core';
 import { Song } from '../../interfaces/songs';
 import { CommonModule } from '@angular/common';
 import { ALL_SONGS, DEFAULT_THUMBNAIL } from '../../constants';
 import { SharedDataService } from '../../services/shared-data.service';
-import { downloadSong, initFavorite, retriveSource } from '../../utils';
+import { downloadSong, retriveSource } from '../../utils';
 
 @Component({
   selector: 'app-song-list',
@@ -77,8 +77,7 @@ export class SongListComponent {
     localStorage.setItem('favoriteList', JSON.stringify(this.favoriteList));
   }
   // Add/remove a song from playlist
-  togglePlaylist(song: Song) {
-    // song.isInPlaylist = !song.isInPlaylist;
+  togglePlaylist() {
     this.optionsIndex = null; // Close options dropdown
   }
 
