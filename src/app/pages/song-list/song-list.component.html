@@ -3,7 +3,7 @@
   <div class="song-card card" (click)="onSingleClick($event, song)" (dblclick)="onDoubleClick($event, song)"
     [id]="$index" (mouseleave)="optionsIndex=null">
     <div class="card-body">
-      <img [src]="song.thumbnail || defaultThumbnail" alt="{{ song.song_name }}" class="thumbnail" />
+      <img [src]="song.thumbnail || defaultThumbnail" loading="lazy" (error)="thumb.src=defaultThumbnail" alt="{{ song.song_name }}" class="thumbnail" #thumb/>
       <!-- Favorite icon -->
       @if (song.isFavorite) {
       <div class="favorite-icon">
