@@ -10,7 +10,7 @@ import { downloadSong, retriveSource } from '../../utils';
   imports: [CommonModule],
   templateUrl: './song-list.component.html',
   styleUrl: './song-list.component.css',
-  changeDetection:ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SongListComponent {
   playlistTitle = input.required<string>();
@@ -27,7 +27,7 @@ export class SongListComponent {
   favoriteList = JSON.parse(localStorage.getItem('favoriteList') || '[]');
   smallScreen = window.innerWidth <= 800;
 
-  constructor(public sharedDataService: SharedDataService) {  }
+  constructor(public sharedDataService: SharedDataService) { }
 
   private checkScreenSize() {
     this.smallScreen = window.innerWidth <= 800;
@@ -48,7 +48,7 @@ export class SongListComponent {
       this.onClick(event, song); // Call the single click handler
       this.clickTimeout = null; // Reset the timeout
     }, 250); // Delay to differentiate single click from double click
-    
+
   }
 
   onDoubleClick(event: MouseEvent, song: Song): void {

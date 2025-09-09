@@ -1,28 +1,29 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, computed, effect, ElementRef, HostListener, signal, ViewChild, WritableSignal } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, computed, effect, ElementRef, HostListener, OnDestroy, signal, ViewChild, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Song } from '../../interfaces/songs';
 import { SharedDataService } from '../../services/shared-data.service';
 import { ALL_SONGS, DEFAULT_THUMBNAIL } from '../../constants';
 import { retriveSource, scrollToCard } from '../../utils';
 import _ from 'lodash';
-import {CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray} from '@angular/cdk/drag-drop';
+import { CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule, FormsModule, CdkDropList, CdkDrag, ScrollingModule],
+  imports: [CommonModule, FormsModule, CdkDropList, CdkDrag, ScrollingModule, NzIconModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FooterComponent implements AfterViewInit {
+export class FooterComponent implements AfterViewInit, OnDestroy {
 
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>; // Reference to the audio element
   @ViewChild('toggleShuffleList') toggleShuffleListBtn!: ElementRef<HTMLButtonElement>;
 
   allSongs!: Song[];
-  shuffledSongs!:Song[];
+  shuffledSongs!: Song[];
   currentSong: WritableSignal<Song | null> = signal(null);
   currentSongIndex = -1;
   songLoading = false;
@@ -43,6 +44,7 @@ export class FooterComponent implements AfterViewInit {
 
   isSuffleListOpen = false;
   isDragEnable = signal(false);
+  private saveTimeInterval: null | ReturnType<typeof setInterval> = null;
 
   playingImage = 'https://i.gifer.com/Nt6v.gif';
   pauseImage = 'https://i.gifer.com/fetch/w300-preview/55/554818561cbf36d813ef2010cc9d66cc.gif';
@@ -82,14 +84,14 @@ export class FooterComponent implements AfterViewInit {
     if (this.isSuffled && !this.currentShufflePlaying) {
       this.shuffleCurrentSong();
     }
-    
+
     this.currentShufflePlaying = false;
     scrollToCard(this.currentSongIndex + '');
   }
 
   // Set the index of the current song in the shuffled list
   private setCurrentSongIndex(): void {
-    this.currentSongIndex = this.shuffledSongs.findIndex((song:Song) => this.currentSong()?.website === song.website);
+    this.currentSongIndex = this.shuffledSongs.findIndex((song: Song) => this.currentSong()?.website === song.website);
   }
 
   // Move the current song to the start of the shuffled list
@@ -128,7 +130,7 @@ export class FooterComponent implements AfterViewInit {
     if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA' && target.tagName !== 'SELECT' && !target.isContentEditable) {
       try {
         this.onKeyPress(event);
-      } catch { }
+      } catch (error) { }
     }
   }
 
@@ -143,6 +145,9 @@ export class FooterComponent implements AfterViewInit {
 
   }
 
+  ngOnDestroy(): void {
+    this.stopSavingTime();
+  }
   get isExpanded() {
     return this.audioPlayer?.nativeElement.paused || this.expanded || this.isSuffleListOpen;
   }
@@ -162,7 +167,7 @@ export class FooterComponent implements AfterViewInit {
   toggleSuffle(): void {
     this.isSuffled = !this.isSuffled;
     this.updateShuffledSongs();
-    
+
     // Handle expanded state toggle
     this.handleExpandedState();
 
@@ -181,7 +186,7 @@ export class FooterComponent implements AfterViewInit {
           (song.isFavorite = !this.currentSong()?.isFavorite);
         return song
       }));
-    const index = ALL_SONGS.findIndex(_song=>_song.website===song?.website)
+    const index = ALL_SONGS.findIndex(_song => _song.website === song?.website)
     this.favoriteList[index] = !this.favoriteList[index]
     if (!this.expanded) {
       this.expanded = true;
@@ -197,19 +202,41 @@ export class FooterComponent implements AfterViewInit {
     this.sharedDataService.currentSong = song
   }
 
+  private startSavingTime(): void {
+    // Clear any existing interval
+    this.stopSavingTime();
+
+    // Save every 4 seconds (you can adjust this)
+    this.saveTimeInterval = setInterval(() => {
+      sessionStorage.setItem('currentTime', JSON.stringify(this.currentTime));
+    }, 2000);
+  }
+
+  private stopSavingTime(): void {
+    if (this.saveTimeInterval) {
+      clearInterval(this.saveTimeInterval);
+      this.saveTimeInterval = null;
+    }
+    // Save one final time when stopping
+    sessionStorage.setItem('currentTime', JSON.stringify(this.currentTime));
+  }
+
   togglePlay(expandOnPause = true): void {
     if (this.duration) {
       if (this.sharedDataService.isSongPlaying) {
         this.audioPlayer.nativeElement.pause(); // Pause the audio
         sessionStorage.setItem('currentTime', JSON.stringify(this.currentTime));
+        this.stopSavingTime();
         setTimeout(() => {
           if (expandOnPause) {
             this.expanded = false;
           }
-        }
-          , 500)
+        }, 500);
       } else {
         this.audioPlayer.nativeElement.play(); // Play the audio
+        if (this.saveTimeInterval === null) {
+          this.startSavingTime();
+        }
         this.expanded = false;
       }
       this.sharedDataService.isSongPlaying = !this.sharedDataService.isSongPlaying; // Toggle the play/pause state
@@ -220,6 +247,10 @@ export class FooterComponent implements AfterViewInit {
     sessionStorage.setItem('currentTime', '0');
     const prevIndex = (this.shuffledSongs.length + this.currentSongIndex - 1) % this.shuffledSongs.length;
     this.setCurrentSong(this.shuffledSongs[prevIndex])
+    this.stopSavingTime();
+    if (this.saveTimeInterval === null) {
+      this.startSavingTime();
+    }
     this.currentShufflePlaying = true;
   }
 
@@ -228,7 +259,20 @@ export class FooterComponent implements AfterViewInit {
     sessionStorage.setItem('currentTime', '0');
     const nextIndex = (this.currentSongIndex + 1) % this.shuffledSongs.length;
     this.setCurrentSong(this.shuffledSongs[nextIndex]);
+    this.stopSavingTime();
+    if (this.saveTimeInterval === null) {
+      this.startSavingTime();
+    }
     this.currentShufflePlaying = true;
+  }
+
+  onPlaying() {
+    console.log('playing');
+    this.sharedDataService.isSongPlaying = true;
+    // this.stopSavingTime();
+    if (this.saveTimeInterval === null) {
+      this.startSavingTime();
+    }
   }
 
   onProgressChange(event: any): void {
@@ -368,9 +412,9 @@ export class FooterComponent implements AfterViewInit {
   drop(event: CdkDragDrop<Song[]>) {
     const prevSong = this.shuffledSongs.slice(this.currentSongIndex)[event.currentIndex]
     const currSong = this.shuffledSongs.slice(this.currentSongIndex)[event.previousIndex]
-    const previousIndex = this.shuffledSongs.findIndex(song=>song.website === prevSong.website)
-    const currentIndex = this.shuffledSongs.findIndex(song=>song.website === currSong.website)
-    moveItemInArray(this.shuffledSongs,currentIndex, previousIndex);
+    const previousIndex = this.shuffledSongs.findIndex(song => song.website === prevSong.website)
+    const currentIndex = this.shuffledSongs.findIndex(song => song.website === currSong.website)
+    moveItemInArray(this.shuffledSongs, currentIndex, previousIndex);
     this.setCurrentSongIndex();
   }
 
@@ -379,7 +423,7 @@ export class FooterComponent implements AfterViewInit {
   };
 
   getCdkDisabled(song: Song) {
-    return song.website===this.currentSong()?.website || !this.isDragEnable()
+    return song.website === this.currentSong()?.website || !this.isDragEnable()
   }
 
   startHold() {

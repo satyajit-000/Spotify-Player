@@ -3,7 +3,7 @@
   <!-- Audio Element -->
   <audio #audioPlayer [src]="currentSong()?.song_url" [muted]="muted" [volume]="volume/100" [loop]="isLooped" (play)="expanded=false;sharedDataService.isSongPlaying=true;isSuffleListOpen=false;"
     [autoplay]="true" (loadstart)="onLoadStart()" (loadeddata)="onDataLoad()" (timeupdate)="updateProgress()" (pause)="sharedDataService.isSongPlaying=false"
-    (ended)="onSongEnd()" (playing)="sharedDataService.isSongPlaying=true" (ended)="playNext()" (error)="playNext()"></audio>
+    (ended)="onSongEnd()" (playing)="onPlaying()" (ended)="playNext()" (error)="playNext()"></audio>
   <div class="now-playing-bar">
     <button class="close-btn" (click)="exitNowPlayingBar()" title="Close" *ngIf="isExpanded">
       <i class="fas fa-times-circle"></i>
@@ -53,8 +53,12 @@
             <i class="fas fa-step-backward" title="Shift + LeftArrow"></i>
           </button>
           <button class="play-pause" (click)="togglePlay(false)" [disabled]="songLoading">
-            <i class="fas"
-              [ngClass]="{'fa-play': !sharedDataService.isSongPlaying , 'fa-pause': sharedDataService.isSongPlaying}"></i>
+            @if (songLoading) {
+              <i nz-icon nzType="loading" nzTheme="outline" class="fa-spin"></i>
+            } @else {
+              <i class="fas"
+                [ngClass]="{'fa-play': !sharedDataService.isSongPlaying , 'fa-pause': sharedDataService.isSongPlaying}"></i>
+            }
           </button>
           <button (click)="playNext()" [disabled]="songLoading" title="Shift + RightArrow">
             <i class="fas fa-step-forward"></i>
