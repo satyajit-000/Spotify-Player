@@ -1,16 +1,16 @@
-import { ChangeDetectionStrategy, Component, effect, HostListener, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, input, output } from '@angular/core';
 import { Song } from '../../interfaces/songs';
 import { CommonModule } from '@angular/common';
 import { ALL_SONGS, DEFAULT_THUMBNAIL } from '../../constants';
 import { SharedDataService } from '../../services/shared-data.service';
-import { downloadSong, initFavorite, retriveSource } from '../../utils';
+import { downloadSong, retriveSource } from '../../utils';
 
 @Component({
   selector: 'app-song-list',
   imports: [CommonModule],
   templateUrl: './song-list.component.html',
   styleUrl: './song-list.component.css',
-  changeDetection:ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SongListComponent {
   playlistTitle = input.required<string>();
@@ -27,7 +27,7 @@ export class SongListComponent {
   favoriteList = JSON.parse(localStorage.getItem('favoriteList') || '[]');
   smallScreen = window.innerWidth <= 800;
 
-  constructor(public sharedDataService: SharedDataService) {  }
+  constructor(public sharedDataService: SharedDataService) { }
 
   private checkScreenSize() {
     this.smallScreen = window.innerWidth <= 800;
@@ -48,7 +48,7 @@ export class SongListComponent {
       this.onClick(event, song); // Call the single click handler
       this.clickTimeout = null; // Reset the timeout
     }, 250); // Delay to differentiate single click from double click
-    
+
   }
 
   onDoubleClick(event: MouseEvent, song: Song): void {

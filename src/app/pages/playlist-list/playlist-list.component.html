@@ -9,7 +9,7 @@
                     <p class="playlist-name">{{ playlist.name }}</p>
                     <p class="song-count">{{ playlist.songs.length }} Songs</p>
                 </div>
-                @if (playlistIndex === $index) {
+                @if (playlistIndex === $index && playlist.songs.length > 0) {
                 <button class="play-pause" (click)="onClickPlay($event, playlist.id, playlist.songs)">
                     <i class="fas fa-play"></i>
                 </button>
