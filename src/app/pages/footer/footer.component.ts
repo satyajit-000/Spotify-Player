@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, computed, effect, ElementRef, HostListener, OnDestroy, signal, ViewChild, WritableSignal } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, computed, effect, ElementRef, HostListener, OnDestroy, Renderer2, signal, ViewChild, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Song } from '../../interfaces/songs';
 import { SharedDataService } from '../../services/shared-data.service';
@@ -15,13 +15,30 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
   imports: [CommonModule, FormsModule, CdkDropList, CdkDrag, ScrollingModule, NzIconModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
+  styles: [`
+    input[type="range"]::-webkit-slider-runnable-track {
+    width: 80%;
+    height: 2px;
+    background: #ccc;
+    border-radius: 2px;
+    background: linear-gradient(
+      to right, 
+      var(--primary-green, blue) 10%, 
+      #ccc 90%,
+    );
+  }
+    `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent implements AfterViewInit, OnDestroy {
 
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>; // Reference to the audio element
   @ViewChild('toggleShuffleList') toggleShuffleListBtn!: ElementRef<HTMLButtonElement>;
-
+  @ViewChild('volumeSlider', { static: false }) sliderRef?: ElementRef<HTMLInputElement>;
+  @ViewChild('volumeSliderExpanded', { static: false }) sliderRefExpanded?: ElementRef<HTMLInputElement>;
+  @ViewChild('progressBar', { static: false }) progressBar?: ElementRef<HTMLInputElement>;
+  volumeElement: HTMLInputElement | null = null;
+  volumeElementExpanded: HTMLInputElement | null = null;
   allSongs!: Song[];
   shuffledSongs!: Song[];
   currentSong: WritableSignal<Song | null> = signal(null);
@@ -37,12 +54,14 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   favoriteList = JSON.parse(localStorage.getItem('favoriteList') || '[]');
   defaultThumbnail = DEFAULT_THUMBNAIL
   retriveSource = retriveSource;
-  expanded = false;
+  expanded = signal(false);
   playBarHeight = '0';
   currentPlayingPlaylistId: string | number = -1;
   currentShufflePlaying = false;
 
-  isSuffleListOpen = false;
+  isSuffleListOpen = signal(false);
+  paused = signal(true); // Track paused state reactively
+  isExpanded = computed(() => this.paused() || this.expanded() || this.isSuffleListOpen());
   isDragEnable = signal(false);
   private saveTimeInterval: null | ReturnType<typeof setInterval> = null;
 
@@ -51,6 +70,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
 
   constructor(
     public sharedDataService: SharedDataService,
+    private renderer: Renderer2,
     private _cdr: ChangeDetectorRef,
   ) {
     // Initial setup from shared service
@@ -60,6 +80,26 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
     effect(() => {
       this.syncPlaylistData();
     });
+    effect(() => {
+      if (this.isSuffleListOpen()) {
+        setTimeout(() => {
+          const currentSongElement = document.getElementById(this.currentSong()?.website || '');
+          currentSongElement?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 500);
+      }
+    });
+    effect(() => {
+      if (this.isExpanded()) {
+        setTimeout(() => {
+          this.updateSlider(this.sliderRefExpanded?.nativeElement, this.volume);
+
+        }, 100);
+      } else {
+        setTimeout(() => {
+          this.updateSlider(this.sliderRef?.nativeElement, this.volume);
+        }, 100);
+      }
+    })
   }
 
   // Initialize playlist based on shared service data
@@ -115,10 +155,10 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
 
   // Handle the expanded state toggling logic
   private handleExpandedState(): void {
-    if (!this.expanded) {
-      this.expanded = true;
+    if (!this.expanded()) {
+      this.expanded.set(true);
       setTimeout(() => {
-        this.expanded = false;
+        this.expanded.set(false);
       }, 1000);
     }
   }
@@ -139,25 +179,27 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
       setTimeout(() => {
         this.audioPlayer.nativeElement.currentTime = this.currentTime;
         this.updateProgress();
+        setTimeout(() => {
+          this.updateSlider(this.sliderRefExpanded?.nativeElement, this.volume);
+          this.updateSlider(this.sliderRef?.nativeElement, this.volume);
+        }, 100);
+        this.updateSlider(this.progressBar?.nativeElement, this.progress);
+        this._cdr.markForCheck();
       }, 1000)
     }
     scrollToCard(this.currentSongIndex + '');
-
   }
 
   ngOnDestroy(): void {
     this.stopSavingTime();
   }
-  get isExpanded() {
-    return this.audioPlayer?.nativeElement.paused || this.expanded || this.isSuffleListOpen;
-  }
 
   toggleLoop(): void {
     this.isLooped = !this.isLooped;
-    if (!this.expanded) {
-      this.expanded = true;
+    if (!this.expanded()) {
+      this.expanded.set(true);
       setTimeout(() => {
-        this.expanded = false;
+        this.expanded.set(false);
 
       }, 1000);
     }
@@ -176,7 +218,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   }
 
   toggleExpand() {
-    this.expanded = !this.expanded;
+    this.expanded.update(value => !value);
   }
 
   toggleFavorite(song: Song | null): void {
@@ -188,10 +230,10 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
       }));
     const index = ALL_SONGS.findIndex(_song => _song.website === song?.website)
     this.favoriteList[index] = !this.favoriteList[index]
-    if (!this.expanded) {
-      this.expanded = true;
+    if (!this.expanded()) {
+      this.expanded.set(true);
       setTimeout(() => {
-        this.expanded = false;
+        this.expanded.set(false);
 
       }, 1000);
     }
@@ -229,7 +271,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
         this.stopSavingTime();
         setTimeout(() => {
           if (expandOnPause) {
-            this.expanded = false;
+            this.expanded.set(false);
           }
         }, 500);
       } else {
@@ -237,7 +279,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
         if (this.saveTimeInterval === null) {
           this.startSavingTime();
         }
-        this.expanded = false;
+        this.expanded.set(false);
       }
       this.sharedDataService.isSongPlaying = !this.sharedDataService.isSongPlaying; // Toggle the play/pause state
     }
@@ -267,9 +309,8 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   }
 
   onPlaying() {
-    console.log('playing');
     this.sharedDataService.isSongPlaying = true;
-    // this.stopSavingTime();
+    this.stopSavingTime();
     if (this.saveTimeInterval === null) {
       this.startSavingTime();
     }
@@ -287,6 +328,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
     this.currentTime = this.audioPlayer.nativeElement.currentTime;
     this.duration = this.audioPlayer.nativeElement.duration;
     this.progress = (this.currentTime / this.duration) * 100; // Update the progress bar
+    this.updateSlider(this.progressBar?.nativeElement, this.progress);
   }
 
   onKeyPress(event: KeyboardEvent): void {
@@ -331,7 +373,6 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
       scrollToCard(this.currentSongIndex + '')
     } else if (event.key === 'q' || event.key === 'Q') {
       this.toggleSuffleList()
-      this.toggleShuffleListBtn.nativeElement.focus();
     }
     this._cdr.markForCheck();
 
@@ -342,7 +383,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   }
 
   toggleSuffleList() {
-    this.isSuffleListOpen = !this.isSuffleListOpen;
+    this.isSuffleListOpen.update(value => !value);
   }
 
   onSongEnd(): void {
@@ -383,7 +424,36 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   }
 
   onVolumeChange() {
-    sessionStorage.setItem('volume', JSON.stringify(this.volume))
+    sessionStorage.setItem('volume', JSON.stringify(this.volume));
+    if (this.isExpanded()) {
+      setTimeout(() => {
+        this.updateSlider(this.sliderRefExpanded?.nativeElement, this.volume);
+
+      }, 100);
+    } else {
+      setTimeout(() => {
+        this.updateSlider(this.sliderRef?.nativeElement, this.volume);
+      }, 100);
+    }
+  }
+
+  updateSlider(sliderElement: HTMLInputElement | undefined, percentageValue: number) {
+
+    if (!sliderElement) {
+      return;
+    }
+
+    const slider = sliderElement;
+    const percentage = isNaN(percentageValue) ? 0 : percentageValue;
+    const style = `linear-gradient(
+    to right, 
+    var(--primary-green, blue) 0%, 
+    var(--primary-green, blue) ${percentage}%, 
+    #ccc ${100 - percentage}%, 
+    #ccc 100%
+  )`;
+
+    this.renderer.setStyle(slider, 'background', style);
   }
 
   exitNowPlayingBar() {

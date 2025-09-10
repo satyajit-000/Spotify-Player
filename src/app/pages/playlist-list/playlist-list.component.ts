@@ -26,4 +26,13 @@ export class PlaylistListComponent {
     this.playlistClicked.emit(playListId);
 
   }
+
+  getThumbnailImages(playlist: Playlist) {
+    return playlist.songs.map(song => song.thumbnail).slice(0, 4);
+  }
+
+  getRandomThumbnail(playlist: Playlist) {
+    const randomIndex = Math.floor(Math.random() * playlist.songs.length);
+    return playlist.songs[randomIndex].thumbnail || '';
+  }
 }

@@ -118,12 +118,19 @@ input[type="range"] {
 }
 
 /* Style the track (the bar) */
-input[type="range"]::-webkit-slider-runnable-track {
-  width: 80%; /* Adjust this to reduce the track width */
-  height: 2px; /* Adjust thickness */
+/* Also add Firefox support */
+input[type="range"]::-moz-range-track {
+  width: 80%;
+  height: 2px;
   background: #ccc;
   border-radius: 2px;
-  background: linear-gradient(to right, var(--primary-green, blue) 0%, var(--primary-green-hover, blue) 20%, #ccc 30%);
+  background: linear-gradient(
+    to right, 
+    var(--primary-green, blue) 0%, 
+    var(--primary-green, blue) var(--fill-percentage, 0%), 
+    #ccc var(--fill-percentage, 100%), 
+    #ccc 100%
+  );
 }
 
 /* Style the thumb (the draggable circle) */

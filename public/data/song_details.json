@@ -4433,7 +4433,7 @@
     "music_composer": "Anirudh Ravichander",
     "published_on": null,
     "duration": null,
-    "language": "Tamil"
+    "language": "Hindi"
   },
   {
     "song_name": "Thee Thalapathy",
@@ -5754,7 +5754,7 @@
     "music_composer": "Thaman S",
     "published_on": "14 Apr, 2024",
     "duration": null,
-    "language": "Kannada"
+    "language": "Telugu"
   },
   {
     "song_name": "Chanda Chanda Anuradha Bhat, Ravi Basrur",
@@ -11311,6 +11311,183 @@
     "music_composer": null,
     "published_on": "28 Jun, 2024",
     "duration": "4:32",
+    "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "Saiyaara",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pendujatt.com.se/song/saiyaara-tanishk-bagchi-faheem-abdullah-mp3-song",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/65989780/2136760/Saiyaara.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/saiyaara-various-artists.webp",
+    "singers": [
+      "Tanishk Bagchi",
+      "Faheem Abdullah",
+      "Arslan Nizami",
+      "Irshad Kamil"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "18 Jul, 2025",
+    "duration": "6:10",
+    "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "Dhun",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pendujatt.com.se/song/dhun-mithoon-arijit-singh-mp3-song",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/65910948/2136668/Dhun.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/dhun-from-saiyaara-mithoon.webp",
+    "singers": [
+      "Mithoon",
+      "Arijit Singh"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "01 Jul, 2025",
+    "duration": "4:36",
+    "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "Tum Ho Toh",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pendujatt.com.se/song/tum-ho-toh-vishal-mishra-mp3-song",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/65989780/2136762/Tum Ho Toh.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/saiyaara-various-artists.webp",
+    "singers": [
+      "Vishal Mishra",
+      "Hansika Pareek",
+      "Raj Shekhar"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "18 Jul, 2025",
+    "duration": "5:18",
+    "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "Saiyaara Reprise - Female",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pendujatt.com.se/song/saiyaara-reprise-female-tanishk-mp3-song",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/65989780/2136765/Saiyaara Reprise - Female.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/saiyaara-various-artists.webp",
+    "singers": [
+      "Tanishk Bagchi",
+      "Faheem Abdullah",
+      "Arslan Nizami",
+      "Shreya Ghoshal",
+      "Irshad Kamil"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "18 Jul, 2025",
+    "duration": "3:03",
+    "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "Barbaad",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pendujatt.com.se/song/barbaad-the-rish-jubin-nautiyal-mp3-song",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/65329983/2136613/Barbaad.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/barbaad-from-saiyaara-the-rish.webp",
+    "singers": [
+      "The Rish",
+      "Jubin Nautiyal"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "15 Jun, 2025",
+    "duration": "5:57",
+    "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "Barbaad Reprise - Female",
+    "language": "Hindi",
+    "genre": "Romantic",
+    "website": "https://pendujatt.com.se/song/barbaad-reprise-female-the-mp3-song",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/65989780/2136766/Barbaad Reprise - Female.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/saiyaara-various-artists.webp",
+    "singers": [
+      "The Rish",
+      "Shilpa Rao"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "18 Jul, 2025",
+    "duration": "2:09",
+    "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "Monica",
+    "language": "Hindi",
+    "genre": "Rock",
+    "website": "https://pendujatt.com.se/song/monica-anirudh-ravichander-sublahshini-kumaar-mp3-song",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/66231898/2136735/Monica.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/monica-from-coolie-the-powerhouse-hindi-anirudh-ravichander.webp",
+    "singers": [
+      "Anirudh Ravichander",
+      "Sublahshini",
+      "Kumaar"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "13 Jul, 2025",
+    "duration": "3:08",
+    "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "Monica (Tamil)",
+    "language": "Tamil",
+    "genre": "Rock",
+    "website": "https://koshalworld.com/download/59320/monica-tamil-.html",
+    "song_url": "https://koshalworld.com/files/download/id/59320",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft119/59320_4.jpg",
+    "singers": [
+      "Sublahshini",
+      "Anirudh Ravichander",
+      "Rap by Asal Kolaar"
+    ],
+    "lyricist": "Vishnu Edavan",
+    "music_composer": "Anirudh Ravichander",
+    "published_on": "11 Jul, 2025",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Nodivalandava",
+    "language": "Kannada",
+    "genre": "Romantic",
+    "website": "https://pendujatt.com.se/song/nodivalandava-armaan-malik-shreya-ghoshal-mp3-song",
+    "song_url": "https://bajaao.pendujatt.com.se/load/128/13271633/78689/Nodivalandava.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/the-villain-arjun-janya.webp",
+    "singers": [
+      "Armaan Malik",
+      "Shreya Ghoshal"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "15 Aug, 2018",
+    "duration": "",
+    "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "Thee Thalapathy",
+    "language": "Tamil",
+    "genre": "Rock",
+    "website": "https://pendujatt.com.se/song/thee-thalapathy-silambarasan-tr-mp3-song",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/41106332/231174/Thee Thalapathy.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/varisu-thaman-s.webp",
+    "singers": [
+      "Silambarasan Tr"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "24 Dec, 2022",
+    "duration": "",
     "source": "https://pendujatt.com/"
   }
 ]

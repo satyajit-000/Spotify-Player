@@ -86,7 +86,8 @@ export class PlaylistComponent implements OnInit {
         this.filteredSongs.set(this.filterCache.get(trimmedText) || []);
       } else {
         const filtered = this.playList.songs.filter(song =>
-          song.song_name.toLowerCase().includes(trimmedText)
+          song.song_name.toLowerCase().includes(trimmedText) ||
+          song.singers?.some(singer => singer.toLowerCase().includes(trimmedText))
         );
         this.filterCache.set(trimmedText, filtered);
         this.filteredSongs.set(filtered);

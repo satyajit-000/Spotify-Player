@@ -4,7 +4,17 @@
         @for (playlist of playlists(); track $index) {
         <div class="playlist-card card" (mouseenter)="playlistIndex = $index" (mouseleave)="playlistIndex = null" (click)="onClickPlaylist($event, playlist.id)">
             <div class="card-body">
-                <img [src]="playlist.thumbnail" alt="{{ playlist.name }}" class="thumbnail" />
+                @if(playlist.songs.length < 4) {
+                    <img [src]="playlist.thumbnail" alt="{{ playlist.name }}" class="thumbnail" />
+                } @else {
+                    <div class="composite-thumbnail">
+                        <div class="thumbnail-grid">
+                            @for (imgSrc of getThumbnailImages(playlist); track imgSrc) {
+                            <img class="thumbnail-item placeholder-image" [src]="imgSrc" (error)="playListThumbNail.src = getRandomThumbnail(playlist)" [loading]="'lazy'" #playListThumbNail />
+                            }
+                        </div>
+                    </div>
+                }
                 <div class="details">
                     <p class="playlist-name">{{ playlist.name }}</p>
                     <p class="song-count">{{ playlist.songs.length }} Songs</p>

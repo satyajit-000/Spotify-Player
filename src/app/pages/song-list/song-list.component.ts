@@ -99,4 +99,17 @@ export class SongListComponent {
     this.optionsIndex = null;
   }
 
+  highlight(text: string | number | null): string | null {
+    if (!text) {
+      return null;
+    } else if (!this.sharedDataService.filteredText) {
+      return text + '';
+    }
+    text = text + '';
+    const re = new RegExp(this.sharedDataService.filteredText, 'gi');
+    if (re.test(text)) {
+      return text.replace(re, (match) => `<mark>${match}</mark>`);
+    }
+    return text;
+  }
 }
