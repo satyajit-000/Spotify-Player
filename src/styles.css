@@ -18,6 +18,9 @@
     --background-dark:#121212;
 
     --background-light-dark: #383838;
+
+    --fill-percentage: 0%;
+    --empty-percentage: 100%;
 }
 
 body {
@@ -108,4 +111,13 @@ html, .song-list, .home-container, .shuffledList {
 
 .float-right {
   float: right;
+}
+
+.hidden {
+  display: none !important;
+}
+
+mark {
+  background-color: rgb(51, 255, 0) !important;
+  padding: 0 !important;
 }

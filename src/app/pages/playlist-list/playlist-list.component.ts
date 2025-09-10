@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { PLAYLISTS } from '../../constants';
 import { Playlist } from '../../models/playlists';
 import { Song } from '../../interfaces/songs';
 
@@ -26,5 +25,14 @@ export class PlaylistListComponent {
     event.stopPropagation();
     this.playlistClicked.emit(playListId);
 
+  }
+
+  getThumbnailImages(playlist: Playlist) {
+    return playlist.songs.map(song => song.thumbnail).slice(0, 4);
+  }
+
+  getRandomThumbnail(playlist: Playlist) {
+    const randomIndex = Math.floor(Math.random() * playlist.songs.length);
+    return playlist.songs[randomIndex].thumbnail || '';
   }
 }
