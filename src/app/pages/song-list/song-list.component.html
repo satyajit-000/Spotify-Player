@@ -11,8 +11,8 @@
       </div>
       }
       <div class="details">
-        <p class="songs" [ngClass]="{ active: currentIndex() === $index }">{{ song.song_name }}</p><br>
-        <p class="artist">{{ song.singers }}</p><br>
+        <p class="songs" [ngClass]="{ active: currentIndex() === $index }" [innerHTML]="highlight(song.song_name)"></p><br>
+        <p class="artist" [innerHTML]="highlight(song.singers?.join(', ') || '')"></p><br>
         @if (!smallScreen) {
           <a class="source" [href]="song.website" target="_blank"
             (click)="$event.stopPropagation()">{{retriveSource(song.source)}}</a>

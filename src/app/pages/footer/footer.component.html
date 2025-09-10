@@ -1,20 +1,20 @@
-<footer (mouseover)="expanded=true" (mouseenter)="expanded=true" (mouseleave)="!audioPlayer.nativeElement.paused && !isSuffleListOpen? expanded=false:''">
+<footer (mouseover)="expanded.set(true)" (mouseenter)="expanded.set(true)" (mouseleave)="!audioPlayer.nativeElement.paused && !isSuffleListOpen()? expanded.set(false):''">
   @if (currentSong()) {
   <!-- Audio Element -->
-  <audio #audioPlayer [src]="currentSong()?.song_url" [muted]="muted" [volume]="volume/100" [loop]="isLooped" (play)="expanded=false;sharedDataService.isSongPlaying=true;isSuffleListOpen=false;"
-    [autoplay]="true" (loadstart)="onLoadStart()" (loadeddata)="onDataLoad()" (timeupdate)="updateProgress()" (pause)="sharedDataService.isSongPlaying=false"
-    (ended)="onSongEnd()" (playing)="onPlaying()" (ended)="playNext()" (error)="playNext()"></audio>
+  <audio #audioPlayer [src]="currentSong()?.song_url" [muted]="muted" [volume]="volume/100" [loop]="isLooped" (play)="expanded.set(false);sharedDataService.isSongPlaying=true;isSuffleListOpen.set(false);"
+    [autoplay]="true" (play)="paused.set(false)" (loadstart)="onLoadStart()" (loadeddata)="onDataLoad()" (timeupdate)="updateProgress()" (pause)="sharedDataService.isSongPlaying=false; paused.set(true)"
+    (ended)="onSongEnd()" (playing)="onPlaying()" (ended)="playNext(); paused.set(true)" (error)="playNext()"></audio>
   <div class="now-playing-bar">
-    <button class="close-btn" (click)="exitNowPlayingBar()" title="Close" *ngIf="isExpanded">
+    <button class="close-btn" (click)="exitNowPlayingBar()" title="Close" *ngIf="isExpanded()">
       <i class="fas fa-times-circle"></i>
     </button>
 
     <div class="now-playing">
       <!-- Song Info -->
       <div class="song-info">
-        <img [src]="currentSong()?.thumbnail || defaultThumbnail" alt="Song Thumbnail" class="thumbnail" [class.small]="!isExpanded"
+        <img [src]="currentSong()?.thumbnail || defaultThumbnail" alt="Song Thumbnail" class="thumbnail" [class.small]="!isExpanded()"
           />
-          @if (isExpanded) {
+          @if (isExpanded()) {
             <div class="details"> 
               @if (isSongNameShort && innerWidth() > 1050) {
                 <p class="song-name pointer" [title]="currentSong()?.song_name">{{ currentSong()?.song_name }}</p>
@@ -27,7 +27,7 @@
             </div>
           } @else {
             @if (isSongNameShort && 650 > innerWidth() && innerWidth() > 1050) {
-              <p class="song-name" [class.small]="!isExpanded">{{ currentSong()?.song_name }}</p>
+              <p class="song-name" [class.small]="!isExpanded()">{{ currentSong()?.song_name }}</p>
             } @else {
               <marquee behavior="scroll" direction="left" class="running-text song-name">
                 {{ currentSong()?.song_name }}
@@ -40,7 +40,7 @@
       <!-- Controls -->
       <div class="audio-info">
 
-        @if(isExpanded) {
+        @if(isExpanded()) {
         <div class="controls">
           <button (click)="toggleFavorite(currentSong())">
             <i class="fa-heart"
@@ -66,16 +66,16 @@
           <button (click)="toggleLoop()">
             <i class="fas fa-repeat" [ngClass]="{active:isLooped}"></i>
           </button>
-          <button class="list" (click)="toggleSuffleList()" (blur)="isSuffleListOpen=false" #toggleShuffleList>
-            <i class="fa-solid fa-list" [ngClass]="{active:isSuffleListOpen}"></i>
-            @if (isSuffleListOpen) {
+          <button class="list" (click)="toggleSuffleList()" (blur)="isSuffleListOpen.set(false)" #toggleShuffleList>
+            <i class="fa-solid fa-list" [ngClass]="{active:isSuffleListOpen()}"></i>
+            @if (isSuffleListOpen()) {
               <div
                 cdkDropList
                 class="shuffledList"
                 (cdkDropListDropped)="drop($event)">
-                @for (song of shuffledSongs.slice(currentSongIndex); track $index) {
+                @for (song of shuffledSongs; track $index) {
                   <div
-                  class="song" [ngClass]="{'mr-5': song.website===currentSong()?.website, 'justify-content-between':song.website!==currentSong()?.website}"
+                  class="song" [id]="song.website" [ngClass]="{'mr-5': song.website===currentSong()?.website, 'justify-content-between':song.website!==currentSong()?.website}"
                   [cdkDragData]="song" 
                   cdkDrag
                   [cdkDragDisabled]="getCdkDisabled(song)"
@@ -103,12 +103,12 @@
               </div>
             }
           </button>
-          @if(isExpanded) {
+          @if(isExpanded()) {
             <div class="volume-control">
               <button (click)="toggleMute()" style="min-width: 52px; display: flex;">
                 <i class="fas pointer" [ngClass]="{'fa-volume-mute':muted || !volume, 'fa-volume-up':!muted && volume}"></i>
               </button>
-              <input type="range" min="0" max="100" [(ngModel)]="volume" (change)="onVolumeChange()" />
+              <input type="range" min="0" max="100" class="volume-input" [(ngModel)]="volume" (change)="onVolumeChange()" (input)="updateSlider(volumeSliderExpanded, volume);" #volumeSliderExpanded />
             </div>
           }
 
@@ -117,7 +117,7 @@
         <!-- Progress Bar -->
         <div class="progress-bar">
           <div class="time-display">
-            @if(!isExpanded) {
+            @if(!isExpanded()) {
               <button (click)="$event.stopPropagation(); togglePlay(false)" [disabled]="songLoading">
                 <i class="fas"
                   [ngClass]="{'fa-play': !sharedDataService.isSongPlaying , 'fa-pause': sharedDataService.isSongPlaying}"></i>
@@ -125,18 +125,18 @@
             }
             <span class="current-time">{{ getTime(currentTime) }}</span>
             <input type="range" min="0" max="100" [(ngModel)]="progress" (input)="onProgressChange($event)" step="0.01"
-              [size]="'1'" [disabled]="songLoading" [attr.value]="50" />
+              [size]="'1'" [disabled]="songLoading" [attr.value]="50" #progressBar/>
             <span class="duration">{{ getTime(duration) }}</span>
           </div>
         </div>
       </div>
       <!-- Volume Control -->
-      @if(!isExpanded) {
+      @if(!isExpanded()) {
       <div class="volume-control">
         <button (click)="toggleMute()" style="min-width: 52px; display: flex;">
           <i class="fas pointer" [ngClass]="{'fa-volume-mute':muted || !volume, 'fa-volume-up':!muted && volume}"></i>
         </button>
-        <input type="range" min="0" max="100" [(ngModel)]="volume" (change)="onVolumeChange()" />
+        <input type="range" min="0" max="100" class="volume-input" [(ngModel)]="volume" (change)="onVolumeChange()" (input)="updateSlider(volumeSlider, volume);" #volumeSlider />
       </div>
     }
     </div>
