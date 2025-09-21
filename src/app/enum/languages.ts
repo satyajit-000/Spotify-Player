@@ -4,6 +4,7 @@ export enum EnumLanguages {
     Telugu = 'Telugu',
     Kannada = 'Kannada',
     Tamil = 'Tamil',
+    Sambalpuri = 'Sambalpuri',
     Malayalam = 'ml',
     Bengali = 'Bengali',
     Marathi = 'mr',

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Song } from '../../interfaces/songs';
 import { ALL_SONGS, PLAYLISTS } from '../../constants';
@@ -11,7 +11,7 @@ import { PlaylistComponent } from '../playlists/playlist/playlist.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, PlaylistListComponent, PlaylistComponent],
+  imports: [PlaylistListComponent, PlaylistComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   changeDetection:ChangeDetectionStrategy.OnPush

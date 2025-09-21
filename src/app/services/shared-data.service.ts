@@ -46,10 +46,10 @@ export class SharedDataService {
   }
 
   get filteredText(): string {
-    return this._filteredText().trim().toLowerCase();
+    return this._filteredText();
   }
   set filteredText(text:string) {
-    this._filteredText.update(value=>text);
+    this._filteredText.set(text);
   }
 
   get isSongPlaying():boolean {

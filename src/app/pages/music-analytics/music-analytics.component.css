@@ -1,0 +1,569 @@
+.music-analytics-container {
+  max-height: 100vh; /* Fixed height */
+  overflow: hidden; /* Prevent main container scroll */
+  display: flex;
+  flex-direction: column; /* Stack header and content */
+}
+
+/* Create a scrollable wrapper */
+.analytics-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+/* Content container with padding */
+.analytics-content {
+  padding: 2rem;
+  padding-top: 0; /* Remove top padding since header will be sticky */
+}
+
+.analytics-header {
+  position: sticky;
+  top: 1remy;
+  z-index: 9; /* Increase z-index */
+  background: rgba(26, 26, 26, 0.95); /* More opaque background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem 2rem; /* Add horizontal padding */
+  padding-bottom: .8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* margin-bottom: 2rem; */
+}
+
+ul.tab-group {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0 !important;
+    /* margin-top: 3rem; */
+    transition: padding 0.3s ease-in-out;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+ul.tab-group li {
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+
+}
+
+ul.tab-group li.active {
+  color: var(--primary-green);
+  background-color: #333333; /* Slightly lighter on hover */
+  transition: all .2s ease-out;
+}
+
+ul.tab-group li:hover {
+  background-color: #444444; /* Slightly lighter on hover */
+  transform: translateY(-2px); /* Slide effect */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+ul.tab-group li .tab-label {
+  margin-left: 0;
+  transition: all .2s ease-out;
+}
+
+.tab-content {
+  padding: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  flex: 1; /* Take remaining space */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  max-height: calc(100vh - 300px); /* Adjust based on header height */
+}
+
+.stat-card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  /* transform: translateY(-5px); */
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  opacity: 0.8;
+}
+
+.stat-content h3 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.chart-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.card-title {
+  color: #28a745;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.progress-sm {
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar {
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.genre-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.artist-rank,
+.rank-badge,
+.year-badge {
+  background: #28a745;
+  color: black;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 20px !important;
+}
+
+.timeline-stat h3 {
+  color: #28a745;
+  margin-top: 0.5rem;
+}
+
+.btn-group .btn {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* .btn-success {
+  background: #28a745;
+  color: black;
+}
+
+.btn-outline-success {
+  border: 1px solid #28a745;
+  color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background: #28a745;
+  color: black;
+} */
+
+/* .more{
+  cursor: pointer;
+} */
+
+.more:hover {
+  cursor: pointer;
+  color: rgb(0, 140, 255) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 820px) {
+  .music-analytics-container {
+    /* height: 100vh; */
+  }
+
+  .analytics-header {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+  }
+  
+  .analytics-header h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .analytics-header p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Mobile tab navigation */
+  ul.tab-group {
+    gap: 0.3rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    /* padding: 0.5rem 0; */
+    margin:0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  ul.tab-group::-webkit-scrollbar {
+    display: none;
+  }
+
+  ul.tab-group li {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+
+  }
+
+  ul.tab-group li i {
+    font-size: 0.9rem;
+  }
+
+  .tab-content {
+    padding: 1rem 0.5rem;
+    max-height: calc(100vh - 180px);
+  }
+
+  /* Statistics cards - stack vertically */
+  .row.g-3 .col-md-3,
+  .row.g-3 .col-md-4 {
+    margin-bottom: 1rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-icon {
+    font-size: 1.8rem;
+    margin-right: 0.8rem;
+  }
+
+  .stat-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .stat-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-content small {
+    font-size: 0.8rem;
+  }
+
+  /* Chart cards */
+  .chart-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-title i {
+    font-size: 0.9rem;
+  }
+
+  /* Progress items */
+  .language-item,
+  .genre-item,
+  .source-item,
+  .timeline-item {
+    margin-bottom: 1rem;
+  }
+
+  .language-color,
+  .genre-color,
+  .source-color {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Rankings */
+  .rank-badge,
+  .artist-rank,
+  .year-badge {
+    width: 25px;
+    height: 25px;
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+  }
+
+  /* Artist items */
+  .artist-item,
+  .top-language-item,
+  .top-year-item,
+  .top-source-item {
+    margin-bottom: 1rem;
+  }
+
+  .artist-item .fw-medium,
+  .top-language-item .fw-medium,
+  .top-year-item .fw-medium,
+  .top-source-item .fw-medium {
+    font-size: 0.9rem;
+  }
+
+  .artist-item small,
+  .top-language-item small,
+  .top-year-item small,
+  .top-source-item small {
+    font-size: 0.75rem;
+  }
+
+  /* Badge adjustments */
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  /* Duration stats */
+  .duration-stats .col-3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .duration-stat h5 {
+    font-size: 1.2rem;
+  }
+
+  .duration-stat small {
+    font-size: 0.7rem;
+  }
+
+  /* Era stats */
+  .era-stat h5 {
+    font-size: 1.2rem;
+  }
+
+  .era-stat small {
+    font-size: 0.7rem;
+  }
+
+  /* Timeline highlights */
+  .highlight-item {
+    margin-bottom: 0.8rem;
+  }
+
+  .highlight-item span {
+    font-size: 0.9rem;
+  }
+
+  /* Artist category stats */
+  .artist-category-stat h5 {
+    font-size: 1.2rem;
+  }
+
+  .artist-category-stat small {
+    font-size: 0.7rem;
+  }
+
+  /* Progress bars */
+  .progress-sm {
+    height: 6px;
+  }
+
+  /* Text adjustments */
+  .fw-medium {
+    font-size: 0.9rem;
+  }
+
+  .text-white {
+    font-size: 0.85rem;
+  }
+
+  h3 {
+    font-size: 1.3rem !important;
+  }
+
+  h4 {
+    font-size: 1.1rem !important;
+  }
+
+  h5 {
+    font-size: 1rem !important;
+  }
+
+  h6 {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width:768px) {
+  ul.tab-group li {
+    gap: 0;
+
+  }
+
+  ul.tab-group li .tab-label {
+    max-width: 0;
+    overflow-x: hidden;
+    display: none;
+    /* transition: display .2s ease-in-out; */
+  }
+
+  ul.tab-group li.active {
+    .tab-label {
+      display: block;
+      max-width: 100vh;
+      margin-left: .5rem;
+    }
+  }
+
+  ul.tab-group li:hover {
+    transform: none; /* Slide effect */
+    box-shadow: none; /* Subtle shadow */
+  }
+
+}
+/* Extra small screens */
+@media (max-width: 480px) {
+  .analytics-header {
+    padding: 0.8rem;
+  }
+
+  .analytics-header h1 {
+    font-size: 1.3rem !important;
+  }
+
+  ul.tab-group li {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  ul.tab-group li i {
+    font-size: 0.8rem;
+  }
+
+  .tab-content {
+    padding: 0.8rem 0.3rem;
+    max-height: calc(100vh - 160px);
+  }
+
+  .stat-card {
+    padding: 0.8rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .chart-card {
+    padding: 0.8rem;
+  }
+
+  .rank-badge,
+  .artist-rank,
+  .year-badge {
+    width: 20px;
+    height: 20px;
+    font-size: 0.6rem;
+  }
+
+  .language-color,
+  .genre-color,
+  .source-color {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Stack duration stats vertically on very small screens */
+  .duration-stats .col-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .duration-stats .row {
+    margin: 0;
+  }
+
+  /* Reduce spacing */
+  .mb-3, .my-3 {
+    margin-bottom: 0.8rem !important;
+  }
+
+  .mb-4, .my-4 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mt-4, .my-4 {
+    margin-top: 1rem !important;
+  }
+}
+
+/* Landscape mobile */
+@media (max-width: 800px) and (orientation: landscape) {
+  .analytics-header {
+    padding: 0.8rem 1rem;
+  }
+
+  .tab-content {
+    max-height: calc(100vh - 140px);
+  }
+
+  ul.tab-group li {
+    padding: 0.3rem 0.7rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .analytics-header {
+    padding: 1.2rem 1.5rem;
+  }
+
+  ul.tab-group li {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .tab-content {
+    padding: 1.5rem 1rem;
+    max-height: calc(100vh - 220px);
+  }
+
+  .stat-card {
+    padding: 1.2rem;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-content h3 {
+    font-size: 1.7rem;
+  }
+}

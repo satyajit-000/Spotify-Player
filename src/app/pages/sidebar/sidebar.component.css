@@ -9,7 +9,7 @@
     transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
     width: 4.5rem;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 2;
+    z-index: 998;
     margin: 0;
 }
 
@@ -151,6 +151,14 @@
 
     .sidebar.open {
         width: 12rem; /* Adjusted for smaller screens */
+    }
+
+    .sidebar nav ul li:hover {
+        transform: translateX(2px); /* Slide effect */
+    }
+
+    .sidebar nav ul li:hover a i {
+        transform: scale(1.1); /* Scale icons on hover */
     }
 
     .sidebar nav ul li a i,

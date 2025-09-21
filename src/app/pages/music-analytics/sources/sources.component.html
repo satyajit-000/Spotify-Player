@@ -1,0 +1,140 @@
+<div>
+  <div class="row g-4">
+    <!-- Source Distribution Chart -->
+    <div class="col-lg-8">
+      <div class="chart-card">
+        <h4 class="card-title">
+          <i class="fas fa-database me-2"></i>
+          Source Distribution ({{ analytics.uniqueSources }} total sources)
+        </h4>
+        <div class="chart-content">
+          @for (source of analytics.sourceData; track source; let i = $index) {
+            <div class="source-item mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="source-color me-3"
+                    [style.background]="getProgressColor(i)">
+                  </div>
+                  <a class="fw-medium text-white" [href]="source.name" target="_blank">{{ retriveSource(source.name || 'Unknown') }}</a>
+                </div>
+                <div class="text-end">
+                  <span class="h6 text-success me-2">{{ source.value }}</span>
+                  <span class="text-white">({{ source.percentage }}%)</span>
+                </div>
+              </div>
+              <div class="progress progress-sm mt-2">
+                <div
+                  class="progress-bar"
+                  [style.width.%]="source.percentage"
+                  [style.background]="getProgressColor(i)">
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Sources Ranking -->
+    <div class="col-lg-4">
+      <div class="chart-card">
+        <h4 class="card-title">
+          <i class="fas fa-trophy me-2"></i>
+          Top Sources
+        </h4>
+        <div class="chart-content">
+          @for (source of analytics.sourceData.slice(0, sourceDistributionCount); track source; let i = $index) {
+            <div class="top-source-item mb-3">
+              <div class="d-flex align-items-center">
+                <div class="rank-badge me-3">{{ i + 1 }}</div>
+
+                <div class="flex-grow-1">
+                  <a class="fw-medium text-white" [href]="source.name" target="_blank">{{ retriveSource(source.name || 'Unknown') }}</a>
+                  <br>
+                  <small class="text-white">{{ source.value }} songs ({{ source.percentage }}%)</small>
+                </div>
+                <div class="source-count">
+                  <span class="badge bg-primary">{{ source.value }}</span>
+                </div>
+              </div>
+              <div class="progress progress-sm mt-2">
+                <div
+                  class="progress-bar bg-primary bg-gradient"
+                  [style.width.%]="source.percentage">
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Source Statistics Cards -->
+  <div class="row g-4 mt-4">
+    <div class="col-lg-3">
+      <div class="chart-card text-center">
+        <h5 class="card-title">
+          <i class="fas fa-star me-2 text-warning"></i>
+          Most Popular Source
+        </h5>
+        <div class="chart-content">
+          @if (analytics.sourceData && analytics.sourceData.length > 0) {
+            <h3><a [href]="analytics.sourceData[0].name" target="_blank">{{ retriveSource(analytics.sourceData[0].name || 'Unknown') }}</a></h3>
+            <p class="text-white">{{ analytics.sourceData[0].value }} songs</p>
+            <small class="text-white">{{ analytics.sourceData[0].percentage }}% of collection</small>
+          } @else {
+            <h3 class="text-muted">No data</h3>
+          }
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-3">
+      <div class="chart-card text-center">
+        <h5 class="card-title">
+          <i class="fas fa-chart-pie me-2 text-info"></i>
+          Source Diversity
+        </h5>
+        <div class="chart-content">
+          <h3 class="text-info">{{ analytics.uniqueSources }}</h3>
+          <p class="text-white">Unique Sources</p>
+          <small class="text-white">Variety in collection</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+      <div class="chart-card text-center">
+        <h5 class="card-title">
+          <i class="fas fa-balance-scale me-2 text-primary"></i>
+          Average per Source
+        </h5>
+        <div class="chart-content">
+          <h3 class="text-primary">{{ (analytics.totalSongs / analytics.uniqueSources) | number:'1.0-0' }}</h3>
+          <p class="text-white">Songs per Source</p>
+          <small class="text-white">Distribution balance</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+      <div class="chart-card text-center">
+        <h5 class="card-title">
+          <i class="fas fa-percentage me-2 text-warning"></i>
+          Source Coverage
+        </h5>
+        <div class="chart-content">
+          @if (analytics.sourceData && analytics.sourceData.length > 0) {
+            <h3 class="text-warning">{{ analytics.sourceData[0].percentage }}%</h3>
+            <p class="text-white">Top Source Share</p>
+            <small class="text-white">Concentration level</small>
+          } @else {
+            <h3 class="text-muted">0%</h3>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,61 +1,61 @@
-@if(!inputPlaylist()){
-    <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <div [ngClass]="{'px-0':innerWidth() < 649}">
-            <button (click)="backToPlaylist()" class="back-btn" [title]="'Back to playlist'">
-                <i class="fa-solid fa-chevron-left"></i>
-                <span>
-                    Back to playlist
-                </span>
-            </button>
-        </div>
-        <div class="p-3" [ngClass]="{'px-0':innerWidth() < 649, 'py-2': innerWidth() <= 573}">
-            <div >
-                <nz-pagination class="m-0 p-0"
-                    [(nzPageIndex)]="pageIndex" 
-                    [nzTotal]="filteredSongs().length" 
-                    [(nzPageSize)]="pageSize" 
-                    [nzResponsive]="true" 
-                    [nzShowTotal]="rangeTemplate" 
-                    [nzShowSizeChanger]="true" 
-                    [nzSimple]="isSimple()"
-                    [nzItemRender]="itemRenderTemplate"
-                    [nzPageSizeOptions]="[5,10,20,30,50,70,100]" 
-                    (nzPageSizeChange)="onPageSizeOrIndexChange()"
-                    (nzPageIndexChange)="onPageSizeOrIndexChange()"/>
-                <ng-template #rangeTemplate let-range="range" let-total>
-                    {{ range[0] }}-{{ range[1] }} of {{ total }} items
-                </ng-template>
-                <ng-template #itemRenderTemplate let-type let-page="page">
-                    @switch (type) {
-                        @case ('prev') {
-                            Previous
+<div class="playlist-songs-container">
+    @if(!inputPlaylist()){
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <div [ngClass]="{'px-0':innerWidth() < 649}">
+                <button (click)="backToPlaylist()" class="back-btn" [title]="'Back'">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <span>
+                        Back
+                    </span>
+                </button>
+            </div>
+            <div class="p-3" [ngClass]="{'px-0':innerWidth() < 649, 'py-2': innerWidth() <= 573}">
+                <div >
+                    <nz-pagination class="m-0 p-0"
+                        [(nzPageIndex)]="pageIndex" 
+                        [nzTotal]="filteredSongs().length" 
+                        [(nzPageSize)]="pageSize" 
+                        [nzResponsive]="true" 
+                        [nzShowTotal]="rangeTemplate" 
+                        [nzShowSizeChanger]="true" 
+                        [nzSimple]="isSimple()"
+                        [nzItemRender]="itemRenderTemplate"
+                        [nzPageSizeOptions]="[5,10,20,30,50,70,100]" />
+                    <ng-template #rangeTemplate let-range="range" let-total>
+                        {{ range[0] }}-{{ range[1] }} of {{ total }} items
+                    </ng-template>
+                    <ng-template #itemRenderTemplate let-type let-page="page">
+                        @switch (type) {
+                            @case ('prev') {
+                                Previous
+                            }
+                            @case ('next') {
+                                Next
+                            }
+                            @case ('page') {
+                                {{page}}
+                            }
+                            @case ('prev_5') {
+                                «
+                            }
+                            @case ('next_5') {
+                                »
+                            }
                         }
-                        @case ('next') {
-                            Next
-                        }
-                        @case ('page') {
-                            {{page}}
-                        }
-                        @case ('prev_5') {
-                            «
-                        }
-                        @case ('next_5') {
-                            »
-                        }
-                    }
-                </ng-template>
+                    </ng-template>
+                </div>
             </div>
         </div>
-    </div>
-}
-
-<section class="section">
-    <h3 class="playlist-title">
-        {{ playList.name }}
-        <span class="song-count">
-            <span class="song-number">{{ playList.songs.length }}</span> Songs
-        </span>
-    </h3>
-    <app-song-list [playlistTitle]="playList.name" [currentIndex]="currentIndex" [currentSong]="currentSong()"
-        [songs]="currentPageSongs()" (songClicked)="onClickSong($event)" />
-</section>
+    }
+    
+    <section class="section">
+        <h3 class="playlist-title">
+            {{ playList.name }}
+            <span class="song-count">
+                <span class="song-number">{{ playList.songs.length }}</span> Songs
+            </span>
+        </h3>
+        <app-song-list [playlistTitle]="playList.name" [currentIndex]="currentIndex" [currentSong]="currentSong()"
+            [songs]="currentPageSongs()" (songClicked)="onClickSong($event)" />
+    </section>
+</div>

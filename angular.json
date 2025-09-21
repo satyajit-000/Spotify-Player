@@ -19,7 +19,7 @@
             "polyfills": [
               "zone.js"
             ],
-            "baseHref": "/Spotify-Player/", 
+            "baseHref": "/Spotify-Player/",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/assets",
@@ -31,7 +31,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/tailwind-custom.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
@@ -42,16 +43,22 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumError": "3MB",
-                  "maximumWarning": "2.5MB"
+                  "maximumError": "4MB",
+                  "maximumWarning": "3MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "6kB",
+                  "maximumError": "10kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": {
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                }
+              }
             },
             "development": {
               "optimization": false,
@@ -94,7 +101,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/tailwind-custom.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
