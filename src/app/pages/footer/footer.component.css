@@ -614,3 +614,23 @@ input[type="range"]::-moz-range-thumb {
 .running-text {
   min-width: 2rem;
 }
+
+.play-back-rate {
+  position: fixed; /* Use fixed instead of absolute for viewport positioning */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Fix the translate syntax */
+  background-color: white;
+  opacity: 0;
+  padding: 10px 20px; /* Add some padding for better appearance */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Optional: subtle shadow */
+  z-index: 1000; /* Ensure it appears above other content */
+  font-weight: 500; /* Optional: make text more prominent */
+  transition: opacity .2s ease-in-out;
+}
+
+.show {
+  opacity: .7;
+
+}

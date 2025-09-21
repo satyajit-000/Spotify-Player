@@ -1,4 +1,4 @@
-.dashboard{
+.dashboard {
     display: flex;
     flex-direction: column;
     /* max-height: 70%; */
@@ -80,30 +80,32 @@
     background-color: #121212;
     color: #fff;
     height: 100%;
-    margin-left: 5rem;
+    margin-left: 4rem;
     transition: margin-left .3s ease-in-out;
 }
+
 @media (min-width:800px) {
 
-.main-content.open {
-    margin-left: 12rem
-}
+    .main-content.open {
+        margin-left: 11.5rem
+    }
 }
 
 @media (max-width: 1426px) {
     .main-content.open {
-        margin-left: 11rem
+        margin-left: 10.5rem
     }
 }
 
 @media (max-width: 1285px) {
     .main-content.open {
-        margin-left: 10rem
+        margin-left: 9.5rem
     }
 }
+
 @media (max-width: 1180px) {
     .main-content.open {
-        margin-left: 9rem
+        margin-left: 8.5rem
     }
 }
 
@@ -114,14 +116,14 @@
     }
 }
 
-@media (max-width: 800px)  {
+@media (max-width: 800px) {
 
     .main-content {
-        margin-left: 3rem;
+        margin-left: 2rem;
     }
 
     .main-content.open {
-        margin-left: 12rem;
+        margin-left: 11rem;
     }
 
 }

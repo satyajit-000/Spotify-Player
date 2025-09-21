@@ -17,8 +17,8 @@ export function downloadSong(songUrl: string): void {
   anchor.remove();
 }
 
-export function retriveSource(sourceUrl: string): string[] {
-  return sourceUrl.trim().split('/').filter((item: string) => item.includes('.'))
+export function retriveSource(sourceUrl: string): string {
+  return sourceUrl.trim().split('/').filter((item: string) => item.includes('.')).join('');
 }
 
 export function scrollToCard(id: string) {
@@ -34,4 +34,10 @@ export async function initFavorite(songs:Song[]) {
   songs.forEach((song:Song, index:number) => {
     song.isFavorite = favoriteList[index];
   })
+}
+
+export function convertDuration(duration: string): number {
+  if (!duration || duration === '') return 0;
+  const parts = duration.split(':').map(Number);
+  return parts.length === 2 ? parts[0] * 60 + parts[1] : 0;
 }

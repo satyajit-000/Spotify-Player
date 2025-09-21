@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
-import { CommonModule } from '@angular/common';
+
 import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, FooterComponent, CommonModule, SidebarComponent],
+  imports: [RouterOutlet, RouterModule, FooterComponent, SidebarComponent],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
   changeDetection:ChangeDetectionStrategy.OnPush

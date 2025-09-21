@@ -46,7 +46,7 @@ export class SharedDataService {
   }
 
   get filteredText(): string {
-    return this._filteredText().trim().toLowerCase();
+    return this._filteredText();
   }
   set filteredText(text:string) {
     this._filteredText.set(text);

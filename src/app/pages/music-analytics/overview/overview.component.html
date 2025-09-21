@@ -1,0 +1,142 @@
+<div>
+  <!-- Key Statistics Cards -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-3">
+      <div class="stat-card bg-primary">
+        <div class="stat-icon">
+          <i class="fas fa-music"></i>
+        </div>
+        <div class="stat-content">
+          <h3>{{ analytics.totalSongs }}</h3>
+          <p>Total Songs</p>
+          <small>In your collection</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="stat-card bg-success">
+        <div class="stat-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <div class="stat-content">
+          <h3>{{ analytics.durationStats.totalMinutes }}</h3>
+          <p>Total Minutes</p>
+          @if(analytics.durationStats.totalMinutes) {
+            <small>~{{ (analytics.durationStats.totalMinutes / 60) | number:'1.0-0' }} hours</small>
+          }
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="stat-card bg-warning">
+        <div class="stat-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="stat-content">
+          <h3>{{ analytics.uniqueArtists }}</h3>
+          <p>Unique Artists</p>
+          <small>Different performers</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="stat-card bg-info">
+        <div class="stat-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="stat-content">
+          <h3>{{ analytics.uniqueLanguages }}</h3>
+          <p>Languages</p>
+          <small>Multi-lingual</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Statistics Row -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-4">
+      <div class="stat-card bg-secondary">
+        <div class="stat-icon">
+          <i class="fas fa-tags"></i>
+        </div>
+        <div class="stat-content">
+          <h3>{{ analytics.uniqueGenres }}</h3>
+          <p>Unique Genres</p>
+          <small>Different categories</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="stat-card bg-dark">
+        <div class="stat-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <div class="stat-content">
+          <h3>{{ analytics.uniqueSources }}</h3>
+          <p>Unique Sources</p>
+          <small>Different origins</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="stat-card bg-danger">
+        <div class="stat-icon">
+          <i class="fas fa-calendar"></i>
+        </div>
+        <div class="stat-content">
+          <h3>{{ analytics.mostActiveYear }}</h3>
+          <p>Most Active Year</p>
+          <small>Peak release period</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Duration Analysis Chart -->
+  <div class="row g-4">
+    <div class="col-lg-12">
+      <div class="chart-card">
+        <h4 class="card-title">
+          <i class="fas fa-stopwatch me-2"></i>
+          Song Duration Analysis
+        </h4>
+        <div class="chart-content">
+          <div class="duration-stats mb-4">
+            <div class="row text-center">
+              <div class="col-3">
+                <div class="duration-stat">
+                  <h5 class="text-primary">{{ analytics.durationStats.shortSongs }}</h5>
+                  <small>Short (&lt;3min)</small>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="duration-stat">
+                  <h5 class="text-warning">{{ analytics.durationStats.mediumSongs }}</h5>
+                  <small>Medium (3-5min)</small>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="duration-stat">
+                  <h5 class="text-danger">{{ analytics.durationStats.longSongs }}</h5>
+                  <small>Long (&gt;5min)</small>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="duration-stat">
+                  <h5 class="text-success">{{ analytics.durationStats.avgMinutes }}</h5>
+                  <small>Average (min)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <h6 class="text-white">Total Listening Time</h6>
+            <h3 class="text-success">{{ (analytics.durationStats.totalMinutes / 60) | number:'1.1-1' }} hours</h3>
+            <small class="text-white">{{ analytics.durationStats.totalMinutes }} minutes total</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

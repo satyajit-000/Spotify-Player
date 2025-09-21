@@ -1,0 +1,135 @@
+        <div>
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="chart-card">
+                <h4 class="card-title">
+                  <i class="fas fa-tags me-2"></i>
+                  Genre Distribution ({{ analytics.uniqueGenres }} total genres)
+                </h4>
+                <div class="chart-content">
+                  @for (genre of analytics.genreData; track genre; let i = $index) {
+                    <div class="genre-item mb-3">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="genre-color me-3"
+                            [style.background]="getProgressColor(i)">
+                          </div>
+                          <span class="fw-medium"><a (click)="navigateToPlaylist(genre.name)">{{ genre.name || 'Unknown' }}</a></span>
+                        </div>
+                        <div class="text-end">
+                          <span class="h6 text-success me-2">{{ genre.value }}</span>
+                          <span class="text-white">({{ genre.percentage }}%)</span>
+                        </div>
+                      </div>
+                      <div class="progress progress-sm mt-2">
+                        <div
+                          class="progress-bar"
+                          [style.width.%]="genre.percentage"
+                          [style.background]="getProgressColor(i)">
+                        </div>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="chart-card">
+                <h4 class="card-title">
+                  <i class="fas fa-trophy me-2"></i>
+                  Top Genres
+                </h4>
+                <div class="chart-content">
+                  @for (genre of analytics.genreData.slice(0, genreDistributionCount); track genre; let i = $index) {
+                    <div class="top-item mb-3">
+                      <div class="d-flex align-items-center">
+                        <div class="rank-badge me-3">{{ i + 1 }}</div>
+                        <div class="flex-grow-1">
+                          <div class="fw-medium"><a (click)="navigateToPlaylist(genre.name)">{{ genre.name || 'Unknown' }}</a></div>
+                          <small class="text-white">{{ genre.value }} songs ({{ genre.percentage }}%)</small>
+                        </div>
+                        <div class="genre-count">
+                          <span class="badge bg-warning">{{ genre.value }}</span>
+                        </div>
+                      </div>
+                      <div class="progress progress-sm mt-2">
+                        <div
+                          class="progress-bar bg-warning bg-gradient"
+                          [style.width.%]="genre.percentage">
+                        </div>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Genre Statistics Cards -->
+          <div class="row g-4 mt-4">
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-star me-2 text-warning"></i>
+                  Most Popular Genre
+                </h5>
+                <div class="chart-content">
+                  @if (analytics.genreData && analytics.genreData.length > 0) {
+                    <h3 class="text-success">{{ analytics.genreData[0].name || 'Unknown' }}</h3>
+                    <p class="text-white">{{ analytics.genreData[0].value }} songs</p>
+                    <small class="text-white">{{ analytics.genreData[0].percentage }}% of collection</small>
+                  } @else {
+                    <h3 class="text-muted">No data</h3>
+                  }
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-palette me-2 text-info"></i>
+                  Genre Diversity
+                </h5>
+                <div class="chart-content">
+                  <h3 class="text-info">{{ analytics.uniqueGenres }}</h3>
+                  <p class="text-white">Total Genres</p>
+                  <small class="text-white">Musical variety</small>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-balance-scale me-2 text-primary"></i>
+                  Average per Genre
+                </h5>
+                <div class="chart-content">
+                  <h3 class="text-primary">{{ (analytics.totalSongs / analytics.uniqueGenres) | number:'1.0-0' }}</h3>
+                  <p class="text-white">Songs per Genre</p>
+                  <small class="text-white">Distribution balance</small>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-percentage me-2 text-warning"></i>
+                  Genre Coverage
+                </h5>
+                <div class="chart-content">
+                  @if (analytics.genreData && analytics.genreData.length > 0) {
+                    <h3 class="text-warning">{{ analytics.genreData[0].percentage }}%</h3>
+                    <p class="text-white">Top Genre Share</p>
+                    <small class="text-white">Concentration level</small>
+                  } @else {
+                    <h3 class="text-muted">0%</h3>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>

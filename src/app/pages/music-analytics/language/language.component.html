@@ -1,0 +1,138 @@
+<div>
+  <div class="row g-4">
+    <!-- Language Distribution Chart -->
+    <div class="col-lg-8">
+      <div class="chart-card">
+        <h4 class="card-title">
+          <i class="fas fa-language me-2"></i>
+          Language Distribution ({{ analytics.uniqueLanguages }} total languages)
+        </h4>
+        <div class="chart-content">
+          @for (lang of analytics.languageData; track lang; let i = $index) {
+            <div class="language-item mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="language-color me-3"
+                    [style.background]="getProgressColor(i)">
+                  </div>
+                  <span class="fw-medium"><a (click)="navigateToPlaylist(lang.name)">{{ lang.name || 'Unknown' }}</a></span>
+                </div>
+                <div class="text-end">
+                  <span class="h6 text-success me-2">{{ lang.value }}</span>
+                  <span class="text-white">({{ lang.percentage }}%)</span>
+                </div>
+              </div>
+              <div class="progress progress-sm mt-2">
+                <div
+                  class="progress-bar"
+                  [style.width.%]="lang.percentage"
+                  [style.background]="getProgressColor(i)">
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Languages Ranking -->
+    <div class="col-lg-4">
+      <div class="chart-card">
+        <h4 class="card-title">
+          <i class="fas fa-trophy me-2"></i>
+          Top Languages
+        </h4>
+        <div class="chart-content">
+          @for (lang of analytics.languageData.slice(0, languageDistributionCount); track lang; let i = $index) {
+            <div class="top-language-item mb-3">
+              <div class="d-flex align-items-center">
+                <div class="rank-badge me-3">{{ i + 1 }}</div>
+                <div class="flex-grow-1">
+                  <div class="fw-medium">{{ lang.name || 'Unknown' }}</div>
+                  <small class="text-white">{{ lang.value }} songs ({{ lang.percentage }}%)</small>
+                </div>
+                <div class="language-count">
+                  <span class="badge bg-info">{{ lang.value }}</span>
+                </div>
+              </div>
+              <div class="progress progress-sm mt-2">
+                <div
+                  class="progress-bar bg-info bg-gradient"
+                  [style.width.%]="lang.percentage">
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Language Statistics Cards -->
+  <div class="row g-4 mt-4">
+    <div class="col-lg-3">
+      <div class="chart-card text-center">
+        <h5 class="card-title">
+          <i class="fas fa-star me-2 text-warning"></i>
+          Dominant Language
+        </h5>
+        <div class="chart-content">
+          @if (analytics.languageData && analytics.languageData.length > 0) {
+            <h3 class="text-success">{{ analytics.languageData[0].name }}</h3>
+            <p class="text-white">{{ analytics.languageData[0].value }} songs</p>
+            <small class="text-white">{{ analytics.languageData[0].percentage }}% of collection</small>
+          } @else {
+            <h3 class="text-muted">No data</h3>
+          }
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-3">
+      <div class="chart-card text-center">
+        <h5 class="card-title">
+          <i class="fas fa-globe me-2 text-info"></i>
+          Language Diversity
+        </h5>
+        <div class="chart-content">
+          <h3 class="text-info">{{ analytics.uniqueLanguages }}</h3>
+          <p class="text-white">Total Languages</p>
+          <small class="text-white">Cultural variety</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+      <div class="chart-card text-center">
+        <h5 class="card-title">
+          <i class="fas fa-balance-scale me-2 text-primary"></i>
+          Average per Language
+        </h5>
+        <div class="chart-content">
+          <h3 class="text-primary">{{ (analytics.totalSongs / analytics.uniqueLanguages) | number:'1.0-0' }}</h3>
+          <p class="text-white">Songs per Language</p>
+          <small class="text-white">Distribution balance</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+      <div class="chart-card text-center">
+        <h5 class="card-title">
+          <i class="fas fa-percentage me-2 text-warning"></i>
+          Language Coverage
+        </h5>
+        <div class="chart-content">
+          @if (analytics.languageData && analytics.languageData.length > 0) {
+            <h3 class="text-warning">{{ analytics.languageData[0].percentage }}%</h3>
+            <p class="text-white">Top Language Share</p>
+            <small class="text-white">Concentration level</small>
+          } @else {
+            <h3 class="text-muted">0%</h3>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,200 @@
+<div>
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="chart-card">
+                <h4 class="card-title">
+                  <i class="fas fa-calendar-alt me-2"></i>
+                  Release Timeline
+                </h4>
+                <div class="chart-content">
+                  @for (year of analytics.timelineData; track year; let i = $index) {
+                    <div class="timeline-item mb-3">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <div class="year-badge me-3">{{ year.year }}</div>
+                          <div>
+                            <span class="fw-medium"><a (click)="navigateToPlaylist(year.year.toString())">{{ year.songs }} songs released</a></span>
+                            <small class="text-white d-block">{{ year.percentage }}% of total collection</small>
+                          </div>
+                        </div>
+                        <div class="year-count">
+                          <span class="badge bg-info">{{ year.songs }}</span>
+                        </div>
+                      </div>
+                      <div class="progress progress-sm mt-2">
+                        <div
+                          class="progress-bar bg-info"
+                          [style.width.%]="year.percentage">
+                        </div>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="chart-card">
+                <h4 class="card-title">
+                  <i class="fas fa-trophy me-2"></i>
+                  Top Years
+                </h4>
+                <div class="chart-content">
+                  @for (year of analytics.timelineData.slice(0, timelineDistributionCount); track year; let i = $index) {
+                    <div class="top-year-item mb-3">
+                      <div class="d-flex align-items-center">
+                        <div class="rank-badge me-3">{{ i + 1 }}</div>
+                        <div class="flex-grow-1">
+                          <div class="fw-medium"><a (click)="navigateToPlaylist(year.year.toString())">{{ year.year }}</a></div>
+                          <small class="text-white">{{ year.songs }} songs ({{ year.percentage }}%)</small>
+                        </div>
+                        <div class="year-count">
+                          <span class="badge bg-primary">{{ year.songs }}</span>
+                        </div>
+                      </div>
+                      <div class="progress progress-sm mt-2">
+                        <div
+                          class="progress-bar bg-primary bg-gradient"
+                          [style.width.%]="year.percentage">
+                        </div>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Timeline Statistics Cards -->
+          <div class="row g-4 mt-4">
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-fire me-2 text-warning"></i>
+                  Peak Year
+                </h5>
+                <div class="chart-content">
+                  @if (analytics.timelineData && analytics.timelineData.length > 0) {
+                    <h3 class="text-success">{{ analytics.timelineData[0].year }}</h3>
+                    <p class="text-white">{{ analytics.timelineData[0].songs }} songs</p>
+                    <small class="text-white">{{ analytics.timelineData[0].percentage }}% of collection</small>
+                  } @else {
+                    <h3 class="text-muted">No data</h3>
+                  }
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-calendar-check me-2 text-info"></i>
+                  Active Years
+                </h5>
+                <div class="chart-content">
+                  <h3 class="text-info">{{ analytics.timelineData.length }}</h3>
+                  <p class="text-white">Years Covered</p>
+                  <small class="text-white">Release timeline span</small>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-chart-line me-2 text-primary"></i>
+                  Average per Year
+                </h5>
+                <div class="chart-content">
+                  <h3 class="text-primary">{{ analytics.songsPerYear | number:'1.1-1' }}</h3>
+                  <p class="text-white">Songs per Year</p>
+                  <small class="text-white">Release consistency</small>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-hourglass me-2 text-warning"></i>
+                  Collection Span
+                </h5>
+                <div class="chart-content">
+                  <h3 class="text-warning">{{ collectionSpanYears }}</h3>
+                  <p class="text-white">Years Range</p>
+                  <small class="text-white">{{ analytics.oldestSong }} to {{ analytics.newestSong }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Timeline Insights -->
+          <div class="row g-4 mt-4">
+            <div class="col-lg-6">
+              <div class="chart-card">
+                <h4 class="card-title">
+                  <i class="fas fa-chart-area me-2"></i>
+                  Era Distribution
+                </h4>
+                <div class="chart-content">
+                  <div class="row text-center">
+                    <div class="col-4">
+                      <div class="era-stat">
+                        <h5 class="text-info">{{ getEraCount('classic') }}</h5>
+                        <small>Classic Era<br>(Before 2000)</small>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="era-stat">
+                        <h5 class="text-warning">{{ getEraCount('modern') }}</h5>
+                        <small>Modern Era<br>(2000-2010)</small>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="era-stat">
+                        <h5 class="text-success">{{ getEraCount('contemporary') }}</h5>
+                        <small>Contemporary<br>(2010+)</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-lg-6">
+              <div class="chart-card">
+                <h4 class="card-title">
+                  <i class="fas fa-trending-up me-2"></i>
+                  Timeline Highlights
+                </h4>
+                <div class="chart-content">
+                  <div class="timeline-highlights">
+                    <div class="highlight-item mb-3">
+                      <div class="d-flex justify-content-between">
+                        <span class="text-white">First Song Year</span>
+                        <span class="text-success fw-bold">{{ analytics.oldestSong }}</span>
+                      </div>
+                    </div>
+                    <div class="highlight-item mb-3">
+                      <div class="d-flex justify-content-between">
+                        <span class="text-white">Latest Song Year</span>
+                        <span class="text-info fw-bold">{{ analytics.newestSong }}</span>
+                      </div>
+                    </div>
+                    <div class="highlight-item mb-3">
+                      <div class="d-flex justify-content-between">
+                        <span class="text-white">Most Productive</span>
+                        <span class="text-warning fw-bold">{{ analytics.mostActiveYear }}</span>
+                      </div>
+                    </div>
+                    <div class="highlight-item">
+                      <div class="d-flex justify-content-between">
+                        <span class="text-white">Collection Growth</span>
+                        <span class="text-primary fw-bold">{{ analytics.songsPerYear | number:'1.0-0' }}/year</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>

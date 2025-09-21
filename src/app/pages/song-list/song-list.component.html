@@ -12,10 +12,18 @@
       }
       <div class="details">
         <p class="songs" [ngClass]="{ active: currentIndex() === $index }" [innerHTML]="highlight(song.song_name)"></p><br>
-        <p class="artist" [innerHTML]="highlight(song.singers?.join(', ') || '')"></p><br>
+        <p class="artist">
+          <span [innerHTML]="highlight(song.singers?.join(', ') || '')"></span>
+          @if (song.singers?.join(', ') && getUniqueArtist(song)) { 
+            @if(innerWidth > 800) {
+              <br> 
+            } @else {, }
+          } 
+          <span [innerHTML]="highlight(getUniqueArtist(song))"></span>
+        </p><br>
         @if (!smallScreen) {
           <a class="source" [href]="song.website" target="_blank"
-            (click)="$event.stopPropagation()">{{retriveSource(song.source)}}</a>
+            (click)="$event.stopPropagation()" [innerHTML]="highlight(retriveSource(song.source))"></a>
           <br>
           @if (currentSong()?.website === song.website) {
           <img [src]="sharedDataService.isSongPlaying ? playingImage:pauseImage" alt="" width="20" />

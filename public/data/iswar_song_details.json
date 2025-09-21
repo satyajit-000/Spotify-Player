@@ -11,8 +11,9 @@
     "website": "https://pagalnew.com/songs/kabhi-shaam-dhale-mohammad-faiz.html",
     "music_composer": "Hunny Bunny",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:49",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Dil Tod Ke",
@@ -26,8 +27,9 @@
     "website": "https://pagalnew.com/songs/dil-tod-ke-b-praak.html",
     "music_composer": "Rochak Kohli",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:59",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Fitoor",
@@ -35,17 +37,18 @@
     "thumbnail": "https://pagalnew.com/coverimages/fitoor-shamshera-hindi-500-500.jpg",
     "singers": [
       "Mithoon",
-      " Arijit Singh",
-      " Neeti Mohan",
-      " Karan Malhotra"
+      "Arijit Singh",
+      "Neeti Mohan",
+      "Karan Malhotra"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/fitoor-shamshera-hindi.html",
     "music_composer": "Mithoon",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:08",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Kahani",
@@ -59,8 +62,9 @@
     "website": "https://pagalnew.com/songs/kahani-laal-singh-chaddha.html",
     "music_composer": "Pritam",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:28",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tujhe Yaad Na Meri Ayee 2",
@@ -74,8 +78,9 @@
     "website": "https://pagalnew.com/songs/tujhe-yaad-na-meri-ayee-2-b-praak.html",
     "music_composer": "Jatin-Lalit",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:54",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tumhare Hi Rahenge Hum Amitabh Bhattacharya, Sachin-Jigar, Varun Jain, Shilpa Rao",
@@ -93,7 +98,8 @@
     "music_composer": "Sachin-Jigar",
     "published_on": null,
     "duration": "03:50",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tum Jo Mile Ho",
@@ -107,8 +113,9 @@
     "website": "https://pagalnew.com/songs/tum-jo-mile-ho-vicky-vidya-ka-woh-wala-video.html",
     "music_composer": "Sachin-Jigar",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:05",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mere Mehboob",
@@ -116,15 +123,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/mere-mehboob-vicky-vidya-ka-woh-wala-video-500-500.jpg",
     "singers": [
       "Shilpa Rao",
-      " Sachet Tandon"
+      "Sachet Tandon"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/mere-mehboob-vicky-vidya-ka-woh-wala-video.html",
     "music_composer": "Sachin-Jigar",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:36",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Soni Soni",
@@ -132,16 +140,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/soni-soni-ishq-vishk-rebound-500-500.jpg",
     "singers": [
       "Darshan Raval",
-      " Jonita Gandhi",
-      " Rochak Kohli"
+      "Jonita Gandhi",
+      "Rochak Kohli"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/soni-soni1-ishq-vishk-rebound.html",
     "music_composer": "Rochak Kohli",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "2:56",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Do Dhaari Talwaar",
@@ -149,17 +158,18 @@
     "thumbnail": "https://pagalnew.com/coverimages/Do-Dhaari-Talwaar-Mere-Brother-Ki-Dulhan-500-500.jpg",
     "singers": [
       "Shweta Pandit",
-      " Shahid Mallya",
-      " Sohail Sen",
-      " Irshad Kamil"
+      "Shahid Mallya",
+      "Sohail Sen",
+      "Irshad Kamil"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/do-dhaari-talwaar-mere-brother-ki-dulhan.html",
     "music_composer": "Sohail Sen",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:00",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Vachindamma (From \"Geetha Govindam\") Sid Sriram",
@@ -174,7 +184,8 @@
     "music_composer": "Aditya Music",
     "published_on": null,
     "duration": "04:10",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Telugu"
   },
   {
     "song_name": "Namo Namah Shivaya",
@@ -189,8 +200,9 @@
     "website": "https://koshalworld.com/download/19944/namo-namah-shivaya.html",
     "music_composer": "Hashtag Pandit",
     "published_on": "20 Nov, 2022",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:52",
+    "playlist": "iswar_playlist",
+    "language": "Sanskrit"
   },
   {
     "song_name": "Chuttamalle",
@@ -204,8 +216,9 @@
     "website": "https://koshalworld.com/download/41581/chuttamalle.html",
     "music_composer": "Anirudh Ravichander",
     "published_on": "05 Aug, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:44",
+    "playlist": "iswar_playlist",
+    "language": "Telugu"
   },
   {
     "song_name": "Piya Ghar Aavenge Kailash Kher",
@@ -220,7 +233,8 @@
     "music_composer": "Sony Music Entertainment",
     "published_on": null,
     "duration": "06:24",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Piya Aaye Na (From \"Aashiqui 2\") KK, Tulsi Kumar",
@@ -236,7 +250,8 @@
     "music_composer": "Jeet Gannguli",
     "published_on": null,
     "duration": "04:46",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Abhi Abhi Duet",
@@ -244,16 +259,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Abhi-Abhi-Duet-Jism-2-500-500.jpg",
     "singers": [
       "Arko",
-      " KK",
-      " Shreya Ghoshal"
+      "KK",
+      "Shreya Ghoshal"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/abhi-abhi-duet-jism-2.html",
     "music_composer": "Arko",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:42",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mere Humsafar Song Download",
@@ -261,7 +277,7 @@
     "thumbnail": "https://pagalnew.com.se/siteuploads/thumb/sft4/1661_4.jpg",
     "singers": [
       "Amanat Ali",
-      " Yashal Shahid & Zaheer Abbas"
+      "Yashal Shahid & Zaheer Abbas"
     ],
     "lyricist": "Qamar Nashad",
     "source": "https://pagalnew.com/",
@@ -269,7 +285,8 @@
     "music_composer": "Naveed Nashad",
     "published_on": "03 Mar, 2024",
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Urdu"
   },
   {
     "song_name": "Barbaadiyan",
@@ -277,17 +294,18 @@
     "thumbnail": "https://pagalnew.com/coverimages/Barbaadiyan-Shiddat-500-500.jpg",
     "singers": [
       "Sachet Tandon",
-      " Nikhita Gandhi",
-      " Madhubanti Bagchi",
-      " Sachin-Jigar"
+      "Nikhita Gandhi",
+      "Madhubanti Bagchi",
+      "Sachin-Jigar"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/barbaadiyan-shiddat.html",
     "music_composer": "Sachin-Jigar",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:50",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Sanson Ki Mala",
@@ -301,8 +319,9 @@
     "website": "https://pagalnew.com/songs/sanson-ki-mala-rahat-fateh-ali-khan.html",
     "music_composer": "Rahat Fateh Ali Khan",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:45",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Deewana Main Tera Deewana",
@@ -310,15 +329,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Deewana-Main-Tera-Deewana-English-Babu-Desi-Mem-500-500.jpg",
     "singers": [
       "Kumar Sanu",
-      " Alka Yagnik"
+      "Alka Yagnik"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/deewana-main-tera-deewana-english-babu-desi-mem.html",
     "music_composer": "Nikhil-Vinay",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:23",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Yaad Piya Ki Aane Lagi",
@@ -326,15 +346,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Yaad-Piya-Ki-Aane-Lagi-Neha-Kakkar-500-500.jpg",
     "singers": [
       "Neha Kakkar",
-      " Tanishk Bagchi"
+      "Tanishk Bagchi"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/yaad-piya-ki-aane-lagi-neha-kakkar.html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:16",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Haaye Oye",
@@ -342,15 +363,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Haaye-Oye-QARAN-500-500.jpg",
     "singers": [
       "Qaran",
-      " Ash King"
+      "Ash King"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/haaye-oye-qaran.html",
     "music_composer": "QARAN",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:20",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Naseeb Se",
@@ -358,15 +380,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/naseeb-se-satyaprem-ki-katha-500-500.jpg",
     "singers": [
       "Payal Dev",
-      " Vishal Mishra"
+      "Vishal Mishra"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/naseeb-se-satyaprem-ki-katha.html",
     "music_composer": "Payal Dev",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:04",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Sajde",
@@ -374,17 +397,18 @@
     "thumbnail": "https://pagalnew.com/coverimages/Sajde-Kill-Dil-500-500.jpg",
     "singers": [
       "Arijit Singh",
-      " Nihira Joshi-Deshpande",
-      " Gulzar",
-      " Shankar-Ehsaan-Loy"
+      "Nihira Joshi-Deshpande",
+      "Gulzar",
+      "Shankar-Ehsaan-Loy"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/sajde-kill-dil.html",
     "music_composer": "Shankar-Ehsaan-Loy",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:25",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Gulabi Sadi",
@@ -398,8 +422,9 @@
     "website": "https://koshalworld.com/download/38381/gulabi-sadi.html",
     "music_composer": null,
     "published_on": "25 May, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:45",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Pyaar Tune Kya Kiya Sonu Nigam, Alka Yagnik",
@@ -415,7 +440,8 @@
     "music_composer": "Sandeep Chowta",
     "published_on": null,
     "duration": "04:37",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mahroo",
@@ -423,16 +449,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/mahroo-showtime-500-500.jpg",
     "singers": [
       "Anand Bhaskar",
-      " Ginny Diwan",
-      " Romy"
+      "Ginny Diwan",
+      "Romy"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/mahroo-showtime.html",
     "music_composer": "Anand Bhaskar",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:19",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Saanson Ko",
@@ -440,15 +467,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Saanson-Ko-Zid-500-500.jpg",
     "singers": [
       "Toshi Sabri",
-      " Arijit Singh"
+      "Arijit Singh"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/saanson-ko1-zid.html",
     "music_composer": "Toshi Sabri, Sharib Sabri",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:48",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mareez E Ishq",
@@ -456,15 +484,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Mareez-E-Ishq-Zid-500-500.jpg",
     "singers": [
       "Toshi Sabri",
-      " Arijit Singh"
+      "Arijit Singh"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/mareez-e-ishq1-zid.html",
     "music_composer": "Toshi Sabri, Sharib Sabri",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:51",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Sadka",
@@ -472,16 +501,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Sadka-I-Hate-Luv-Storys-500-500.jpg",
     "singers": [
       "Vishal-Shekhar",
-      " Suraj Jagan",
-      " Mahalakshmi Iyer"
+      "Suraj Jagan",
+      "Mahalakshmi Iyer"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/sadka1-i-hate-luv-storys.html",
     "music_composer": "Vishal Dadlani, Shekhar Ravjiani",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:43",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Haareya",
@@ -489,16 +519,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Haareya-Meri-Pyaari-Bindu-500-500.jpg",
     "singers": [
       "Arijit Singh",
-      " Sachin-Jigar",
-      " Priya Saraiya"
+      "Sachin-Jigar",
+      "Priya Saraiya"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/haareya-meri-pyaari-bindu.html",
     "music_composer": "Sachin-Jigar",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:34",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Manohari (From \"Baahubali - The Beginning\") Revanth, Mohana Bhogaraju",
@@ -514,7 +545,8 @@
     "music_composer": "Lahari Music",
     "published_on": null,
     "duration": "03:34",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Telugu"
   },
   {
     "song_name": "Heer",
@@ -522,16 +554,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Heer-Jab-Tak-Hai-Jaan-500-500.jpg",
     "singers": [
       "Harshdeep Kaur",
-      " A.R. Rahman",
-      " Gulzar"
+      "A.R. Rahman",
+      "Gulzar"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/heer-jab-tak-hai-jaan.html",
     "music_composer": "A.R. Rahman",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:13",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Choomantar",
@@ -539,17 +572,18 @@
     "thumbnail": "https://pagalnew.com/coverimages/Choomantar-Mere-Brother-Ki-Dulhan-500-500.jpg",
     "singers": [
       "Benny Dayal",
-      " Aditi Singh Sharma",
-      " Sohail Sen",
-      " Irshad Kamil"
+      "Aditi Singh Sharma",
+      "Sohail Sen",
+      "Irshad Kamil"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/choomantar-mere-brother-ki-dulhan.html",
     "music_composer": "Sohail Sen",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:20",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Raabta",
@@ -557,15 +591,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Raabta-Agent-Vinod-500-500.jpg",
     "singers": [
       "Pritam",
-      " Arijit Singh"
+      "Arijit Singh"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/raabta-agent-vinod.html",
     "music_composer": "Pritam, Pritam",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:04",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Dil Mein Ho Tum",
@@ -579,8 +614,9 @@
     "website": "https://pagalnew.com/songs/dil-mein-ho-tum-why-cheat-india.html",
     "music_composer": "Bappi Lahiri, Rochak Kohli",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:26",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Dekhha Tenu",
@@ -594,8 +630,9 @@
     "website": "https://pagalnew.com/songs/dekhha-tenu1-mr-and-mrs-mahi.html",
     "music_composer": "Jaani",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:41",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Sajni",
@@ -609,8 +646,9 @@
     "website": "https://pagalnew.com/songs/sajni-laapataa-ladies.html",
     "music_composer": "Ram Sampath",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "2:50",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Uncha Lamba Kad",
@@ -618,15 +656,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Uncha-Lamba-Kad-Welcome-500-500.jpg",
     "singers": [
       "Anand Raj Anand",
-      " Kalpana Patowary"
+      "Kalpana Patowary"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/uncha-lamba-kad1-welcome.html",
     "music_composer": "Anand Raj Anand",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:39",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Chashni",
@@ -640,8 +679,9 @@
     "website": "https://pagalnew.com/songs/chashni1-bharat.html",
     "music_composer": "Vishal-Shekhar",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:26",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Yimmy Yimmy",
@@ -649,15 +689,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Yimmy-Yimmy-Tayc-500-500.jpg",
     "singers": [
       "Tayc",
-      " Shreya Ghoshal"
+      "Shreya Ghoshal"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/yimmy-yimmy-tayc.html",
     "music_composer": "Rajat Nagpal, Nyadjiko",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:31",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Bol Na Halke Halke Rahat Fateh Ali Khan, Mahalakshmi Iyer",
@@ -673,7 +714,8 @@
     "music_composer": "YRF Music",
     "published_on": null,
     "duration": "05:06",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Paunji Padaku (Pagala Karichi Paunji Tora)",
@@ -688,8 +730,9 @@
     "website": "https://odiafresh.com/filedownload/899/5961/Paunji-Padaku-(Pagala-Karichi-Paunji-Tora).html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:48",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Tere Hoke Rehengay",
@@ -703,8 +746,9 @@
     "website": "https://pagalnew.com/songs/tere-hoke-rehengay1-raja-natwarlal.html",
     "music_composer": "Yuvan Shankar Raja",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:03",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Paani Paani",
@@ -719,8 +763,9 @@
     "website": "https://pagalnew.com/songs/paani-paani-badshah.html",
     "music_composer": "Badshah",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "2:54",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Paribini Tate Chhadi",
@@ -734,8 +779,9 @@
     "website": "https://koshalworld.com/download/18126/paribini-tate-chhadi.html",
     "music_composer": "Satya Ranjan Bal",
     "published_on": "22 Sep, 2022",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:36",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Tu Mora",
@@ -744,13 +790,14 @@
     "singers": [
       "Human Sagar"
     ],
-    "lyricist": "Lyricist :Pramod Parida",
+    "lyricist": "Pramod Parida",
     "source": "https://odiafresh.com/",
     "website": "https://odiafresh.com/filedownload/2703/26531/Tu-Mora.html",
     "music_composer": "Music :Biraja Prasad",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:54",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Sunjaraa Sunjaraa,Odia Romantic Song by Humane Sagar, Ananya",
@@ -764,8 +811,9 @@
     "website": "https://odiafresh.com/filedownload/46/354/Sunjaraa-Sunjaraa,Odia-Romantic-Song-by-Humane-Sagar,-Ananya.html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:22",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Malka Malka O Baby",
@@ -780,8 +828,9 @@
     "website": "https://koshalworld.com/download/36840/malka-malka-o-baby.html",
     "music_composer": "Prem Anand",
     "published_on": "25 Apr, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:19",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Sehejadi O Sehejadi",
@@ -796,8 +845,9 @@
     "website": "https://koshalworld.com/download/36855/sehejadi-o-sehejadi.html",
     "music_composer": null,
     "published_on": "25 Apr, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:08",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Chiri Deba Agaru Chithi Thare Padhi Dekha",
@@ -811,8 +861,9 @@
     "website": "https://koshalworld.com/download/24972/chiri-deba-agaru-chithi-thare-padhi-dekha.html",
     "music_composer": null,
     "published_on": "11 Jun, 2023",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:53",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "A Jibanara Bandhana",
@@ -826,8 +877,9 @@
     "website": "https://koshalworld.com/download/36312/a-jibanara-bandhana.html",
     "music_composer": "Pravanshu Samantray",
     "published_on": "19 Apr, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:36",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Phaguna Re Phaguna",
@@ -842,8 +894,9 @@
     "website": "https://koshalworld.com/download/36756/phaguna-re-phaguna.html",
     "music_composer": "Japani Bhai",
     "published_on": "24 Apr, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:01",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Balika Badhu",
@@ -857,8 +910,9 @@
     "website": "https://koshalworld.com/download/6922/balika-badhu.html",
     "music_composer": null,
     "published_on": "30 Mar, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:42",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Chatire Lekhichi Tori Naan",
@@ -872,8 +926,9 @@
     "website": "https://koshalworld.com/download/13856/chatire-lekhichi-tori-naan.html",
     "music_composer": "Pintu Das",
     "published_on": "15 Feb, 2022",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:35",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Aa Kahuchi Tate (Diwana)",
@@ -887,8 +942,9 @@
     "website": "https://odiafresh.com/filedownload/504/6639/Aa-Kahuchi-Tate-(Diwana).html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "8:11",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Hasa Gote Otha Tala Gaan Ra Naa",
@@ -903,8 +959,9 @@
     "website": "https://koshalworld.com/download/9862/hasa-gote-otha-tala-gaan-ra-naa.html",
     "music_composer": "Shantiraj Khosla",
     "published_on": "31 Jul, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:53",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Feel My Love",
@@ -918,8 +975,9 @@
     "website": "https://koshalworld.com/download/38448/feel-my-love.html",
     "music_composer": "Devi Sri Prasad",
     "published_on": "26 May, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:42",
+    "playlist": "iswar_playlist",
+    "language": "Telugu"
   },
   {
     "song_name": "Tora E Hasare Aji (Pagala Premi)",
@@ -931,8 +989,9 @@
     "website": "https://odiafresh.com/filedownload/896/5990/Tora-E-Hasare-Aji-(Pagala-Premi).html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:46",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Paunji Tate Magibi Nahin",
@@ -947,8 +1006,9 @@
     "website": "https://odiafresh.com/filedownload/415/9039/Paunji-Tate-Magibi-Nahin.html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:48",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Uff (From \"Bang Bang\") Vishal, Shekhar, Harshdeep Kaur, Benny Dayal",
@@ -966,7 +1026,8 @@
     "music_composer": "Sony Music Entertainment",
     "published_on": null,
     "duration": "04:30",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Chori Chori Chupke Chupke",
@@ -974,15 +1035,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Chori-Chori-Chupke-Chupke-Krrish-500-500.jpg",
     "singers": [
       "Udit Narayan",
-      " Shreya Ghoshal"
+      "Shreya Ghoshal"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/chori-chori-chupke-chupke1-krrish.html",
     "music_composer": "Rajesh Roshan",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "6:28",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Amar Gaan-Sambalpuri",
@@ -992,13 +1054,14 @@
       "Bijay Anand Sahu",
       "Ayushi Pani"
     ],
-    "lyricist": "Lyricist :Bijay Anand Sahu & Beloved Tapan",
+    "lyricist": "Bijay Anand Sahu & Beloved Tapan",
     "source": "https://odiafresh.com/",
     "website": "https://odiafresh.com/filedownload/2601/32189/Amar-Gaan-Sambalpuri.html",
     "music_composer": "Producer :Vibes Music Official",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:17",
+    "playlist": "iswar_playlist",
+    "language": "Sambalpuri"
   },
   {
     "song_name": "Rasia",
@@ -1013,8 +1076,9 @@
     "website": "https://koshalworld.com/download/46275/rasia.html",
     "music_composer": null,
     "published_on": "23 Oct, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "6:02",
+    "playlist": "iswar_playlist",
+    "language": "Sambalpuri"
   },
   {
     "song_name": "Rani Guri",
@@ -1029,8 +1093,9 @@
     "website": "https://koshalworld.com/download/11557/rani-guri.html",
     "music_composer": "Bijay Anand Sahu",
     "published_on": "18 Oct, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:50",
+    "playlist": "iswar_playlist",
+    "language": "Sambalpuri"
   },
   {
     "song_name": "Nani Maa",
@@ -1045,7 +1110,8 @@
     "music_composer": "Harshit Saxena",
     "published_on": null,
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Maheroo Maheroo",
@@ -1053,7 +1119,7 @@
     "thumbnail": "https://pagalnew.com/coverimages/Maheroo-Maheroo-Super-Nani-500-500.jpg",
     "singers": [
       "Shreya Ghoshal",
-      " Darshan Rathod"
+      "Darshan Rathod"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
@@ -1061,7 +1127,8 @@
     "music_composer": "Harshit Saxena",
     "published_on": null,
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mora Mana Udi Jaye Re",
@@ -1075,8 +1142,9 @@
     "website": "https://koshalworld.com/download/26435/mora-mana-udi-jaye-re.html",
     "music_composer": "Lalit Kumar",
     "published_on": "26 Sep, 2023",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:06",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Naah",
@@ -1090,8 +1158,9 @@
     "website": "https://pagalnew.com/songs/naah-harrdy-sandhu.html",
     "music_composer": "B Praak",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:10",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Backbone",
@@ -1105,8 +1174,9 @@
     "website": "https://pagalnew.com/songs/backbone-harrdy-sandhu.html",
     "music_composer": "B Praak",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "2:55",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Parshawan Harnoor",
@@ -1121,7 +1191,8 @@
     "music_composer": "Jayb Singh",
     "published_on": null,
     "duration": "02:48",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Zindagi Di Paudi",
@@ -1135,8 +1206,9 @@
     "website": "https://pagalnew.com/songs/zindagi-di-paudi-blessed.html",
     "music_composer": "Millind Gaba",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:49",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Sohnea",
@@ -1144,15 +1216,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Sohnea-Miss-Pooja-500-500.jpg",
     "singers": [
       "Miss Pooja",
-      " Millind Gaba"
+      "Millind Gaba"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/sohnea-miss-pooja.html",
     "music_composer": "Millind Gaba",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:29",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Phir Mujhe Dil Se Pukar Tu Mohit Gaur",
@@ -1167,7 +1240,8 @@
     "music_composer": "Kunaal Vermaa",
     "published_on": null,
     "duration": "05:38",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "O O Rangabati - Romantic Odia Song",
@@ -1182,8 +1256,9 @@
     "website": "https://odiafresh.com/filedownload/2492/22578/O-O-Rangabati---Romantic-Odia-Song.html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:17",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Rajahansi Ta Chali",
@@ -1197,8 +1272,9 @@
     "website": "https://koshalworld.com/download/16995/rajahansi-ta-chali.html",
     "music_composer": "Asad Nizam",
     "published_on": "22 Jul, 2022",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:33",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "E Samaya",
@@ -1212,8 +1288,9 @@
     "website": "https://koshalworld.com/download/24506/e-samaya.html",
     "music_composer": "Subhrajit Mohanty",
     "published_on": "28 Apr, 2023",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:13",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Kabhii Tumhhe",
@@ -1227,8 +1304,9 @@
     "website": "https://pagalnew.com/songs/kabhii-tumhhe-shershaah.html",
     "music_composer": "Javed Khan, Mohsin Shaikh",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:50",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Khulke Jeene Ka",
@@ -1236,16 +1314,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Khulke-Jeene-Ka-Dil-Bechara-500-500.jpg",
     "singers": [
       "A.R. Rahman",
-      " Arijit Singh",
-      " Shashaa Tirupati"
+      "Arijit Singh",
+      "Shashaa Tirupati"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/khulke-jeene-ka-dil-bechara.html",
     "music_composer": "A.R. Rahman",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:06",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Saibo",
@@ -1253,16 +1332,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Saibo-Shor-in-the-City-Original-Motion-Picture-Soundtrack-500-500.jpg",
     "singers": [
       "Sachin-Jigar",
-      " Shreya Ghoshal",
-      " Tochi Raina"
+      "Shreya Ghoshal",
+      "Tochi Raina"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/saibo-shor-in-the-city.html",
     "music_composer": "Sachin Sanghvi, Jigar Saraiya",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:15",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Chaand Baaliyan",
@@ -1276,8 +1356,9 @@
     "website": "https://pagalnew.com/songs/chaand-baaliyan-aditya-a.html",
     "music_composer": "Aditya A",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "1:43",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Joker",
@@ -1291,24 +1372,26 @@
     "website": "https://pagalnew.com/songs/joker-harrdy-sandhu.html",
     "music_composer": "B Praak",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:17",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
-    "song_name": "She Dont Know",
+    "song_name": "She Don't Know",
     "song_url": "https://pagalnew.com/320-download/24840",
     "thumbnail": "https://pagalnew.com/coverimages/She-Dont-Know-From-Blessed-Millind-Gaba-500-500.jpg",
     "singers": [
       "Millind Gaba",
-      " Millind Gaba"
+      "Millind Gaba"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/she-dont-know-millind-gaba.html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:23",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mujhe Kaise, Pata Na Chala",
@@ -1322,8 +1405,9 @@
     "website": "https://koshalworld.com/download/12674/mujhe-kaise-pata-na-chala.html",
     "music_composer": "Meet Bros",
     "published_on": "25 Dec, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:46",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Yaara",
@@ -1337,8 +1421,9 @@
     "website": "https://pagalnew.com/songs/yaara-mamta-sharma.html",
     "music_composer": "BAD-ASH",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:26",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Hue bechain pehli baar",
@@ -1353,8 +1438,9 @@
     "website": "https://koshalworld.com/download/8386/hue-bechain-pehli-baar.html",
     "music_composer": null,
     "published_on": "02 Jun, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:45",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Sapna Jahan",
@@ -1362,16 +1448,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Sapna-Jahan-Brothers-500-500.jpg",
     "singers": [
       "Sonu Nigam",
-      " Neeti Mohan",
-      " Ajay-Atul"
+      "Neeti Mohan",
+      "Ajay-Atul"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/sapna-jahan1-brothers.html",
     "music_composer": "Ajay-Atul",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:41",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Baby Song Download",
@@ -1379,7 +1466,7 @@
     "thumbnail": "https://pagalnew.com.se/siteuploads/thumb/sft5/2110_4.jpg",
     "singers": [
       "Justin Bieber",
-      " Ludacris"
+      "Ludacris"
     ],
     "lyricist": "Justin Bieber",
     "source": "https://pagalnew.com/",
@@ -1387,7 +1474,8 @@
     "music_composer": "Justin Bieber",
     "published_on": "17 Mar, 2024",
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "English"
   },
   {
     "song_name": "Tu Mo Valentine 2",
@@ -1401,8 +1489,9 @@
     "website": "https://koshalworld.com/download/38019/tu-mo-valentine-2.html",
     "music_composer": "Swayanshu",
     "published_on": "16 May, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:40",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Ae Dil Hai Mushkil Title Track",
@@ -1410,15 +1499,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Ae-Dil-Hai-Mushkil-Title-Track-Pritam-500-500.jpg",
     "singers": [
       "Pritam",
-      " Arijit Singh"
+      "Arijit Singh"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/ae-dil-hai-mushkil-title-track2-pritam.html",
     "music_composer": "Pritam",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:29",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tike Tike Achinha Tu (Title Track)",
@@ -1433,8 +1523,9 @@
     "website": "https://koshalworld.com/download/37456/tike-tike-achinha-tu-title-track-.html",
     "music_composer": null,
     "published_on": "06 May, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:06",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Tu Megha Heija",
@@ -1449,8 +1540,9 @@
     "website": "https://koshalworld.com/download/35857/tu-megha-heija.html",
     "music_composer": null,
     "published_on": "13 Apr, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:01",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Jani Tu Ajana",
@@ -1464,8 +1556,9 @@
     "website": "https://koshalworld.com/download/12348/jani-tu-ajana.html",
     "music_composer": null,
     "published_on": "05 Dec, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:13",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Bhala Pae Tote Mu Emiti",
@@ -1480,8 +1573,9 @@
     "website": "https://koshalworld.com/download/36741/bhala-pae-tote-mu-emiti.html",
     "music_composer": "Sumit Dickshit",
     "published_on": "24 Apr, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:19",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Bhijei Dei Jaa Thare",
@@ -1495,8 +1589,9 @@
     "website": "https://koshalworld.com/download/37097/bhijei-dei-jaa-thare.html",
     "music_composer": "Asad Nizam",
     "published_on": "28 Apr, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:07",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Baazigar tu mo Baazigar",
@@ -1509,7 +1604,9 @@
     "lyricist": "Mrutyunjaya Mishra",
     "source": "https://koshalworld.com/",
     "website": "https://koshalworld.com/download/32979/baazigar-tu-mo-baazigar.html",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "duration": "5:43",
+    "language": "Odia"
   },
   {
     "song_name": "Baazigar O Baazigar",
@@ -1517,15 +1614,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Baazigar-O-Baazigar-Kumar-Sanu-500-500.jpg",
     "singers": [
       "Kumar Sanu",
-      " Alka Yagnik"
+      "Alka Yagnik"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/baazigar-o-baazigar-kumar-sanu.html",
     "music_composer": "Anu Malik",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "7:39",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Sharmili   Odia Song",
@@ -1539,8 +1637,9 @@
     "website": "https://koshalworld.com/download/5796/sharmili-odia-song.html",
     "music_composer": null,
     "published_on": "12 Feb, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:56",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Kebe Aasi Tu",
@@ -1555,8 +1654,9 @@
     "website": "https://koshalworld.com/download/35781/kebe-aasi-tu.html",
     "music_composer": "Anshuman Satapathy",
     "published_on": "12 Apr, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:54",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Pal Pal Dil Ke Paas ",
@@ -1569,7 +1669,8 @@
     "music_composer": "Michael Silas",
     "published_on": null,
     "duration": "05:41",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Teri Saanson Mein Aise Bas Jau Song Download",
@@ -1584,7 +1685,8 @@
     "music_composer": "Sahil Rayyan",
     "published_on": "15 Jul, 2024",
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tame Jadi Gadhidia Balighara",
@@ -1599,8 +1701,9 @@
     "website": "https://koshalworld.com/download/26785/tame-jadi-gadhidia-balighara.html",
     "music_composer": null,
     "published_on": "09 Oct, 2023",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:52",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Valam",
@@ -1608,16 +1711,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Valam-Made-in-China-500-500.jpg",
     "singers": [
       "Sachin-Jigar",
-      " Priya Saraiya",
-      " Arijit Singh"
+      "Priya Saraiya",
+      "Arijit Singh"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/valam-made-in-china.html",
     "music_composer": "Sachin Sanghvi, Jigar Saraiya",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:15",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Dilawara",
@@ -1625,15 +1729,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Dilawara-The-PropheC-500-500.jpg",
     "singers": [
       "The PropheC",
-      " Ezu"
+      "Ezu"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/dilawara-the-prophec.html",
     "music_composer": "The PropheC, Ezu",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:42",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Dulhan Banami -Sambalpuri",
@@ -1643,13 +1748,14 @@
       "Achurjya Borpatra",
       "Kiran Dash"
     ],
-    "lyricist": "Lyricist :Pratham Kumbhar",
+    "lyricist": "Pratham Kumbhar",
     "source": "https://odiafresh.com/",
     "website": "https://odiafresh.com/filedownload/3104/31833/Dulhan-Banami--Sambalpuri.html",
     "music_composer": "Music :Bijay Anand Sahu",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:28",
+    "playlist": "iswar_playlist",
+    "language": "Sambalpuri"
   },
   {
     "song_name": "What Jhumka",
@@ -1657,16 +1763,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/what-jhumka-rocky-aur-rani-kii-prem-kahaani-500-500.jpg",
     "singers": [
       "Arijit Singh",
-      " Jonita Gandhi",
-      " Ranveer Singh"
+      "Jonita Gandhi",
+      "Ranveer Singh"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/what-jhumka-rocky-aur-rani-kii-prem-kahaani.html",
     "music_composer": "Pritam",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:33",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Aarambh",
@@ -1680,8 +1787,9 @@
     "website": "https://pagalnew.com/songs/aarambh1-gulaal.html",
     "music_composer": "Piyush Mishra",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:55",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Banke Hawa Mein Bezubaan Mein",
@@ -1695,8 +1803,9 @@
     "website": "https://koshalworld.com/download/23905/banke-hawa-mein-bezubaan-mein.html",
     "music_composer": "Amol - Abhishek",
     "published_on": "09 Apr, 2023",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "0:00",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Kina Chir",
@@ -1710,8 +1819,9 @@
     "website": "https://pagalnew.com/songs/kina-chir-the-lifestyle.html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:36",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Tu Hi Hai Aashiqui",
@@ -1719,15 +1829,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Tu-Hi-Hai-Aashiqui-Duet-Dishkiyaoon-500-500.jpg",
     "singers": [
       "Arijit Singh",
-      " Palak Muchhal"
+      "Palak Muchhal"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/tu-hi-hai-aashiqui-duet-hb-dishkiyaoon.html",
     "music_composer": "Palash Muchhal",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:58",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tu Hi Hai Aashiqui",
@@ -1741,8 +1852,9 @@
     "website": "https://pagalnew.com/songs/tu-hi-hai-aashiqui-male-dishkiyaoon.html",
     "music_composer": "Palash Muchhal",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:57",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Satranga",
@@ -1750,15 +1862,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/satranga-animal-500-500.jpg",
     "singers": [
       "Arijit Singh",
-      " Shreyas Puranik"
+      "Shreyas Puranik"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/satranga4-animal.html",
     "music_composer": "Shreyas Puranik",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:31",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Kya Hai Mohabbat",
@@ -1772,361 +1885,331 @@
     "website": "https://pagalnew.com/songs/kya-hai-mohabbat1-ekk-deewana-tha.html",
     "music_composer": "A.R. Rahman",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:28",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mere Rang Mein Rangne Wali",
     "song_url": "https://pagalnew.com/320-download/21961",
     "thumbnail": "https://pagalnew.com/coverimages/mere-rang-mein-rangne-wali-maine-pyar-kiya-500-500.jpg",
-    "singers": [
-      "S. P. Balasubrahmanyam"
-    ],
+    "singers": ["S. P. Balasubrahmanyam"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/mere-rang-mein-rangne-wali-maine-pyar-kiya.html",
     "music_composer": "Raam-Laxman",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "6:52",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Nede Nede",
     "song_url": "https://koshalworld.com/files/download/id/46156",
     "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft93/46156_4.jpg",
-    "singers": [
-      "Harsh Kargeti"
-    ],
+    "singers": ["Harsh Kargeti"],
     "lyricist": "Samay",
     "source": "https://koshalworld.com/",
     "website": "https://koshalworld.com/download/46156/nede-nede.html",
     "music_composer": "Harsh Kargeti",
     "published_on": "22 Oct, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:51",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Aziyat",
     "song_url": "https://pagalnew.com/320-download/21445",
     "thumbnail": "https://pagalnew.com/coverimages/Aziyat-Pratyush-Dhiman-500-500.jpg",
-    "singers": [
-      "Pratyush Dhiman"
-    ],
+    "singers": ["Pratyush Dhiman"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/aziyat-pratyush-dhiman.html",
     "music_composer": "Pratyush Dhiman",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:37",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Ek Mulaqaat",
     "song_url": "https://pagalnew.com/320-download/44484",
     "thumbnail": "https://pagalnew.com/coverimages/Ek-Mulaqaat-Javed-Mohsin-500-500.jpg",
-    "singers": [
-      "Vishal Mishra",
-      " Shreya Ghoshal"
-    ],
+    "singers": ["Vishal Mishra", "Shreya Ghoshal"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/ek-mulaqaat-vishal-mishra.html",
     "music_composer": "Javed-Mohsin",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:28",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Phir bhi aas lagi hai 2.0",
     "song_url": "https://pagalnew.com/320-download/20371",
     "thumbnail": "https://pagalnew.com/coverimages/Phir-bhi-aas-lagi-hai-2.0-Sagar-Kalra-500-500.jpg",
-    "singers": "",
+    "singers": [],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/phir-bhi-aas-lagi-hai-2.0-sagar-kalra.html",
     "music_composer": "Sagar Kalra",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:50",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Ferichi Faguna",
     "song_url": "https://koshalworld.com/files/download/id/36742",
     "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft74/36742_4.jpg",
-    "singers": [
-      "Asima Panda",
-      "Kuldeep Pattnayak"
-    ],
+    "singers": ["Asima Panda", "Kuldeep Pattnayak"],
     "lyricist": "Tapu Nayak",
     "source": "https://koshalworld.com/",
     "website": "https://koshalworld.com/download/36742/ferichi-faguna.html",
     "music_composer": "Asad Nizam",
     "published_on": "24 Apr, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:32",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Harleys In Hawaii Song Download",
     "song_url": "https://pagalnew.com/files/download/id/2200",
     "thumbnail": "https://pagalnew.com.se/siteuploads/thumb/sft5/2200_4.jpg",
-    "singers": [
-      "Katty Perry"
-    ],
+    "singers": ["Katty Perry"],
     "lyricist": "Katty Perry",
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com.se/audio/2200/harleys-in-hawaii.html",
     "music_composer": "Capitol Records",
     "published_on": "17 Mar, 2024",
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "English"
   },
   {
     "song_name": "Hum Toh Deewane",
     "song_url": "https://pagalnew.com/320-download/43458",
     "thumbnail": "https://pagalnew.com/coverimages/Hum-Toh-Deewane-Rajat-Nagpal-500-500.jpg",
-    "singers": [
-      "Yasser Desai"
-    ],
+    "singers": ["Yasser Desai"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/hum-toh-deewane-yasser-desai.html",
     "music_composer": "Rajat Nagpal",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:01",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "One Love",
     "song_url": "https://pagalnew.com/320-download/43180",
     "thumbnail": "https://pagalnew.com/coverimages/One-Love-Shubh-500-500.jpg",
-    "singers": [
-      "Shubh"
-    ],
+    "singers": ["Shubh"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/one-love-shubh.html",
     "music_composer": "Shubh",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "2:39",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "O Mere Dil Ke Chain",
     "song_url": "https://pagalnew.com/320-download/34708",
     "thumbnail": "https://pagalnew.com/coverimages/o-mere-dil-ke-chain-mere-jeevan-saathi-500-500.jpg",
-    "singers": [
-      "Kishore Kumar"
-    ],
+    "singers": ["Kishore Kumar"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/o-mere-dil-ke-chain-mere-jeevan-saathi.html",
     "music_composer": "Kishore Kumar, R. D. Burman",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:36",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Fakira",
     "song_url": "https://pagalnew.com/320-download/5626",
     "thumbnail": "https://pagalnew.com/coverimages/Fakira-Qismat-500-500.jpg",
-    "singers": [
-      "Gurnam Bhullar"
-    ],
+    "singers": ["Gurnam Bhullar"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/fakira1-qismat.html",
     "music_composer": "B Praak",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:09",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Challa",
     "song_url": "https://pagalnew.com/320-download/6866",
     "thumbnail": "https://pagalnew.com/coverimages/Challa-Jab-Tak-Hai-Jaan-500-500.jpg",
-    "singers": [
-      "Rabbi Shergill",
-      " A.R. Rahman",
-      " Gulzar"
-    ],
+    "singers": ["Rabbi Shergill", "A.R. Rahman", "Gulzar"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/challa-srk-jab-tak-hai-jaan.html",
     "music_composer": "A.R. Rahman",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:20",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Chandni",
     "song_url": "https://pagalnew.com/320-download/43026",
     "thumbnail": "https://pagalnew.com/coverimages/Chandni-Sachet-Tandon-500-500.jpg",
-    "singers": [
-      "Sachet Tandon",
-      " Parampara Tandon"
-    ],
+    "singers": ["Sachet Tandon", "Parampara Tandon"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/chandni-sachet-tandon.html",
     "music_composer": "B Praak",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:08",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Nai Separi Gaan",
     "song_url": "https://koshalworld.com/files/download/id/15690",
     "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft32/15690_4.jpg",
-    "singers": [
-      "Human sagar"
-    ],
+    "singers": ["Human sagar"],
     "lyricist": "Soumya Ranjan Bal",
     "source": "https://koshalworld.com/",
     "website": "https://koshalworld.com/download/15690/nai-separi-gaan.html",
     "music_composer": "Bimugdha Das",
     "published_on": "13 May, 2022",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:06",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Guli Mata Song Download",
     "song_url": "https://pagalnew.com/files/download/id/4071",
     "thumbnail": "https://pagalnew.com.se/siteuploads/thumb/sft9/4071_4.jpg",
-    "singers": [
-      "Saad Lamjarred",
-      " Shreya Ghoshal"
-    ],
+    "singers": ["Saad Lamjarred", "Shreya Ghoshal"],
     "lyricist": "Mohamed El Maghribi",
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com.se/audio/4071/guli-mata.html",
     "music_composer": "Mehdi Mozayine",
     "published_on": "12 Jun, 2024",
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Arabic/Hindi (collab)"
   },
   {
     "song_name": "Ethara Fagune",
     "song_url": "https://koshalworld.com/files/download/id/22305",
     "thumbnail": "https://koshalworld.com/siteuploads/thumb/c/768_4.jpg",
-    "singers": [
-      "Asima Panda",
-      "Satyajeet padhan"
-    ],
+    "singers": ["Asima Panda", "Satyajeet padhan"],
     "lyricist": "Sambit Kumar Mohanty",
     "source": "https://koshalworld.com/",
     "website": "https://koshalworld.com/download/22305/ethara-fagune.html",
     "music_composer": "Sambit Kumar Mohanty",
     "published_on": "14 Feb, 2023",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:48",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "JhalaMala",
     "song_url": "https://koshalworld.com/files/download/id/25021",
     "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft51/25021_4.jpg",
-    "singers": [
-      "Asima Panda",
-      "Mantu Chhuriya"
-    ],
+    "singers": ["Asima Panda", "Mantu Chhuriya"],
     "lyricist": null,
     "source": "https://koshalworld.com/",
     "website": "https://koshalworld.com/download/25021/jhalamala.html",
     "music_composer": null,
     "published_on": "20 Jun, 2023",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:43",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Alta Makhi",
     "song_url": "https://koshalworld.com/files/download/id/25009",
     "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft51/25009_4.jpg",
-    "singers": [
-      "Pankaj Tandi",
-      "Pratham Kumbhar",
-      "Kiran Dash"
-    ],
+    "singers": ["Pankaj Tandi", "Pratham Kumbhar", "Kiran Dash"],
     "lyricist": "Pratham Kumbhar",
     "source": "https://koshalworld.com/",
     "website": "https://koshalworld.com/download/25009/alta-makhi.html",
     "music_composer": "Bijay Anand Sahu",
     "published_on": "19 Jun, 2023",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:30",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Mor Bela 2. 0",
     "song_url": "https://koshalworld.com/files/download/id/25274",
     "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft51/25274_4.jpg",
-    "singers": [
-      "Pratham Kumbhar"
-    ],
+    "singers": ["Pratham Kumbhar"],
     "lyricist": "Pratham Kumbhar",
     "source": "https://koshalworld.com/",
     "website": "https://koshalworld.com/download/25274/mor-bela-2-0.html",
     "music_composer": "Bijay Anand Sahu",
     "published_on": "23 Jul, 2023",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "2:58",
+    "playlist": "iswar_playlist",
+    "language": "Odia"
   },
   {
     "song_name": "Junoon",
     "song_url": "https://pagalnew.com/320-download/23355",
     "thumbnail": "https://pagalnew.com/coverimages/Junoon-Mitraz-500-500.jpg",
-    "singers": [
-      "Mitraz"
-    ],
+    "singers": ["Mitraz"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/junoon-mitraz.html",
     "music_composer": "Anmol Ashish, Pratik Singh",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:11",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "SAMBALPURI Gudiya",
     "song_url": "https://koshalworld.com/files/download/id/5106",
     "thumbnail": "https://koshalworld.com/siteuploads/thumb/c/269_4.jpg",
-    "singers": [
-      "Bijay Anand Sahu"
-    ],
+    "singers": ["Bijay Anand Sahu"],
     "lyricist": null,
     "source": "https://koshalworld.com/",
     "website": "https://koshalworld.com/download/5106/sambalpuri-gudiya.html",
     "music_composer": null,
     "published_on": "18 Jan, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:34",
+    "playlist": "iswar_playlist",
+    "language": "Sambalpuri"
   },
   {
     "song_name": "Tumhe Kitna Pyaar Karte",
     "song_url": "https://pagalnew.com/320-download/42671",
     "thumbnail": "https://pagalnew.com/coverimages/tumhe-kitna-pyaar-karte-bawaal-500-500.jpg",
-    "singers": [
-      "Arijit Singh"
-    ],
+    "singers": ["Arijit Singh"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/tumhe-kitna-pyaar-karte-bawaal.html",
     "music_composer": "Mithoon",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:05",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Dil De Diya Hai",
-    "song_url": "https://pagalnew.com/320-download/10703",
-    "thumbnail": "https://pagalnew.com/coverimages/Dil-De-Diya-Hai-Masti-500-500.jpg",
-    "singers": [
-      "Anand Raj Anand"
-    ],
+    "song_url": "https://pagalnew.com/320-download/35328",
+    "thumbnail": "https://pagalnew.com/coverimages/dil-de-diya-hai-thank-god-500-500.jpg",
+    "singers": ["Anand Raaj Anand"],
     "lyricist": null,
     "source": "https://pagalnew.com/",
-    "website": "https://pagalnew.com/songs/dil-de-diya-hai1-masti.html",
-    "music_composer": "Anand Raj Anand",
+    "website": "https://pagalnew.com/songs/dil-de-diya-hai-thank-god.html",
+    "music_composer": "Himesh Reshammiya",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:05",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Ye Pyar Nahi To Kya Hai",
@@ -2140,8 +2223,9 @@
     "website": "https://koshalworld.com/download/30161/ye-pyar-nahi-to-kya-hai.html",
     "music_composer": "Rahul Jain",
     "published_on": "06 Jan, 2024",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:52",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Dholna   Unplugged Cover",
@@ -2155,8 +2239,9 @@
     "website": "https://koshalworld.com/download/13062/dholna-unplugged-cover.html",
     "music_composer": null,
     "published_on": "15 Jan, 2022",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "2:24",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Sajna Aa Bhi Ja",
@@ -2170,8 +2255,9 @@
     "website": "https://pagalnew.com/songs/sajna-aa-bhi-ja2-waisa-bhi-hota-hai-part-2.html",
     "music_composer": "Shibani Kashyap",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:25",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Meri Zindagi Hai Tu",
@@ -2179,15 +2265,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/meri-zindagi-hai-tu-satyameva-jayate-2-500-500.jpg",
     "singers": [
       "Jubin Nautiyal",
-      " Neeti Mohan"
+      "Neeti Mohan"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/meri-zindagi-hai-tu-john1-satyameva-jayate-2.html",
     "music_composer": "Rochak Kohli",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:44",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Oh Ho Ho Ho Remix",
@@ -2195,15 +2282,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Oh-Ho-Ho-Ho-(Remix)-Hindi-Medium-500-500.jpg",
     "singers": [
       "Sukhbir",
-      " Ikka"
+      "Ikka"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/oh-ho-ho-ho-(remix)-hindi-medium.html",
     "music_composer": "Sukhbir, Abhijit Vaghani",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:04",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Daaru Party",
@@ -2217,8 +2305,9 @@
     "website": "https://pagalnew.com/songs/daaru-party-millind-gaba.html",
     "music_composer": "Millind Gaba",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:28",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Woofer Dr Zeus, Snoop Dogg, Zora Randhawa, Nargis Fakhri, Zora Randhawa & Nargis Fakhri",
@@ -2237,7 +2326,8 @@
     "music_composer": "Sony Music / Being U Music",
     "published_on": null,
     "duration": "02:52",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Tera Mera Viah",
@@ -2251,8 +2341,9 @@
     "website": "https://pagalnew.com/songs/tera-mera-viah-jass-manak.html",
     "music_composer": "MixSingh",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:17",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Dope Shope",
@@ -2260,15 +2351,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Dope-Shope-International-Villager-500-500.jpg",
     "singers": [
       "Yo Yo Honey Singh",
-      " Deep Money"
+      "Deep Money"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/dope-shope-international-villager.html",
     "music_composer": "Yo Yo Honey Singh",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:08",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Ishqam",
@@ -2276,15 +2368,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Ishqam-Mika-Singh-500-500.jpg",
     "singers": [
       "Mika Singh",
-      " Ali Quli Mirza"
+      "Ali Quli Mirza"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/ishqam-mika-singh.html",
     "music_composer": "Apeiruss",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:14",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Yeh Vaada Raha",
@@ -2292,15 +2385,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/yeh-vaada-raha-yeh-vaada-raha-500-500.jpg",
     "singers": [
       "Asha Bhosle",
-      " Kishore Kumar"
+      "Kishore Kumar"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/yeh-vaada-raha-yeh-vaada-raha.html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "0:00",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Zihaal E Miskin",
@@ -2308,15 +2402,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Zihaal-e-Miskin-Javed-Mohsin-500-500.jpg",
     "singers": [
       "Vishal Mishra",
-      " Shreya Ghoshal"
+      "Shreya Ghoshal"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/zihaal-e-miskin-vishal-mishra.html",
     "music_composer": "Javed-Mohsin",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:04",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tere Vaaste",
@@ -2324,16 +2419,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/tere-vaaste-zara-hatke-zara-bachke-500-500.jpg",
     "singers": [
       "Varun Jain",
-      " Shadab Faridi",
-      " Altamash Faridi"
+      "Shadab Faridi",
+      "Altamash Faridi"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/tere-vaaste-zara-hatke-zara-bachke.html",
     "music_composer": "Sachin- Jigar",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:09",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tum Bin",
@@ -2347,8 +2443,9 @@
     "website": "https://pagalnew.com/songs/tum-bin-tum-bin-2.html",
     "music_composer": "Ankit Tiwari",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "6:56",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Pehla Pehla Pyar",
@@ -2362,8 +2459,9 @@
     "website": "https://pagalnew.com/songs/pehla-pehla-pyar-spbalasubhramaniam-hum-aapke-hain-koun.html",
     "music_composer": "Raam-Laxman",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:24",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Kahani Suno 2.0",
@@ -2377,8 +2475,9 @@
     "website": "https://pagalnew.com/songs/kahani-suno-2two-kaifi-khalil.html",
     "music_composer": "Kaifi Khalil",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "2:53",
+    "playlist": "iswar_playlist",
+    "language": "Urdu"
   },
   {
     "song_name": "Pyaar Hota Kayi Baar Hai",
@@ -2392,8 +2491,9 @@
     "website": "https://pagalnew.com/songs/pyaar-hota-kayi-baar-hai-rk-tu-jhoothi-main-makkaar.html",
     "music_composer": "Pritam",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:36",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tu Mile Dil Khile",
@@ -2408,8 +2508,9 @@
     "website": "https://pagalnew.com/songs/tu-mile-dil-khile-stebin-ben.html",
     "music_composer": "Lijo George",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:17",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Zindagi Kuch Toh Bata Reprise",
@@ -2424,8 +2525,9 @@
     "website": "https://pagalnew.com/songs/zindagi-kuch-toh-bata-reprise-bajrangi-bhaijaan.html",
     "music_composer": "Pritam",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:23",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Zara Si Dosti",
@@ -2439,8 +2541,9 @@
     "website": "https://pagalnew.com/songs/zara-si-dosti-happy-bhag-jayegi.html",
     "music_composer": "Sohail Sen",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:27",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Bandeya Rey Bandeya",
@@ -2455,8 +2558,9 @@
     "website": "https://pagalnew.com/songs/bandeya-rey-bandeya-simmba.html",
     "music_composer": "Tanishk Bagchi",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:14",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Jab Kisi Ki Taraf Dil   Raj Barman Unplugged Cover",
@@ -2470,8 +2574,9 @@
     "website": "https://koshalworld.com/download/6142/jab-kisi-ki-taraf-dil-raj-barman-unplugged-cover.html",
     "music_composer": null,
     "published_on": "26 Feb, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:08",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Hiriye Shael Oswal",
@@ -2486,7 +2591,8 @@
     "music_composer": "Universal Music India Ltd.",
     "published_on": null,
     "duration": "04:15",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Tum Se Hi",
@@ -2501,8 +2607,9 @@
     "website": "https://pagalnew.com/songs/tum-se-hi-jab-we-met.html",
     "music_composer": "Pritam",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:23",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mere Mehboob Qayamat Hogi",
@@ -2516,8 +2623,9 @@
     "website": "https://koshalworld.com/download/13069/mere-mehboob-qayamat-hogi.html",
     "music_composer": null,
     "published_on": "15 Jan, 2022",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:28",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Rim Jhim",
@@ -2531,8 +2639,9 @@
     "website": "https://pagalnew.com/songs/rim-jhim-khan-saab.html",
     "music_composer": "Pav Dharia",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:00",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Rooh E Daari",
@@ -2546,8 +2655,9 @@
     "website": "https://pagalnew.com/songs/rooh-e-daari-altamash-faridi.html",
     "music_composer": "Amol - Abhishek",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:13",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Main Duniya Bhula Dunga Subhashree & Satyajeet.",
@@ -2555,15 +2665,16 @@
     "thumbnail": "https://koshalworld.com/siteuploads/thumb/c/334_4.jpg",
     "singers": [
       "Satyajeet Jena",
-      "Subhasree jena"
+      "Subhasree Jena"
     ],
     "lyricist": null,
     "source": "https://koshalworld.com/",
     "website": "https://koshalworld.com/download/6174/main-duniya-bhula-dunga-subhashree-satyajeet-.html",
     "music_composer": null,
     "published_on": "26 Feb, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:47",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Chahunga Main Tujhe Hardam",
@@ -2577,8 +2688,9 @@
     "website": "https://koshalworld.com/download/6176/chahunga-main-tujhe-hardam.html",
     "music_composer": null,
     "published_on": "26 Feb, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:36",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mahabharat Theme Song Download",
@@ -2593,7 +2705,8 @@
     "music_composer": "Various Artist",
     "published_on": "14 Mar, 2024",
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Rootha Kyun",
@@ -2601,17 +2714,18 @@
     "thumbnail": "https://pagalnew.com/coverimages/Rootha-Kyun-1920-London-500-500.jpg",
     "singers": [
       "Sharib Sabri",
-      " Toshi Sabri",
-      " Mohit Chauhan",
-      " Payal Dev"
+      "Toshi Sabri",
+      "Mohit Chauhan",
+      "Payal Dev"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/rootha-kyun-1920-london.html",
     "music_composer": "Toshi Sabri",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:02",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Nasha (Equals Sessions) Faridkot, Amar Jalal",
@@ -2627,7 +2741,8 @@
     "music_composer": null,
     "published_on": null,
     "duration": "04:47",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tulsi Kumars Dance Wave Mashup",
@@ -2641,8 +2756,9 @@
     "website": "https://pagalnew.com/songs/tulsi-kumars-dance-wave-mashup-tulsi-kumar.html",
     "music_composer": "Lijo George, Guru Randhawa, Sachin-Jigar, Tanishk Bagchi, Lalit Sen, Pritam",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:53",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Aaya Na Tu",
@@ -2650,28 +2766,30 @@
     "thumbnail": "https://pagalnew.com/coverimages/Aaya-Na-Tu-Arjun-Kanungo-500-500.jpg",
     "singers": [
       "Arjun Kanungo",
-      " Momina Mustehsan"
+      "Momina Mustehsan"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/aaya-na-tu-arjun-kanungo.html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:30",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Such Keh Raha Hai",
     "song_url": "https://pagalnew.com/320-download/12579",
     "thumbnail": "https://pagalnew.com/coverimages/Such-Keh-Raha-Hai-Rehnaa-Hai-Terre-Dil-Mein-500-500.jpg",
-    "singers": "",
+    "singers": [],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/such-keh-raha-hai-rehnaa-hai-terre-dil-mein.html",
     "music_composer": "KK, Harris Jayaraj",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:28",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Jo Tu Na Mila (Mashup) Asim Azhar",
@@ -2685,8 +2803,9 @@
     "website": "https://koshalworld.com/download/10768/jo-tu-na-mila-mashup-asim-azhar.html",
     "music_composer": null,
     "published_on": "08 Sep, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "6:44",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Daru Badnaam Kar Di Song Download",
@@ -2701,7 +2820,8 @@
     "music_composer": "Param Singh",
     "published_on": "22 Jan, 2024",
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Aashiqui Aa Gayi Arijit Singh",
@@ -2716,7 +2836,8 @@
     "music_composer": "Mithoon",
     "published_on": null,
     "duration": "04:20",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Let Me Down Slowly x Main Dhoondne Ko Zamaane Mein (Mashup)",
@@ -2730,8 +2851,9 @@
     "website": "https://koshalworld.com/download/8671/let-me-down-slowly-x-main-dhoondne-ko-zamaane-mein-mashup-.html",
     "music_composer": null,
     "published_on": "13 Jun, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "2:56",
+    "playlist": "iswar_playlist",
+    "language": "English"
   },
   {
     "song_name": "Marham",
@@ -2745,8 +2867,9 @@
     "website": "https://pagalnew.com/songs/marham1-animal.html",
     "music_composer": "Vishal Mishra",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "1:53",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Isq Risk",
@@ -2754,16 +2877,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Isq-Risk-Mere-Brother-Ki-Dulhan-500-500.jpg",
     "singers": [
       "Rahat Fateh Ali Khan",
-      " Sohail Sen",
-      " Irshad Kamil"
+      "Sohail Sen",
+      "Irshad Kamil"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/isq-risk1-mere-brother-ki-dulhan.html",
     "music_composer": "Sohail Sen",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "0:00",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Khuda Raazi Jubin Nautiyal, Akanksha Sharma",
@@ -2779,7 +2903,8 @@
     "music_composer": "Prem Anand",
     "published_on": null,
     "duration": "04:16",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Guilty",
@@ -2787,15 +2912,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/guilty-inder-chahal-500-500.jpg",
     "singers": [
       "Inder Chahal",
-      " Karan Aujla"
+      "Karan Aujla"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/guilty.html",
     "music_composer": "Proof",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "2:58",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Jeene Bhi De Duniya Humein (Arijit Singh)",
@@ -2809,8 +2935,9 @@
     "website": "https://koshalworld.com/download/14495/jeene-bhi-de-duniya-humein-arijit-singh-.html",
     "music_composer": null,
     "published_on": "24 Mar, 2022",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "6:31",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Is Qadar",
@@ -2818,15 +2945,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Is-Qadar-Tulsi-Kumar-500-500.jpg",
     "singers": [
       "Tulsi Kumar",
-      " Darshan Raval"
+      "Darshan Raval"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/is-qadar-tulsi-kumar.html",
     "music_composer": "Sachet-Parampara",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:46",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Thoda Aur Arijit Singh, Palak Muchhal",
@@ -2842,7 +2970,8 @@
     "music_composer": "Jeet Gannguli",
     "published_on": null,
     "duration": "04:09",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Dil Meri Na Sune",
@@ -2856,8 +2985,9 @@
     "website": "https://pagalnew.com/songs/dil-meri-na-sune-genius.html",
     "music_composer": "Himesh Reshammiya",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:56",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Zaroori Tha Song Download",
@@ -2872,7 +3002,8 @@
     "music_composer": "Rahat Fateh Ali Khan",
     "published_on": "03 Mar, 2024",
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Urdu"
   },
   {
     "song_name": "Dhadkan Meri Jaane Na",
@@ -2886,8 +3017,9 @@
     "website": "https://pagalnew.com/songs/dhadkan-meri-jaane-na-sarit-dutta.html",
     "music_composer": "Mahfuz Ali",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "2:49",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Sauda Khara Khara ",
@@ -2900,7 +3032,8 @@
     "music_composer": null,
     "published_on": null,
     "duration": "04:15",
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "Care Ni Karda",
@@ -2908,15 +3041,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/care-ni-karda-chhalaang-500-500.jpg",
     "singers": [
       "Sweetaj Brar",
-      " Yo Yo Honey Singh"
+      "Yo Yo Honey Singh"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/care-ni-karda.html",
     "music_composer": "Yo Yo Honey Singh",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:13",
+    "playlist": "iswar_playlist",
+    "language": "Punjabi"
   },
   {
     "song_name": "KHAIRIYAT (BONUS TRACK)",
@@ -2930,8 +3064,9 @@
     "website": "https://koshalworld.com/download/9235/khairiyat-bonus-track-.html",
     "music_composer": null,
     "published_on": "04 Jul, 2021",
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:58",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mehrama",
@@ -2939,16 +3074,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Mehrama-Love-Aaj-Kal-500-500.jpg",
     "singers": [
       "Pritam",
-      " Darshan Raval",
-      " Antara Mitra"
+      "Darshan Raval",
+      "Antara Mitra"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/mehrama1-love-aaj-kal.html",
     "music_composer": "Pritam",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:09",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mehendi Wale Haath",
@@ -2963,7 +3099,8 @@
     "music_composer": "Sachet-Parampara",
     "published_on": null,
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Bheegi Bheegi Raaton Mein",
@@ -2971,16 +3108,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/bheegi-bheegi-raaton-mein-ajanabee-500-500.jpg",
     "singers": [
       "R.D. Burman",
-      " Lata Mangeshkar",
-      " Kishore Kumar"
+      "Lata Mangeshkar",
+      "Kishore Kumar"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/bheegi-bheegi-raaton-mein-ajanabee.html",
     "music_composer": "R.D. Burman",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:53",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tu Zaroori",
@@ -2988,16 +3126,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Tu-Zaroori-Zid-500-500.jpg",
     "singers": [
       "Sunidhi Chauhan",
-      " Toshi Sabri",
-      " Sharib Sabri"
+      "Toshi Sabri",
+      "Sharib Sabri"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/tu-zaroori1-zid.html",
     "music_composer": "Toshi Sabri, Sharib Sabri",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:49",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Azeem",
@@ -3005,16 +3144,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/Azeem-O-Shaan-Shahenshah-Jodhaa-Akbar-500-500.jpg",
     "singers": [
       "A.R. Rahman",
-      " Mohammed Aslam",
-      " Bonnie Chakraborty"
+      "Mohammed Aslam",
+      "Bonnie Chakraborty"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/azeem-o-shaan-shahenshah1-jodhaa-akbar.html",
     "music_composer": "A.R. Rahman",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:54",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Pallo Latke Song Download",
@@ -3022,7 +3162,7 @@
     "thumbnail": "https://pagalnew.com.se/siteuploads/thumb/sft1/169_4.jpg",
     "singers": [
       "Anjali Raj",
-      " Ricky Singh"
+      "Ricky Singh"
     ],
     "lyricist": "Anjali Raj",
     "source": "https://pagalnew.com/",
@@ -3030,7 +3170,8 @@
     "music_composer": "Ricky Singh",
     "published_on": "21 Jan, 2024",
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Laal Bindi",
@@ -3044,8 +3185,9 @@
     "website": "https://pagalnew.com/songs/laal-bindi-akull.html",
     "music_composer": null,
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:23",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Safari",
@@ -3059,8 +3201,9 @@
     "website": "https://pagalnew.com/songs/safari-serena.html",
     "music_composer": "Radu Baisan, Serena, KaRO",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "3:07",
+    "playlist": "iswar_playlist",
+    "language": "English"
   },
   {
     "song_name": "O Soniya",
@@ -3068,16 +3211,17 @@
     "thumbnail": "https://pagalnew.com/coverimages/O-Soniya-Ishq-Hai-Tumse-500-500.jpg",
     "singers": [
       "Alka Yagnik",
-      " Himesh Reshammiya",
-      " Udit Narayan"
+      "Himesh Reshammiya",
+      "Udit Narayan"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/o-soniya1-ishq-hai-tumse.html",
     "music_composer": "Himesh Reshammiya",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:32",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tera Dil",
@@ -3085,15 +3229,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Tera-Dil-Hungama-500-500.jpg",
     "singers": [
       "Udit Narayan",
-      " Alka Yagnik"
+      "Alka Yagnik"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/tera-dil-hungama.html",
     "music_composer": "Nadeem-Shravan",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:51",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tujhe Na Dekhu Toh Chain Song Download",
@@ -3101,7 +3246,7 @@
     "thumbnail": "https://pagalnew.com.se/siteuploads/thumb/sft4/1616_4.jpg",
     "singers": [
       "Kumar Sanu",
-      " Alka yagnik"
+      "Alka yagnik"
     ],
     "lyricist": "Sameer",
     "source": "https://pagalnew.com/",
@@ -3109,7 +3254,8 @@
     "music_composer": "Nadeem, Shravan",
     "published_on": "03 Mar, 2024",
     "duration": null,
-    "playlist": "iswar_playlist"
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Mubarak Mubarak",
@@ -3123,8 +3269,9 @@
     "website": "https://pagalnew.com/songs/mubarak-mubarak1-haan-maine-bhi-pyaar-kiya.html",
     "music_composer": "Nadeem-Shravan",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "7:05",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Kisise Tum Pyar Karo",
@@ -3132,15 +3279,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/kisise-tum-pyar-karo-andaaz-2003-500-500.jpg",
     "singers": [
       "Alka Yagnik",
-      " Kumar Sanu"
+      "Kumar Sanu"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/kisise-tum-pyar-karo-andaaz-2003.html",
     "music_composer": "Nadeem - Shravan",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:06",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Aapke Pyaar Mein Hum",
@@ -3154,8 +3302,9 @@
     "website": "https://pagalnew.com/songs/aapke-pyaar-mein-hum1-raaz.html",
     "music_composer": "Nadeem-Shravan",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:30",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Aayega Maza Ab Barsaat Ka",
@@ -3163,15 +3312,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/aayega-maza-ab-barsaat-ka-andaaz-2003-500-500.jpg",
     "singers": [
       "Alka Yagnik",
-      " Babul Supriyo"
+      "Babul Supriyo"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/aayega-maza-ab-barsaat-ka-andaaz-2003.html",
     "music_composer": "Nadeem - Shravan",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "5:32",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   },
   {
     "song_name": "Tum Bin",
@@ -3179,15 +3329,16 @@
     "thumbnail": "https://pagalnew.com/coverimages/Tum-Bin-Sanam-Re-500-500.jpg",
     "singers": [
       "Shreya Ghoshal",
-      " Jeet Gannguli",
-      " Rashmi Virag"
+      "Jeet Gannguli",
+      "Rashmi Virag"
     ],
     "lyricist": null,
     "source": "https://pagalnew.com/",
     "website": "https://pagalnew.com/songs/tum-bin-sanam-re.html",
     "music_composer": "Jeet Gannguli",
     "published_on": null,
-    "duration": null,
-    "playlist": "iswar_playlist"
+    "duration": "4:44",
+    "playlist": "iswar_playlist",
+    "language": "Hindi"
   }
 ]
