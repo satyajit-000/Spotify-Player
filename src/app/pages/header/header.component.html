@@ -21,8 +21,8 @@
             <!-- <button class="signup btn rounded-pill mx-4">Sign up / Sign in</button> -->
         <!-- </a> -->
          <span class="position-relative">
-             <input type="text" placeholder="Search for songs" [(ngModel)]="searchQuery" (input)="onSearch()" (keyup.enter)="onSearch()" />
-             <i class="fa-solid fa-x clear-search " (click)="onClear()"></i>
+             <input type="text" [placeholder]="placeholder" [(ngModel)]="sharedDataService.filteredText" (input)="onSearch()" (keyup.enter)="onSearch()" #searchInput/>
+             <i class="fa-solid fa-x clear-search " (click)="onClear(); searchInput.focus()"></i>
          </span>
         <button (click)="onSearch()">
             <i class="fa-solid fa-magnifying-glass"></i>

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, computed, effect, ElementRef, HostListener, OnDestroy, Renderer2, signal, ViewChild, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Song } from '../../interfaces/songs';
@@ -9,10 +9,11 @@ import _ from 'lodash';
 import { CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule, FormsModule, CdkDropList, CdkDrag, ScrollingModule, NzIconModule],
+  imports: [FormsModule, CdkDropList, CdkDrag, ScrollingModule, NzIconModule, NgClass],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
   styles: [`
@@ -32,11 +33,14 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 })
 export class FooterComponent implements AfterViewInit, OnDestroy {
 
-  @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>; // Reference to the audio element
+  @ViewChild('audioPlayer') audioPlayer?: ElementRef<HTMLAudioElement>; // Reference to the audio element
   @ViewChild('toggleShuffleList') toggleShuffleListBtn!: ElementRef<HTMLButtonElement>;
   @ViewChild('volumeSlider', { static: false }) sliderRef?: ElementRef<HTMLInputElement>;
   @ViewChild('volumeSliderExpanded', { static: false }) sliderRefExpanded?: ElementRef<HTMLInputElement>;
   @ViewChild('progressBar', { static: false }) progressBar?: ElementRef<HTMLInputElement>;
+  playbackRate = signal(1);
+  timer?: ReturnType<typeof setTimeout>;
+  showPlaybackRate = signal(false);
   volumeElement: HTMLInputElement | null = null;
   volumeElementExpanded: HTMLInputElement | null = null;
   allSongs!: Song[];
@@ -177,7 +181,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     if (this.audioPlayer) {
       setTimeout(() => {
-        this.audioPlayer.nativeElement.currentTime = this.currentTime;
+        this.audioPlayer && (this.audioPlayer.nativeElement.currentTime = this.currentTime);
         this.updateProgress();
         setTimeout(() => {
           this.updateSlider(this.sliderRefExpanded?.nativeElement, this.volume);
@@ -192,6 +196,9 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.stopSavingTime();
+    if (this.timer) {
+      clearTimeout(this.timer);
+    }
   }
 
   toggleLoop(): void {
@@ -263,7 +270,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   }
 
   togglePlay(expandOnPause = true): void {
-    if (this.duration) {
+    if (this.audioPlayer && this.duration) {
       if (this.sharedDataService.isSongPlaying) {
         this.audioPlayer.nativeElement.pause(); // Pause the audio
         sessionStorage.setItem('currentTime', JSON.stringify(this.currentTime));
@@ -316,6 +323,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   }
 
   onProgressChange(event: any): void {
+    if(!this.audioPlayer) return;
     this.progress = event.target?.value;
     this.duration = this.audioPlayer.nativeElement.duration;
     this.currentTime = this.audioPlayer.nativeElement.currentTime = (this.progress / 100) * this.duration; // Update the audio position
@@ -323,7 +331,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   }
 
   updateProgress(): void {
-
+    if(!this.audioPlayer) return;
     this.currentTime = this.audioPlayer.nativeElement.currentTime;
     this.duration = this.audioPlayer.nativeElement.duration;
     this.progress = (this.currentTime / this.duration) * 100; // Update the progress bar
@@ -337,6 +345,12 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
     } else if (event.shiftKey && event.key === 'ArrowRight') {
       // Trigger next song
       this.playNext();
+    } else if(event.shiftKey && event.key === '<') {
+      this.playbackRate.update((rate) => Math.max(rate - .25, .25));
+      this.showPlaybackRate.set(true);
+    } else if(event.shiftKey && event.key === '>') {
+      this.playbackRate.update((rate) => Math.min(rate + .25, 2));
+      this.showPlaybackRate.set(true);
     } else if (event.key === 'ArrowLeft') {
       this.currentSong() && this.onProgressChange({
         target: {
@@ -371,8 +385,26 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
     } else if (event.key === 'Enter') {
       scrollToCard(this.currentSongIndex + '')
     } else if (event.key === 'q' || event.key === 'Q') {
-      this.toggleSuffleList()
+      if(this.toggleShuffleListBtn) {
+        if(this.isSuffleListOpen()) {
+          this.toggleShuffleListBtn.nativeElement.blur();
+        } else {
+          this.toggleShuffleListBtn.nativeElement.focus();
+        }
+      } 
+      this.toggleSuffleList();
     }
+
+    
+    if(this.showPlaybackRate()) {
+      if(this.timer) {
+        clearTimeout(this.timer);
+      }
+      this.timer = setTimeout(() => {
+          this.showPlaybackRate.set(false);
+        }, 1000);
+    }
+
     this._cdr.markForCheck();
 
   }
@@ -414,11 +446,16 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   }
 
   onDataLoad() {
-    this.duration = this.audioPlayer.nativeElement.duration;
+    if(!this.audioPlayer) return;
+    if(!this.duration) {
+      this.duration = this.audioPlayer.nativeElement.duration;
+    }
+    this.paused.set(false);
     this.songLoading = false;
   }
   onLoadStart() {
     this.songLoading = true;
+    this.paused.set(true);
     this.progress = 0;
   }
 

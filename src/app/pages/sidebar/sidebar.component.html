@@ -1,21 +1,21 @@
 <aside class="sidebar" [class.open]="sideBarOpen()">
-    <nav>
-        <!-- <div class="d-flex justify-content-end align-items-center"> -->
-            <button class="toggle-btn" (click)="onToggleSidebar()">
-                <i class="fa fa-angle-double-left"></i>
-            </button>
+  <nav>
+    <button class="toggle-btn" (click)="onToggleSidebar()">
+      <i class="fa fa-angle-double-left"></i>
+    </button>
 
-        <!-- </div> -->
-        <ul>
-            @for (item of dashboardItems; track $index) {
-            <li class="pointer" [title]="item.nav">
-                <a [routerLink]="item.routerLink" routerLinkActive="active">
-                    <i [class]="item.iconClass"></i>
-                    
-                    <span *ngIf="sideBarOpen()">{{ item.nav }}</span>
-                </a>
-            </li>
+    <ul>
+      @for (item of dashboardItems; track $index) {
+        <li class="pointer" [title]="item.nav">
+          <a [routerLink]="item.routerLink" routerLinkActive="active">
+            <i [class]="item.iconClass"></i>
+
+            @if (sideBarOpen()) {
+              <span>{{ item.nav }}</span>
             }
-        </ul>
-    </nav>
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
 </aside>

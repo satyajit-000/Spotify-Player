@@ -4,7 +4,7 @@
   gap: 1rem;
   flex-wrap: wrap;
   /* margin: 1rem; */
-  max-height: 77vh;
+  max-height: calc(100vh - 250px);
   overflow-y: auto;
   /* justify-content: space-between; Ensures cards spread out evenly */
 }

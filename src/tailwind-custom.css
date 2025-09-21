@@ -1,0 +1,54 @@
+/* Custom Tailwind styles that won't conflict with Bootstrap/ng-zorro */
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component classes for music dashboard */
+@layer components {
+  .music-card {
+    @apply bg-spotify-gray-800 border border-spotify-gray-700 rounded-xl p-6 hover:border-spotify-green transition-all duration-300;
+  }
+  
+  .music-btn-primary {
+    @apply px-4 py-2 bg-spotify-green text-black font-medium rounded-lg hover:bg-spotify-green-light transition-colors duration-200;
+  }
+  
+  .music-btn-secondary {
+    @apply px-4 py-2 border border-spotify-gray-600 text-spotify-gray-300 rounded-lg hover:border-spotify-green hover:text-white transition-all duration-200;
+  }
+  
+  .music-stat-card {
+    @apply bg-spotify-gray-900 rounded-xl p-6 border border-spotify-gray-800 hover:border-spotify-green transition-all duration-300;
+  }
+  
+  .music-progress-bar {
+    @apply w-full bg-spotify-gray-700 rounded-full h-2;
+  }
+  
+  .music-progress-fill {
+    @apply h-2 rounded-full transition-all duration-500 bg-spotify-green;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bg-gradient-spotify {
+    background: linear-gradient(135deg, #1DB954 0%, #1aa34a 100%);
+  }
+  
+  .bg-dashboard-dark {
+    background: linear-gradient(135deg, #191414 0%, #121212 100%);
+  }
+  
+  /* Dark theme utilities */
+  .dark-card {
+    @apply bg-spotify-gray-800 border-spotify-gray-700;
+  }
+  
+  .dark-text {
+    @apply text-spotify-gray-300;
+  }
+}

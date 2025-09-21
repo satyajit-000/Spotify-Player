@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, HostListener, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SharedDataService } from '../../services/shared-data.service';
 import { RouterLink } from '@angular/router';
@@ -18,16 +18,28 @@ export class HeaderComponent {
     return computed(() => window.innerWidth <= 800)();
   }
 
-  constructor(private _sharedDataService: SharedDataService) {
+  constructor(public sharedDataService: SharedDataService) {
     initFavorite(ALL_SONGS);
+    effect(() => {
+      this.searchQuery = this.sharedDataService.filteredText;
+    })
   }
 
 
   onSearch(): void {
-    this._sharedDataService.filteredText = this.searchQuery;
+    // this.sharedDataService.filteredText = this.searchQuery;
   }
 
   onClear(): void {
-    this._sharedDataService.filteredText = this.searchQuery = '';
+    this.sharedDataService.filteredText = this.searchQuery = '';
+  }
+
+  get placeholder() {
+    if (window.innerWidth <= 540) {
+      return 'Search songs...';
+    } else if (window.innerWidth < 770) {
+      return 'Search for songs, artists, or lang...'
+    } 
+    return 'Search for songs, artists, or language'
   }
 }

@@ -1,8 +1,6 @@
 import { Routes } from "@angular/router";
-import { PlaylistComponent } from "./playlist/playlist.component";
-import { PlaylistHomeComponent } from "./home/playlist-home/playlist-home.component";
 
 export const routes: Routes = [
-    { path: '', component: PlaylistHomeComponent },
-    { path: ':id', component: PlaylistComponent },
+    { path: '', loadComponent: () => import('./home/playlist-home/playlist-home.component').then(m => m.PlaylistHomeComponent) },
+    { path: ':id', loadComponent: () => import('./playlist/playlist.component').then(m => m.PlaylistComponent) },
 ]

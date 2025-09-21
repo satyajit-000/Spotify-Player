@@ -3,4 +3,5 @@ export enum EnumRoutes {
     Home = '/home',
     PlayLists = '/playlists',
     Favorites = '/favorites',
+    Analytics = '/analytics',
 }

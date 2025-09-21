@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, HostListener, input, output } from '@angular/core';
 import { Song } from '../../interfaces/songs';
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { ALL_SONGS, DEFAULT_THUMBNAIL } from '../../constants';
 import { SharedDataService } from '../../services/shared-data.service';
 import { downloadSong, retriveSource } from '../../utils';
 
 @Component({
   selector: 'app-song-list',
-  imports: [CommonModule],
+  imports: [NgClass],
   templateUrl: './song-list.component.html',
   styleUrl: './song-list.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -103,7 +103,7 @@ export class SongListComponent {
   highlight(text: string | number | null): string | null {
     if (!text) {
       return null;
-    } else if (!this.sharedDataService.filteredText) {
+    } else if (!this.sharedDataService.filteredText.trim()) {
       return text + '';
     }
     text = text + '';
@@ -112,5 +112,21 @@ export class SongListComponent {
       return text.replace(re, (match) => `<mark>${match}</mark>`);
     }
     return text;
+  }
+
+  getUniqueArtist(song: Song) {
+    const allArtists = [
+      song.lyricist,
+      song.music_composer
+    ]
+      .filter(artist => !!artist && artist.trim()) // Remove falsy and empty strings
+      .map(artist => artist?.trim()); // Trim whitespace
+
+    // Remove duplicates using Set
+    return [...new Set(allArtists)].join(', ');
+  }
+
+  get innerWidth() {
+    return window.innerWidth;
   }
 }

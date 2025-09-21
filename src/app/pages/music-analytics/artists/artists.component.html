@@ -1,0 +1,221 @@
+<div>
+          <div class="row g-4">
+            <!-- Top Singers -->
+            <div class="col-lg-4">
+              <div class="chart-card">
+                <h4 class="card-title">
+                  <i class="fas fa-microphone me-2"></i>
+                  Top Singers
+                </h4>
+                <div class="chart-content">
+                  @for (singer of analytics.topSingers.slice(0, artistDistributionCount); track singer; let i = $index) {
+                    <div class="artist-item mb-3">
+                      <div class="d-flex align-items-center">
+                        <div class="artist-rank me-3">{{ i + 1 }}</div>
+                        <div class="flex-grow-1">
+                          <div class="fw-medium text-white"><a (click)="navigateToPlaylist(singer.name)">{{ singer.name }}</a></div>
+                          <small class="text-white">{{ singer.songs }} songs ({{ singer.percentage }}%)</small>
+                        </div>
+                        <div class="artist-count">
+                          <span class="badge bg-success">{{ singer.songs }}</span>
+                        </div>
+                      </div>
+                      <div class="progress progress-sm mt-2">
+                        <div
+                          class="progress-bar bg-success bg-gradient"
+                          [style.width.%]="singer.percentage">
+                        </div>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+            <!-- Top Composers -->
+            <div class="col-lg-4">
+              <div class="chart-card">
+                <h4 class="card-title">
+                  <i class="fas fa-music me-2"></i>
+                  Top Music Composers
+                </h4>
+                <div class="chart-content">
+                  @for (composer of analytics.topComposers.slice(0, artistDistributionCount); track composer; let i = $index) {
+                    <div class="artist-item mb-3">
+                      <div class="d-flex align-items-center">
+                        <div class="artist-rank me-3">{{ i + 1 }}</div>
+                        <div class="flex-grow-1">
+                          <div class="fw-medium text-white"><a (click)="navigateToPlaylist(composer.name)">{{ composer.name }}</a></div>
+                          <small class="text-white">{{ composer.songs }} compositions</small>
+                        </div>
+                        <div class="artist-count">
+                          <span class="badge bg-warning bg-gradient">{{ composer.songs }}</span>
+                        </div>
+                      </div>
+                      <div class="progress progress-sm mt-2">
+                        <div
+                          class="progress-bar bg-warning"
+                          [style.width.%]="composer.percentage">
+                        </div>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+            <!-- Top Lyricists  -->
+            <div class="col-lg-4">
+              <div class="chart-card">
+                <h4 class="card-title">
+                  <i class="fas fa-pen me-2"></i>
+                  Top Lyricists
+                </h4>
+                <div class="chart-content">
+                  @for (lyricist of analytics.topLyricists.slice(0, artistDistributionCount); track lyricist; let i = $index) {
+                    <div class="artist-item mb-3">
+                      <div class="d-flex align-items-center"> 
+                        <div class="artist-rank me-3">{{ i + 1 }}</div>
+                        <div class="flex-grow-1">
+                          <div class="fw-medium text-white"><a (click)="navigateToPlaylist(lyricist.name)">{{ lyricist.name }}</a></div>
+                          <small class="text-white">{{ lyricist.songs }} songs</small>
+                        </div>
+                        <div class="artist-count">
+                          <span class="badge bg-info">{{ lyricist.songs }}</span>
+                        </div>
+                      </div>
+                      <div class="progress progress-sm mt-2">
+                        <div
+                          class="progress-bar bg-info"
+                          [style.width.%]="lyricist.percentage">
+                        </div>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Artist Statistics Cards -->
+          <div class="row g-4 mt-4">
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-crown me-2 text-warning"></i>
+                  Top Performer
+                </h5>
+                <div class="chart-content">
+                  @if (analytics.topSingers && analytics.topSingers.length > 0) {
+                    <h3 class="text-success">{{ analytics.topSingers[0].name }}</h3>
+                    <p class="text-white">{{ analytics.topSingers[0].songs }} songs</p>
+                    <small class="text-white">{{ analytics.topSingers[0].percentage }}% of collection</small>
+                  } @else {
+                    <h3 class="text-muted">No data</h3>
+                  }
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-users me-2 text-info"></i>
+                  Artist Diversity
+                </h5>
+                <div class="chart-content">
+                  <h3 class="text-info">{{ analytics.uniqueArtists }}</h3>
+                  <p class="text-white">Unique Artists</p>
+                  <small class="text-white">Different performers</small>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-calculator me-2 text-primary"></i>
+                  Average per Artist
+                </h5>
+                <div class="chart-content">
+                  <h3 class="text-primary">{{ (analytics.totalSongs / analytics.uniqueArtists) | number:'1.1-1' }}</h3>
+                  <p class="text-white">Songs per Artist</p>
+                  <small class="text-white">Collaboration level</small>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-lg-3">
+              <div class="chart-card text-center">
+                <h5 class="card-title">
+                  <i class="fas fa-medal me-2 text-warning"></i>
+                  Top Composer
+                </h5>
+                <div class="chart-content">
+                  @if (analytics.topComposers && analytics.topComposers.length > 0) {
+                    <h3 class="text-warning">{{ analytics.topComposers[0].name }}</h3>
+                    <p class="text-white">{{ analytics.topComposers[0].songs }} compositions</p>
+                    <small class="text-white">Most prolific composer</small>
+                  } @else {
+                    <h3 class="text-muted">No data</h3>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Additional Artist Insights -->
+          <div class="row g-4 mt-4">
+            <div class="col-lg-6">
+              <div class="chart-card">
+                <h4 class="card-title">
+                  <i class="fas fa-chart-bar me-2"></i>
+                  Artist Category Breakdown
+                </h4>
+                <div class="chart-content">
+                  <div class="row text-center">
+                    <div class="col-4">
+                      <div class="artist-category-stat">
+                        <h5 class="text-success">{{ analytics.topSingers.length }}</h5>
+                        <small>Active Singers</small>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="artist-category-stat">
+                        <h5 class="text-warning">{{ analytics.topComposers.length }}</h5>
+                        <small>Active Composers</small>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="artist-category-stat">
+                        <h5 class="text-info">{{ analytics.topLyricists.length }}</h5>
+                        <small>Active Lyricists</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-lg-6">
+              <div class="chart-card">
+                <h4 class="card-title">
+                  <i class="fas fa-handshake me-2"></i>
+                  Collaboration Stats
+                </h4>
+                <div class="chart-content">
+                  <div class="collaboration-info text-center">
+                    <h6 class="text-white">Top Lyricist</h6>
+                    @if (analytics.topLyricists && analytics.topLyricists.length > 0) {
+                      <h4 class="text-info">{{ analytics.topLyricists[0].name }}</h4>
+                      <p class="text-white mb-3">{{ analytics.topLyricists[0].songs }} lyrics written</p>
+                    } @else {
+                      <h4 class="text-muted">No data</h4>
+                    }
+                    <small class="text-white">
+                      Creative diversity across {{ analytics.uniqueArtists }} unique artists
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>

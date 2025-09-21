@@ -121,3 +121,19 @@ mark {
   background-color: rgb(51, 255, 0) !important;
   padding: 0 !important;
 }
+
+.text-success {
+  color: var(--primary-green) !important;
+}
+
+.text-success-light {
+  color: var(--primary-green-hover) !important;
+}
+
+.bg-success {
+  background-color: var(--primary-green) !important;
+}
+
+.bg-success-light {
+  background-color: var(--primary-green-hover) !important;
+}
