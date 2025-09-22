@@ -1,4 +1,3 @@
-
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, computed, effect, ElementRef, HostListener, OnDestroy, Renderer2, signal, ViewChild, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Song } from '../../interfaces/songs';
@@ -231,7 +230,8 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   toggleFavorite(song: Song | null): void {
     this.currentSong() && (this.currentSong.update(
       (song: Song | null) => {
-        song && (song.isFavorite = !this.currentSong()?.isFavorite);
+        if (song) 
+          (song.isFavorite = !this.currentSong()?.isFavorite);
         return song
       }));
     const index = ALL_SONGS.findIndex(_song => _song.website === song?.website)
@@ -357,8 +357,8 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
           value: Math.max(this.progress - 1, 0)
         }
       })
-    } else if (event.key === 'ArrowRight') {
-      this.currentSong() && this.onProgressChange({
+    } else if (event.key === 'ArrowRight' && this.currentSong() ) {
+      this.onProgressChange({
         target: {
           value: Math.min(this.progress + 1, 100)
         }
