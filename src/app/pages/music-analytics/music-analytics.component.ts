@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { Song } from '../../interfaces/songs';
 import { AnalyticsData } from '../../interfaces/analytics';
 import { ALL_SONGS } from '../../constants';
-import { retriveSource } from '../../utils';
-import { Router, RouterLink, RouterModule } from '@angular/router';
-import { SharedDataService } from '../../services/shared-data.service';
+import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-music-analytics',
   imports: [CommonModule, RouterModule],
@@ -13,7 +12,6 @@ import { SharedDataService } from '../../services/shared-data.service';
   styleUrl: './music-analytics.component.css'
 })
 export class MusicAnalyticsComponent {
-  activeTab = 'overview';
   tabs = [
     {
       "name": "overview",
@@ -58,10 +56,7 @@ export class MusicAnalyticsComponent {
       ]
     }
   ];
-  colors = ['#1DB954', '#1ED760', '#1aa34a', '#159e3f', '#0e7a2b', '#0a5d1f', '#064115'];
-  languageDistributionCount = 10;
   songsData: Song[] = ALL_SONGS;
-  retriveSource = retriveSource;
   analytics: AnalyticsData = {
     languageData: [],
     genreData: [],
@@ -88,78 +83,8 @@ export class MusicAnalyticsComponent {
     newestSong: ''
   };
 
-  private router = inject(Router);
-
-  private sharedDataService = inject(SharedDataService);
-
   ngOnInit(): void {
     this.calculateAnalytics();
-  }
-
-  setActiveTab(tab: typeof this.tabs[0]): void {
-    if (tab.name !== this.activeTab) {
-      this.activeTab = tab.name;
-      this.router.navigate
-      window.scrollTo({ top: 0 });
-    }
-  }
-
-  getTabClass(tab: string): string {
-    return this.activeTab === tab ? 'btn-success' : 'btn-outline-success';
-  }
-
-  getTabIcon(tab: string): string {
-    const icons: { [key: string]: string } = {
-      overview: 'fas fa-chart-pie me-2',
-      languages: 'fas fa-language me-2',
-      genres: 'fas fa-tags me-2',
-      artists: 'fas fa-users me-2',
-      timeline: 'fas fa-calendar-alt me-2',
-      sources: 'fas fa-database me-2' // Added source icon
-    };
-    return icons[tab] || 'fas fa-chart-bar me-2';
-  }
-
-  getProgressColor(index: number): string {
-    const colors = [
-      'linear-gradient(45deg, #28a745, #20c997)',
-      'linear-gradient(45deg, #007bff, #17a2b8)',
-      'linear-gradient(45deg, #ffc107, #fd7e14)',
-      'linear-gradient(45deg, #dc3545, #e83e8c)',
-      'linear-gradient(45deg, #6f42c1, #6610f2)',
-      'linear-gradient(45deg, #fd7e14, #dc3545)',
-      'linear-gradient(45deg, #20c997, #17a2b8)',
-      'linear-gradient(45deg, #e83e8c, #6f42c1)'
-    ];
-    return colors[index % colors.length];
-  }
-
-  getEraCount(era: string): number {
-    if (!this.analytics.timelineData) return 0;
-    
-    switch (era) {
-      case 'classic':
-        return this.analytics.timelineData
-          .filter(item => item.year < 2000)
-          .reduce((sum, item) => sum + item.songs, 0);
-      case 'modern':
-        return this.analytics.timelineData
-          .filter(item => item.year >= 2000 && item.year < 2010)
-          .reduce((sum, item) => sum + item.songs, 0);
-      case 'contemporary':
-        return this.analytics.timelineData
-          .filter(item => item.year >= 2010)
-          .reduce((sum, item) => sum + item.songs, 0);
-      default:
-        return 0;
-    }
-  }
-
-  getCollectionSpanYears(): number {
-    if (!this.analytics.newestSong || !this.analytics.oldestSong) return 0;
-    const newest = parseInt(this.analytics.newestSong, 10);
-    const oldest = parseInt(this.analytics.oldestSong, 10);
-    return newest - oldest;
   }
 
   private convertDuration(duration: string): number {
@@ -331,12 +256,5 @@ export class MusicAnalyticsComponent {
       oldestSong: oldestYear.toString(),
       newestSong: newestYear.toString()
     };
-  }
-
-  navigateToPlaylist(text?: string | null) {
-    if(text) {
-      this.sharedDataService.filteredText = text.trim();
-      this.router.navigate(['playlists', 0]);
-    }
   }
 }
