@@ -11785,5 +11785,37 @@
     "published_on": null,
     "duration": null,
     "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Kahare Kalia Kouthi Paibi Tate",
+    "website": "https://odiafresh.com/filedownload/3332/33664/Kahare-Kalia-Kouthi-Paibi-Tate.html",
+    "genre": "Bhajan",
+    "language": "Odia",
+    "song_url": "https://odiafresh.com/files/download/id/33664/",
+    "thumbnail": "https://odiafresh.com/folderthumb/Kahare-Kalia-Kouthi-Paibi-Tate.jpg",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Lyricist :Puspak Parida",
+    "music_composer": "Music :Abhinash Mishra",
+    "published_on": null,
+    "duration": null,
+    "source": "https://odiafresh.com/"
+  },
+  {
+    "song_name": "Mun Jagannath Matire Janma",
+    "website": "https://koshalworld.com/download/50468/mun-jagannath-matire-janma.html",
+    "genre": "Bhajan",
+    "language": "Odia",
+    "song_url": "https://koshalworld.com/files/download/id/50468",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft101/50468_4.webp",
+    "singers": [
+      "Sourav Bharadwaj"
+    ],
+    "lyricist": "Rakesh Dash",
+    "music_composer": "Bimal Kumar Sahoo",
+    "published_on": "24 Jan, 2025",
+    "duration": null,
+    "source": "https://koshalworld.com/"
   }
 ]

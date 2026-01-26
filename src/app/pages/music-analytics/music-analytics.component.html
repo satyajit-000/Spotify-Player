@@ -12,7 +12,7 @@
        <div class="tab-container">
          <ul class="tab-group">
            @for (tab of tabs; track tab) {
-             <li class="tab" [routerLink]="tab.routes" [routerLinkActive]="'active'" (click)="setActiveTab(tab)">
+             <li class="tab" [routerLink]="tab.routes" [routerLinkActive]="'active'">
                <i [class]="tab.iconClass"></i>
                <span class="tab-label">{{ tab.name | titlecase }}</span>
              </li>
