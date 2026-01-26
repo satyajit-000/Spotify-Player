@@ -30,10 +30,10 @@ export function scrollToCard(id: string) {
 }
 
 export async function initFavorite(songs:Song[]) {
-  const favoriteList = await JSON.parse(localStorage.getItem('favoriteList') || '[]');
-  songs.forEach((song:Song, index:number) => {
-    song.isFavorite = favoriteList[index];
-  })
+  const favoUrls = new Set(await JSON.parse(localStorage.getItem('favoriteSongUrls') || '[]'))
+  songs.forEach(song => {
+    song.isFavorite = favoUrls.has(song.song_url)
+  });
 }
 
 export function convertDuration(duration: string): number {

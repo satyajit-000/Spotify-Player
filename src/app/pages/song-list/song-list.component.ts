@@ -24,7 +24,6 @@ export class SongListComponent {
   pauseImage = 'https://i.gifer.com/fetch/w300-preview/55/554818561cbf36d813ef2010cc9d66cc.gif';
   retriveSource = retriveSource
   clickTimeout: any; // Timer reference for click event
-  favoriteList = JSON.parse(localStorage.getItem('favoriteList') || '[]');
   smallScreen = window.innerWidth <= 800;
 
   constructor(public sharedDataService: SharedDataService) { }
@@ -33,7 +32,7 @@ export class SongListComponent {
     this.smallScreen = window.innerWidth <= 800;
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize() {
     this.checkScreenSize();
   }
@@ -72,9 +71,14 @@ export class SongListComponent {
     $event.stopPropagation();
     song.isFavorite = !song.isFavorite;
     this.optionsIndex = null; // Close options dropdown
-    const index = ALL_SONGS.findIndex((_song: Song) => _song.website === song.website);
-    this.favoriteList[index] = !this.favoriteList[index]
-    localStorage.setItem('favoriteList', JSON.stringify(this.favoriteList));
+    if (song.isFavorite) {
+      if(!this.sharedDataService.favoriteSongUrls().includes(song.song_url)) {
+        this.sharedDataService.favoriteSongUrls.update(urls => [...urls, song.song_url])
+      }
+    } else {
+      this.sharedDataService.favoriteSongUrls.update(urls => urls.filter(url => url !== song.song_url))
+    }
+    localStorage.setItem('favoriteSongUrls', JSON.stringify(this.sharedDataService.favoriteSongUrls()));
   }
   // Add/remove a song from playlist
   togglePlaylist() {

@@ -13,8 +13,16 @@
     margin: 0;
 }
 
+.sidebar nav button i.fa {
+    transition: transform .2s ease-in-out;
+}
+
 .sidebar.open {
     width: 12rem; /* Set explicit width */
+}
+
+.sidebar.open nav button i {
+    transform: rotateY(180deg);
 }
 
 .sidebar nav ul li a span {

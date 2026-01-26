@@ -61,18 +61,24 @@ export class PlaylistComponent implements OnInit {
       this.pageIndex();
       document.querySelector('.song-list')?.scrollTo({ top: 0, behavior: 'smooth' });
     })
+
+    effect(() => {
+      this.initSongs(this.inputPlaylist())
+    })
   }
 
   ngOnInit() {
-    if (this.inputPlaylist()) {
-      this.playList = this.inputPlaylist() as Playlist;
+    this.initSongs(this.inputPlaylist())
+  }
+
+  initSongs(playList?: Playlist) {
+    if (playList) {
+      this.playList = playList as Playlist;
     } else {
       this.playListId = Number(this._route.snapshot.params['id']);
       this.playList = PLAYLISTS.find((playlist: Playlist) => this.playListId === playlist.id) || {} as Playlist;
     }
     this.filteredSongs.set(this.playList.songs);
-    // this.onPageSizeOrIndexChange();
-
   }
 
   backToPlaylist() {

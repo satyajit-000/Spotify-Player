@@ -31,6 +31,7 @@ export class SharedDataService {
       }
     })() as Playlist | null
   );
+  private _favoriteSongUrls = signal<string[]>(JSON.parse(localStorage.getItem('favoriteSongUrls') || '[]'));
 
   get currentSong(): WritableSignal<Song | null> {
     return this._currentSong
@@ -65,5 +66,12 @@ export class SharedDataService {
   set currentPlayingPlaylist(playlist:Playlist | null) {
     this._currentPlayingPlaylist.set(playlist);
     sessionStorage.setItem('currentPlayingPlaylist', JSON.stringify(playlist));
+  }
+
+  get favoriteSongUrls(): WritableSignal<string[]> {
+    return this._favoriteSongUrls;
+  }
+  set favoriteSongUrls(songUrls: WritableSignal<string[]>) {
+    this._favoriteSongUrls = songUrls;
   }
 }

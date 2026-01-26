@@ -11658,5 +11658,132 @@
     "published_on": "9 Mar, 2009",
     "duration": null,
     "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "Title Track",
+    "website": "https://pagalnew.com/songs/title-track-tere-ishk-mein.html",
+    "language": "Hindi",
+    "song_url": "https://pagalnew.com/320-download/52484",
+    "thumbnail": "https://pagalnew.com/coverimages/title-track-tere-ishk-mein-500-500.jpg",
+    "singers": [
+      "Arijit Singh"
+    ],
+    "lyricist": null,
+    "music_composer": "A.R. Rahman",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Mera Hua",
+    "website": "https://pagalnew.com/songs/mera-hua-ek-deewane-ki-deewaniyat.html",
+    "language": "Hindi",
+    "song_url": "https://pagalnew.com/320-download/52423",
+    "thumbnail": "https://pagalnew.com/coverimages/mera-hua-ek-deewane-ki-deewaniyat-500-500.jpg",
+    "singers": [
+      "Sachin Urmtosh",
+      " Annkur R Pathakk"
+    ],
+    "lyricist": null,
+    "music_composer": "Annkur R Pathakk",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Aawaara Angaara",
+    "website": "https://pagalnew.com/songs/aawaara-angaara-tere-ishk-mein.html",
+    "language": "Hindi",
+    "song_url": "https://pagalnew.com/320-download/52695",
+    "thumbnail": "https://pagalnew.com/coverimages/aawaara-angaara-tere-ishk-mein-500-500.jpg",
+    "singers": [
+      "Faheem Abdullah",
+      " Irshad Kamil"
+    ],
+    "lyricist": null,
+    "music_composer": "A.R. Rahman",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Deewaniyat",
+    "website": "https://pagalnew.com/songs/deewaniyat-ek-deewane-ki-deewaniyat.html",
+    "language": "Hindi",
+    "song_url": "https://pagalnew.com/320-download/52076",
+    "thumbnail": "https://pagalnew.com/coverimages/deewaniyat-ek-deewane-ki-deewaniyat-500-500.jpg",
+    "singers": [
+      "Vishal Mishra"
+    ],
+    "lyricist": null,
+    "music_composer": "Kaushik-Guddu",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Bol Kaffara Kya Hoga",
+    "website": "https://pagalnew.com/songs/bol-kaffara-kya-hoga-ek-deewane-ki-deewaniyat.html",
+    "language": "Hindi",
+    "song_url": "https://pagalnew.com/320-download/52249",
+    "thumbnail": "https://pagalnew.com/coverimages/bol-kaffara-kya-hoga-ek-deewane-ki-deewaniyat-500-500.jpg",
+    "singers": [
+      "Neha Kakkar",
+      " Farhan Sabri"
+    ],
+    "lyricist": null,
+    "music_composer": "Dj Chetas, Lijo George",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
+  },
+  {
+    "song_name": "Gehra Hua",
+    "website": "https://pendujatt.com.se/song/gehra-hua-irshad-kamil-shashwat-mp3-song",
+    "language": "Hindi",
+    "song_url": "https://bajaao.pendujatt.com.se/load/320/70160165/2138176/Gehra Hua.mp3",
+    "thumbnail": "https://pendujatt.com.se/uploads/album/gehra-hua-from-dhurandhar-shashwat-sachdev.webp",
+    "singers": [
+      "Irshad Kamil",
+      "Shashwat Sachdev",
+      "Arijit Singh",
+      "Armaan Khan"
+    ],
+    "lyricist": null,
+    "music_composer": null,
+    "published_on": "29 Nov, 2025",
+    "duration": "6:02",
+    "source": "https://pendujatt.com/"
+  },
+  {
+    "song_name": "To Bhala Paiba Mora Darkar",
+    "website": "https://koshalworld.com/download/66365/to-bhala-paiba-mora-darkar.html",
+    "language": "Odia",
+    "song_url": "https://koshalworld.com/files/download/id/66365",
+    "thumbnail": "https://koshalworld.com/siteuploads/thumb/sft133/66365_4.webp",
+    "singers": [
+      "Swayam Padhi",
+      "Anuradha Panigrahi"
+    ],
+    "lyricist": "SOUMYA RANJAN BAL",
+    "music_composer": "RSR Odia Music",
+    "published_on": "05 Nov, 2025",
+    "duration": null,
+    "source": "https://koshalworld.com/"
+  },
+  {
+    "song_name": "Chikiri Chikiri",
+    "website": "https://pagalnew.com/songs/chikiri-chikiri-peddi.html",
+    "language": "Hindi",
+    "song_url": "https://pagalnew.com/320-download/52578",
+    "thumbnail": "https://pagalnew.com/coverimages/chikiri-chikiri-peddi-500-500.jpg",
+    "singers": [
+      "Mohit Chauhan"
+    ],
+    "lyricist": null,
+    "music_composer": "A. R. Rahman",
+    "published_on": null,
+    "duration": null,
+    "source": "https://pagalnew.com/"
   }
 ]
