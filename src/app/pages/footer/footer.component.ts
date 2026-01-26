@@ -3,7 +3,7 @@ import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, c
 import { FormsModule } from '@angular/forms';
 import { Song } from '../../interfaces/songs';
 import { SharedDataService } from '../../services/shared-data.service';
-import { ALL_SONGS, DEFAULT_THUMBNAIL } from '../../constants';
+import { DEFAULT_THUMBNAIL } from '../../constants';
 import { retriveSource, scrollToCard } from '../../utils';
 import _ from 'lodash';
 import { CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
@@ -55,7 +55,6 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   isSuffled: boolean = JSON.parse(localStorage.getItem('isSuffled') || 'false');
   progress = 0;
   volume: number = JSON.parse(sessionStorage.getItem('volume') ?? '100');
-  favoriteList = JSON.parse(localStorage.getItem('favoriteList') || '[]');
   defaultThumbnail = DEFAULT_THUMBNAIL
   retriveSource = retriveSource;
   expanded = signal(false);
@@ -234,8 +233,6 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
         song && (song.isFavorite = !this.currentSong()?.isFavorite);
         return song
       }));
-    const index = ALL_SONGS.findIndex(_song => _song.website === song?.website)
-    this.favoriteList[index] = !this.favoriteList[index]
     if (!this.expanded()) {
       this.expanded.set(true);
       setTimeout(() => {
@@ -243,7 +240,16 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
 
       }, 1000);
     }
-    localStorage.setItem('favoriteList', JSON.stringify(this.favoriteList));
+    if (song) {
+      if (song.isFavorite) {
+        if(!this.sharedDataService.favoriteSongUrls().includes(song.song_url)) {
+          this.sharedDataService.favoriteSongUrls.update(urls => [...urls, song.song_url]);
+        }
+      } else {
+        this.sharedDataService.favoriteSongUrls.update(urls => urls.filter(url => url !== song.song_url));
+      }
+      localStorage.setItem('favoriteSongUrls', JSON.stringify(this.sharedDataService.favoriteSongUrls()));
+    }
   }
 
   setCurrentSong(song: Song | null): void {
