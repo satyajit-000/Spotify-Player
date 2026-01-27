@@ -1,0 +1,1 @@
+import"./chunk-GAL4ENT6.js";var t=[{path:"",loadComponent:()=>import("./chunk-AYT5T2TM.js").then(o=>o.PlaylistHomeComponent)},{path:":id",loadComponent:()=>import("./chunk-MNRUUIPR.js").then(o=>o.PlaylistComponent)}];export{t as routes};

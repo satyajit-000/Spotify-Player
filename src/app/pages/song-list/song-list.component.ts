@@ -81,8 +81,7 @@ export class SongListComponent {
     localStorage.setItem('favoriteSongUrls', JSON.stringify(this.sharedDataService.favoriteSongUrls()));
   }
   // Add/remove a song from playlist
-  togglePlaylist(song: Song) {
-    // song.isInPlaylist = !song.isInPlaylist;
+  togglePlaylist() {
     this.optionsIndex = null; // Close options dropdown
   }
 
